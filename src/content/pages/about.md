@@ -1,8 +1,9 @@
 ---
 title: My journey
 seo:
-  title: ICF Coach in Paris | Leadership in Tech | Helping You Unlock Your Potential
-  description: Discover the journey of an ICF coach with a leadership background in tech. Kate Mas is passionate about helping individuals unlock their full potential, create meaningful careers, and lead fulfilling lives. Learn more about her commitment to personal growth and transformation.
+  title: ICF Coach in Paris | Leadership in Tech | Unlock Your Potential
+  description: Discover the journey of ICF coach Kate Mas, passionate about helping individuals unlock their potential, build meaningful careers, and lead fulfilling lives.
+
   image:
     src: '/about.jpeg'
     alt: A person taking a step forward in a photo studio with a vibrant yellow background, symbolizing progress and new beginnings. 
