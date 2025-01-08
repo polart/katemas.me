@@ -35,5 +35,3 @@ In 2023, I took a leap of faith and completed my ACTP at the International Coach
 By 2024, I was ready to fully embrace coaching as my career. The more I coached, the more I felt a deep sense of alignment with my purpose. What started as a dream in 2023 turned into a reality in 2024, as I made the decision to step away from shaping user stories and dedicate myself fully to empowering individuals to reshape their own lives.
 
 I craved more connection and impact, and working directly with clients was giving me exactly that. It also fulfilled my creativity, sparked inspiration, and left me in pure awe of the personalities I was meeting.
-
-My
