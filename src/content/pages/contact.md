@@ -1,8 +1,8 @@
 ---
 title: Get in touch
 seo:
-  title: Contact Me | Get in Touch for 1:1 Coaching and Career Growth | Paris & Online
-  description: Ready to take the next step in your career and life? Reach out today to start your coaching journey with Kate Mas. Unlock your potential and create a fulfilling future. Book your FREE chemistry session today.
+  title: Contact Me | 1:1 Coaching and Career Growth | Paris & Online
+  description: Ready to take the next step in your career and life? Reach out today to start your coaching journey with Kate Mas. Book your FREE chemistry session today.
 
 
 ---
