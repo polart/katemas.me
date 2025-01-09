@@ -1,19 +1,22 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import type { MarkdownLayoutProps } from 'astro';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 
-export type Props = HeadProps & { showHeader?: boolean };
+type Props = MarkdownLayoutProps<{
+  title: string;
+  description: string;
+}>;
 
-const { showHeader = false, ...head } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="antialiased break-words">
     <head>
-        <BaseHead {...head} />
+        <BaseHead {...frontmatter} />
         <script>
             if (localStorage.theme === 'dark') {
                 document.documentElement.classList.add('dark');
@@ -24,9 +27,12 @@ const { showHeader = false, ...head } = Astro.props;
     <body class="bg-main text-main">
         <div class="flex flex-col min-h-screen px-4 md:px-8">
             <Nav />
-            {showHeader && <Header />}
             <main class="grow w-full max-w-3xl mx-auto">
-                <slot />
+                <article class="mb-16 sm:mb-24">
+                    <div class="max-w-none prose prose-dante sm:prose-lg">
+                        <slot />
+                    </div>
+                </article>
             </main>
             <Footer />
         </div>

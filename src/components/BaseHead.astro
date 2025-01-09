@@ -1,17 +1,16 @@
 ---
 import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import newsreaderWoff2 from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
-import siteConfig from '../data/site-config';
+import siteConfig from '../site-config';
 import '../styles/global.css';
 
 export type Props = {
     title?: string;
     description?: string;
     image?: { src: string; alt?: string };
-    pageType?: 'website' | 'article';
 };
 
-const { description = '', image = siteConfig.image, pageType = 'website' } = Astro.props;
+const { description = '', image = siteConfig.image } = Astro.props;
 const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(' | ');
 const resolvedImage = image?.src
     ? {
@@ -49,14 +48,14 @@ function formatCanonicalURL(url: string | URL) {
 <!-- Low Priority Global Metadata -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
+<!-- <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" /> -->
 
 <!-- Page Metadata -->
 <link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content={pageType} />
+<meta property="og:type" content="website" />
 <meta property="og:url" content={formatCanonicalURL(canonicalURL)} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

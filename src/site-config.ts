@@ -39,12 +39,7 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     title: 'KateMas.me',
-    subtitle: 'Minimal Astro.js theme',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
-    image: {
-        src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
-    },
+    description: '',
     headerNavLinks: [
         {
             text: 'Home',
@@ -52,21 +47,21 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'My journey',
-            href: '/about'
+            href: '/my-journey'
         },
         {
             text: 'Your journey',
-            href: '/blog'
+            href: '/your-journey'
         },
         {
             text: 'Your words',
-            href: '/blog'
+            href: '/your-words'
         }
     ],
     footerNavLinks: [
         {
             text: 'My journey',
-            href: '/about'
+            href: '/my-journey'
         },
         {
             text: 'Contact',
@@ -86,28 +81,7 @@ const siteConfig: SiteConfig = {
             text: 'LinkedIn',
             href: 'https://www.linkedin.com/in/katemaslenkova/'
         }
-    ],
-    hero: {
-        title: 'Take a step closer to a career and life you truly love',
-        text: "I'm Kate, an ICF-certified coach with a tech leadership background, passionate about helping you unlock your potential and create a career and life you love. My journey has taken me across different countries, but one thing has always stayed the same: **my commitment to people and their growth**.",
-        image: {
-            src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer'
-        },
-        actions: [
-            {
-                text: 'Get in Touch',
-                href: '/contact'
-            }
-        ]
-    },
-    subscribe: {
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
-        formUrl: '#'
-    },
-    postsPerPage: 8,
-    projectsPerPage: 8
+    ]
 };
 
 export default siteConfig;
