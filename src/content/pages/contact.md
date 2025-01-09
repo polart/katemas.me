@@ -9,4 +9,4 @@ seo:
 
 For collaborations, event invitations or specific requests, feel free to drop me an email at [katexmass@gmail.com](mailto:katexmass@gmail.com)
 
-To book a FREE 30-min chemistry session with Kate [choose a suitable date](linkto:https://cal.com/katemas/30min-intro)
+To book a FREE 30-min chemistry session with Kate [choose a suitable date](https://cal.com/katemas/30min-intro)
