@@ -7,7 +7,6 @@ seo:
 
 ---
 
-Thank you for reaching out! Whether you have a question, a suggestion, or just want to share your thoughts, I'm all ears. 
+For collaborations, event invitations or specific requests, feel free to drop me an email at [katexmass@gmail.com](mailto:katexmass@gmail.com)
 
-_Email:_
-Feel free to drop me an email at [katexmass@gmail.com](mailto:katexmass@gmail.com)
+To book a FREE 30-min chemistry session with Kate [choose a suitable date](linkto:https://cal.com/katemas/30min-intro)
