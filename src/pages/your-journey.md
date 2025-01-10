@@ -37,29 +37,31 @@ This package is designed for clients committed to making sustained progress towa
 
 ##### My clients choose this package to:
 
-- **Achieve Career Goals**
+- Achieve Career Goals
 
 	Whether you're looking to advance in your current role, switch careers, or start your own business, we'll focus on setting clear milestones, overcoming obstacles, and developing the mindset needed for success.
 
 
-- **Grow as Leaders** 
+- Grow as Leaders 
 
 	For those in leadership positions or aspiring leaders, this package helps you enhance your communication, decision-making, and team-building skills, empowering you to lead with confidence and purpose.
 
 
-- **Define Personal Values** 
+- Define Personal Values 
 
 	If you're looking to overcome self-doubt, build resilience, or gain clarity on your personal values, this package will provide the tools and support to grow into your best self.
 
 
-- **Achieve Work-Life Balance** 
+- Achieve Work-Life Balance 
 
 	We'll explore how to create a fulfilling balance between your professional and personal life, helping you prioritize what matters most and avoid burnout.
 
 
-- **Set & Achieve Goals**
+- Set & Achieve Goals
 
 	This package supports you in creating actionable, measurable plans for your long-term ambitions, whether that’s personal, professional, or both.
+
+##### 6-months package details:
 
 Investment: €990  
 12 sessions  
@@ -90,7 +92,7 @@ This focused 3-month package is designed for clients who are ready to make signi
 	Struggling to manage your time effectively? This package helps you prioritize your tasks, optimize your workflow, and increase productivity to achieve more with less stress.
 
 
-- **Achieve Work-Life Balance** 
+- Achieve Work-Life Balance 
 
 	If you're finding it hard to juggle your professional and personal life, we’ll work on creating strategies to help you maintain balance, prioritize what matters most, and prevent burnout.
 
@@ -98,6 +100,8 @@ This focused 3-month package is designed for clients who are ready to make signi
 - Set & Achieve Goals with Action Plans
 
 	Whether you’re tackling a specific project, personal milestone, or professional development goal, this package ensures you break down your objectives into manageable steps with clear timelines.
+
+##### 3-months package details:
 
 Investment: €590  
 6 sessions  
