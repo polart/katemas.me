@@ -30,7 +30,7 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 ### Available packages 
 
 
-### 6 months
+### The Life Shift Package (6 months)
 
 
 This package is designed for clients committed to making sustained progress toward their long-term goals. Over 12 sessions, we will work together to create a personalized roadmap, address challenges, and implement strategies for lasting change. This package offers the depth and consistency needed to achieve meaningful transformation.
@@ -70,14 +70,14 @@ Text access to me; session notes or recordings upon request
 
 While the package is designed for 6 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
-### 3 months
+## The Pivot Package (3 months)
 
 
 This focused 3-month package is designed for clients who are ready to make significant progress in a shorter time frame. Over 6 sessions, we’ll dive into your key challenges, set actionable goals, and create a clear path to achieve them. This package offers a balanced approach to achieving meaningful change with consistent support.
 
 ##### My clients choose this package to:
 
-- **Navigate Work & Life Transitions**
+- Navigate Work & Life Transitions
 
 	Whether you're seeking to change roles, improve your current job situation, or overcome career challenges, we’ll work together to clarify your path and develop a concrete action plan.
 
@@ -108,22 +108,21 @@ Investment: €590
 70-min calls  
 Text access to me; session notes or recordings upon request
 
-### One-off session
+## One-off session
 
 
 This offering is perfect for one-off requests such as resolving urgent challenges, identifying and leveraging key resources, preparing for an important talk/interview or developing a clear action plan for your next steps. 
 
 For long-term goals and sustained progress, I recommend considering my 3- or 6-month coaching packages, which provide a more comprehensive approach.
 
-##### **My clients choose this session to:**
+##### My clients choose this session to:
 
-- **Resolve Immediate Challenges:** Whether you're facing a personal or professional crisis, this session provides focused support to navigate urgent challenges and find solutions.
-- **Explore New Resources:** If you’re looking to discover new tools, strategies, or resources to tackle specific goals or obstacles, this session will help you identify and leverage what’s available.
-- **Develop a Clear Action Plan:** If you need guidance on how to move forward with a project or a new initiative, we’ll create a concrete, actionable plan with clear steps and timelines.
-- **Strategic Decision-Making:** When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
+- Resolve Immediate Challenges: Whether you're facing a personal or professional crisis, this session provides focused support to navigate urgent challenges and find solutions.
+- Explore New Resources: If you’re looking to discover new tools, strategies, or resources to tackle specific goals or obstacles, this session will help you identify and leverage what’s available.
+- Develop a Clear Action Plan: If you need guidance on how to move forward with a project or a new initiative, we’ll create a concrete, actionable plan with clear steps and timelines.
+- Strategic Decision-Making: When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
 
+##### One-off session details:
 1 session
-
 Duration: 70-min call
-
 Investment: €120 
