@@ -59,7 +59,7 @@ This package is designed for clients committed to making sustained progress towa
 
 ##### 6-months package details:
 
-Investment: €990  
+Investment: **€990**
 12 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
@@ -99,7 +99,7 @@ This focused 3-month package is designed for clients who are ready to make signi
 
 ##### 3-months package details:
 
-Investment: €590  
+Investment: **€590** 
 6 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
@@ -113,12 +113,24 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
 
 ##### My clients choose this session to:
 
-- Resolve Immediate Challenges: Whether you're facing a personal or professional crisis, this session provides focused support to navigate urgent challenges and find solutions.
-- Explore New Resources: If you’re looking to discover new tools, strategies, or resources to tackle specific goals or obstacles, this session will help you identify and leverage what’s available.
-- Develop a Clear Action Plan: If you need guidance on how to move forward with a project or a new initiative, we’ll create a concrete, actionable plan with clear steps and timelines.
-- Strategic Decision-Making: When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
+- Resolve Immediate Challenges
+  
+  	Whether you're facing a personal or professional crisis, this session provides focused support to navigate urgent challenges and find solutions.
+  
+- Explore New Resources
+  
+  	If you’re looking to discover new tools, strategies, or resources to tackle specific goals or obstacles, this session will help you identify and leverage what’s available.
+  
+- Develop a Clear Action Plan
+  
+  	If you need guidance on how to move forward with a project or a new initiative, we’ll create a concrete, actionable plan with clear steps and timelines.
+  
+- Strategic Decision-Making
+  
+  	When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
 
 ##### One-off session details:
+Investment: **€120**
 1 session
-Duration: 70-min call
-Investment: €120 
+70-min call
+ 
