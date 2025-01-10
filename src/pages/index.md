@@ -7,9 +7,6 @@ title: Take a step closer to a career and life you truly love
 
 ![Alt text for image](../images/main-kate.jpg)
 
-I'm Kate, an ICF-certified coach with a tech leadership background, passionate
-about helping you unlock your potential and create a career and life you love.
-My journey has taken me across different countries, but one thing has always
-stayed the same: **my commitment to people and their growth**.
+I'm Kate, an ICF-certified coach and mentor with a leadership background, passionate about helping individuals unlock their potential and create a career and life they love. Whether you're navigating a major life transition, redefining your career, or striving for personal growth, I'm here to guide and support you every step of the way.
 
-[Get in touch](/contact)
+[Take the first step](/contact)
