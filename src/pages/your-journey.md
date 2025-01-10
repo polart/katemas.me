@@ -30,7 +30,7 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 ### Available packages 
 
 
-### The Life Shift Package (6 months)
+## The Life Shift Package (6 months)
 
 
 This package is designed for clients committed to making sustained progress toward their long-term goals. Over 12 sessions, we will work together to create a personalized roadmap, address challenges, and implement strategies for lasting change. This package offers the depth and consistency needed to achieve meaningful transformation.
