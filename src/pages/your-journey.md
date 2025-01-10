@@ -22,11 +22,9 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 
 ### People I work with
 
+Leaders in tech
 
-###  Leaders in tech
-
-
-High performers in tech
+High performers (IC, Expert, Staff) in tech
 
 Immigrants 
 
