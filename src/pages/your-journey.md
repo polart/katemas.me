@@ -4,14 +4,7 @@ title: Your journey
 description:
 ---
 
-# Your journey
-
-> **"The unexamined life is not worth living."** – **Socrates**
-
-
-I currently offer several options for collaborating with me.
-
-## **1:1 coaching**
+## **1:1 coaching with Kate**
 
 
 In coaching, we focus on the **future**.
@@ -22,15 +15,15 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 
 ### People I work with
 
-Leaders in tech
+- **Leaders in tech**
 
-High performers (IC, Expert, Staff) in tech
+- **High performers (IC, Expert, Staff) in tech**
 
-Immigrants 
+- **Immigrants**
 
-Career transitioners 
+- **Career transitioners**
 
-Freelancers & enterpreneurs
+- **Freelancers & enterpreneurs**
 
 ### Available packages 
 
