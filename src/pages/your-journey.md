@@ -13,7 +13,7 @@ Together, we will define where you are now and where you want to be, so you can 
 
 Together, we’ll work to create ‘more’ in your life—more balance, more fulfilment, and more joy.
 
-#### People I work with:
+### I work with:
 
 - Leaders in tech (C level, Mid-level)
 - High performers (IC, Expert, Staff) in tech
@@ -59,10 +59,10 @@ This package is designed for clients committed to making sustained progress towa
 
 ##### 6-months package details:
 
-Investment: **€990**
 12 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
+Investment: **€990**
 
 While the package is designed for 6 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
@@ -99,10 +99,10 @@ This focused 3-month package is designed for clients who are ready to make signi
 
 ##### 3-months package details:
 
-Investment: **€590** 
 6 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
+Investment: **€590** 
 
 ## One-off session
 
@@ -130,7 +130,8 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
   	When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
 
 ##### One-off session details:
-Investment: **€120**
 1 session
 70-min call
- 
+Investment: **€120**
+
+
