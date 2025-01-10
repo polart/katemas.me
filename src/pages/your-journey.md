@@ -13,16 +13,12 @@ Together, we will define where you are now and where you want to be, so you can 
 
 Together, we’ll work to create ‘more’ in your life—more balance, more fulfilment, and more joy.
 
-#### People I work with
+#### People I work with:
 
-- Leaders in tech
-
-- High performers (IC, Expert, Staff) in tech**
-
-- Immigrants
-
-- Career transitioners
-
+- Leaders in tech (C level, Mid-level)
+- High performers (IC, Expert, Staff) in tech
+- Expats & immigrants
+- Career transitioners 
 - Freelancers & enterpreneurs
 
 ![Alt text for image](../images/kate-reading.jpg)
