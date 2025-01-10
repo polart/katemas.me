@@ -25,7 +25,7 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 
 - Freelancers & enterpreneurs
 
-![Alt text for image](../images/hero.jpg)
+![Alt text for image](../images/kate-reading.jpg)
 
 ### Available packages 
 
