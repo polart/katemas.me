@@ -62,6 +62,7 @@ This package is designed for clients committed to making sustained progress towa
 12 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
+
 Investment: **€990**
 
 While the package is designed for 6 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
@@ -102,6 +103,7 @@ This focused 3-month package is designed for clients who are ready to make signi
 6 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
+
 Investment: **€590** 
 
 ## One-off session
@@ -132,6 +134,7 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
 ##### One-off session details:
 1 session
 70-min call
+
 Investment: **€120**
 
 
