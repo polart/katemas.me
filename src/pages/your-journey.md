@@ -27,7 +27,7 @@ I usually work with:
 - Career transitioners 
 - Freelancers & enterpreneurs
 
-![Alt text for image](../images/kate-reading.jpg)
+![A woman reading a book without eye-contact](../images/kate-reading.jpg)
 
 ## Available packages 
 
