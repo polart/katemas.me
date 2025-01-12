@@ -4,7 +4,7 @@ title: Your journey
 description:
 ---
 
-# **1:1 coaching with Kate**
+# 1:1 coaching with Kate
 
 On this page, you can explore what your journey working with me could look like.
 
@@ -13,7 +13,6 @@ You’ll find details about the coaching packages I offer, pricing options, and 
 ## Approach
 
 As an ICF coach, I adhere to the [International Coaching Federation (ICF)](https://www.credly.com/badges/c7fdb9be-af14-4244-b235-c1264e0fb7e3/public_url) and uphold their [Code of Ethics](https://coachingfederation.org/ethics/code-of-ethics).
-
 
 In coaching, we focus on the **future**.
 
@@ -30,15 +29,15 @@ I usually work with:
 
 ![Alt text for image](../images/kate-reading.jpg)
 
-# Available packages 
+## Available packages 
 
 
-## The Life Shift Package (6 months)
+### The Life Shift Package (6 months)
 
 
 This package is designed for clients committed to making sustained progress toward their long-term goals. Over 12 sessions, we will work together to create a personalized roadmap, address challenges, and implement strategies for lasting change. This package offers the depth and consistency needed to achieve meaningful transformation.
 
-### My clients choose this package to:
+#### My clients choose this package to:
 
 - Achieve Career Goals
 
@@ -64,7 +63,7 @@ This package is designed for clients committed to making sustained progress towa
 
 	This package supports you in creating actionable, measurable plans for your long-term ambitions, whether that’s personal, professional, or both.
 
-#### 6-months package details:
+##### 6-months package details:
 
 12 sessions  
 70-min calls  
@@ -78,12 +77,12 @@ While the package is designed for 6 months, it's possible that we may reach your
 
 I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
 
-## The Pivot Package (3 months)
+### The Pivot Package (3 months)
 
 
 This focused 3-month package is designed for clients who are ready to make significant progress in a shorter time frame. Over 6 sessions, we’ll dive into your key challenges, set actionable goals, and create a clear path to achieve them. This package offers a balanced approach to achieving meaningful change with consistent support.
 
-### My clients choose this package to:
+#### My clients choose this package to:
 
 - Navigate Work & Life Transitions
 
@@ -109,7 +108,7 @@ This focused 3-month package is designed for clients who are ready to make signi
 
 	Whether you’re tackling a specific project, personal milestone, or professional development goal, this package ensures you break down your objectives into manageable steps with clear timelines.
 
-#### 3-months package details:
+##### 3-months package details:
 
 6 sessions  
 70-min calls  
@@ -123,14 +122,14 @@ While the package is designed for 3 months, it's possible that we may reach your
 
 I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
 
-## One-off session
+### One-off session
 
 
 This offering is perfect for one-off requests such as resolving urgent challenges, identifying and leveraging key resources, preparing for an important talk/interview or developing a clear action plan for your next steps. 
 
 For long-term goals and sustained progress, I recommend considering my 3- or 6-month coaching packages, which provide a more comprehensive approach.
 
-### My clients choose this session to:
+#### My clients choose this session to:
 
 - Resolve Immediate Challenges
   
@@ -148,7 +147,7 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
   
   	When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
 
-#### One-off session details:
+##### One-off session details:
 1 session
 70-min call
 
