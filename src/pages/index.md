@@ -12,4 +12,4 @@ I'm Kate, an ICF-certified coach and mentor with over 7 years of experience and 
 Whether you're navigating a **major life transition, redefining your career, or striving for personal growth**, I’m here to support you throughout your journey.
 
 
-[Take the first step](/contact)
+[Start your journey](/your-journey)
