@@ -6,6 +6,15 @@ description:
 
 # **1:1 coaching with Kate**
 
+On this page, you can explore what your journey working with me could look like.
+
+You’ll find details about the coaching packages I offer, pricing options, and the simple steps to schedule your first session.
+
+## Approach
+
+As an ICF coach, I adhere to the [International Coaching Federation (ICF)](https://www.credly.com/badges/c7fdb9be-af14-4244-b235-c1264e0fb7e3/public_url) and uphold their [Code of Ethics](https://coachingfederation.org/ethics/code-of-ethics).
+
+
 
 In coaching, we focus on the **future**.
 
