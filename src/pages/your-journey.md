@@ -64,6 +64,8 @@ Text access to me; session notes or recordings upon request
 
 Investment: **€990**
 
+Schedule a [free 30-min chemistry session](https://cal.com/katemas/30min-intro) 
+
 While the package is designed for 6 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
 I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
@@ -107,6 +109,8 @@ Text access to me; session notes or recordings upon request
 
 Investment: **€590** 
 
+Schedule a [free 30-min chemistry session](https://cal.com/katemas/30min-intro)  
+
 While the package is designed for 3 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
 I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
@@ -141,5 +145,7 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
 70-min call
 
 Investment: **€120**
+
+Schedule a [free 30-min chemistry session](https://cal.com/katemas/30min-intro) 
 
 
