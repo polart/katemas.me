@@ -15,14 +15,13 @@ You’ll find details about the coaching packages I offer, pricing options, and 
 As an ICF coach, I adhere to the [International Coaching Federation (ICF)](https://www.credly.com/badges/c7fdb9be-af14-4244-b235-c1264e0fb7e3/public_url) and uphold their [Code of Ethics](https://coachingfederation.org/ethics/code-of-ethics).
 
 
-
 In coaching, we focus on the **future**.
 
 Together, we will define where you are now and where you want to be, so you can live a more fulfilling life. Through our work, you will gain a deeper understanding of your goals and what it takes to achieve them.
 
 Together, we’ll work to create ‘more’ in your life—more balance, more fulfilment, and more joy.
 
- I work with:
+I usually work with:
 - Leaders in tech (C level, Mid-level)
 - High performers (IC, Expert, Staff) in tech
 - Expats & immigrants
