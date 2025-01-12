@@ -5,6 +5,7 @@ description:
 ---
 
 # Your words
+![A woman wearing a leopard shirt without direct eye contact](../images/kate-proud.jpg)
 Here’s what some of my clients have shared about their experiences working with me:
 
 "Working with Kate has been an absolute game-changer! Her energy and enthusiasm create a positive and motivating atmosphere. She listens deeply, asks thought-provoking questions, and helps you uncover solutions you didn’t even know you had in you.
