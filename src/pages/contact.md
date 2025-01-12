@@ -8,6 +8,8 @@ description:
 
 # Get in touch
 
+![A woman holding a mobile phone](../images/kate-phone.jpg)
+
 To book a FREE 30-min chemistry session with Kate
 [choose a suitable date](https://cal.com/katemas/30min-intro)
 
