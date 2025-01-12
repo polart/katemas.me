@@ -10,7 +10,7 @@ description:
 
 # My journey
 
-![A person taking a step forward in a photo studio with a vibrant yellow background, symbolizing progress and new beginnings](../images/hero.jpg)
+![A close-up of a pensive woman with no eye-contact](../images/kate-think.jpg)
 
 ## From Ukraine to France: a journey of growth
 
@@ -40,6 +40,8 @@ communication expert and grew to lead the copywriting department. After five
 years and several investment rounds, I left the company to pursue an offer from
 a French unicorn and relocate to Paris, France, where I now live with my family.
 
+![A close-up of a woman smiling with direct eye-contact](../images/kate-smile.jpg)
+
 ## Embracing coaching as my true purpose
 
 While writing my 2024 resolutions, I dared to put into words a phrase that had
@@ -59,6 +61,8 @@ day-to-day responsibilities. With each passing year, the demands of my role
 pulled me further away from what I truly enjoyed. What once felt meaningful
 began to feel less fulfilling, and I started to question whether I was truly
 aligned with my purpose.
+
+![A close-up of a woman smiling with her eyes closed and teeth visible](../images/kate-lol.jpg)
 
 In 2023, I took a leap of faith and completed my ACTP at the International
 Coaching Competence Academy. Coaching my first clients as an ICF certified coach
