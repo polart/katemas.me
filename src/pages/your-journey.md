@@ -4,7 +4,7 @@ title: Your journey
 description:
 ---
 
-## **1:1 coaching with Kate**
+# **1:1 coaching with Kate**
 
 
 In coaching, we focus on the **future**.
@@ -13,8 +13,7 @@ Together, we will define where you are now and where you want to be, so you can 
 
 Together, we’ll work to create ‘more’ in your life—more balance, more fulfilment, and more joy.
 
-### I work with:
-
+ I work with:
 - Leaders in tech (C level, Mid-level)
 - High performers (IC, Expert, Staff) in tech
 - Expats & immigrants
@@ -23,7 +22,7 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 
 ![Alt text for image](../images/kate-reading.jpg)
 
-### Available packages 
+# Available packages 
 
 
 ## The Life Shift Package (6 months)
@@ -31,7 +30,7 @@ Together, we’ll work to create ‘more’ in your life—more balance, more fu
 
 This package is designed for clients committed to making sustained progress toward their long-term goals. Over 12 sessions, we will work together to create a personalized roadmap, address challenges, and implement strategies for lasting change. This package offers the depth and consistency needed to achieve meaningful transformation.
 
-##### My clients choose this package to:
+### My clients choose this package to:
 
 - Achieve Career Goals
 
@@ -57,7 +56,7 @@ This package is designed for clients committed to making sustained progress towa
 
 	This package supports you in creating actionable, measurable plans for your long-term ambitions, whether that’s personal, professional, or both.
 
-##### 6-months package details:
+#### 6-months package details:
 
 12 sessions  
 70-min calls  
@@ -67,12 +66,14 @@ Investment: **€990**
 
 While the package is designed for 6 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
+I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
+
 ## The Pivot Package (3 months)
 
 
 This focused 3-month package is designed for clients who are ready to make significant progress in a shorter time frame. Over 6 sessions, we’ll dive into your key challenges, set actionable goals, and create a clear path to achieve them. This package offers a balanced approach to achieving meaningful change with consistent support.
 
-##### My clients choose this package to:
+### My clients choose this package to:
 
 - Navigate Work & Life Transitions
 
@@ -98,13 +99,17 @@ This focused 3-month package is designed for clients who are ready to make signi
 
 	Whether you’re tackling a specific project, personal milestone, or professional development goal, this package ensures you break down your objectives into manageable steps with clear timelines.
 
-##### 3-months package details:
+#### 3-months package details:
 
 6 sessions  
 70-min calls  
 Text access to me; session notes or recordings upon request
 
 Investment: **€590** 
+
+While the package is designed for 3 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
+
+I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
 
 ## One-off session
 
@@ -113,7 +118,7 @@ This offering is perfect for one-off requests such as resolving urgent challenge
 
 For long-term goals and sustained progress, I recommend considering my 3- or 6-month coaching packages, which provide a more comprehensive approach.
 
-##### My clients choose this session to:
+### My clients choose this session to:
 
 - Resolve Immediate Challenges
   
@@ -131,7 +136,7 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
   
   	When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
 
-##### One-off session details:
+#### One-off session details:
 1 session
 70-min call
 
