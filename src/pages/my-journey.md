@@ -8,11 +8,11 @@ description:
   fulfilling lives.
 ---
 
-# My journey
+# Why I coach: my personal journey
 
 ![A close-up of a pensive woman with no eye-contact](../images/kate-think.jpg)
 
-## From Ukraine to France: a journey of growth
+## Roots in Ukraine, wings around the world
 
 I was born in 1992, in the aftermath of the Soviet Union’s collapse, a time of
 uncertainty and hardship for many, including my own family. When I was just 6
@@ -42,7 +42,7 @@ a French unicorn and relocate to Paris, France, where I now live with my family.
 
 ![A close-up of a woman smiling with direct eye-contact](../images/kate-smile.jpg)
 
-## Embracing coaching as my true purpose
+## From leading teams to empowering lives
 
 While writing my 2024 resolutions, I dared to put into words a phrase that had
 been swirling in my head for years: "I want to leave my job."
@@ -63,6 +63,8 @@ began to feel less fulfilling, and I started to question whether I was truly
 aligned with my purpose.
 
 ![A close-up of a woman smiling with her eyes closed and teeth visible](../images/kate-lol.jpg)
+
+## A leap of faith: my path to coaching
 
 In 2023, I took a leap of faith and completed my ACTP at the International
 Coaching Competence Academy. Coaching my first clients as an ICF certified coach
