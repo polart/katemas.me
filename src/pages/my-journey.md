@@ -1,11 +1,7 @@
 ---
 layout: ../layouts/BaseLayout.astro
-title:
-ICF Coach in Paris | Leadership in Tech | Expats
-description:
-  Discover the journey of ICF coach Kate Mas, passionate about helping
-  individuals unlock their potential, build meaningful careers, and lead
-  fulfilling lives.
+title: ICF Coach in Paris | Leadership in Tech | Expats
+description: Discover the journey of ICF coach Kate Mas, passionate about helping individuals unlock their potential, build meaningful careers, and lead fulfilling lives.
 ---
 
 # Why I coach: my personal journey
