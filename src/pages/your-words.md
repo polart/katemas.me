@@ -4,7 +4,8 @@ title: Your words
 description:
 ---
 
-# Your words
+# What clients say: transformative coaching experiences
+
 ![A woman wearing a leopard shirt without direct eye contact](../images/kate-proud.jpg)
 Here’s what some of my clients have shared about their experiences working with me:
 
