@@ -4,7 +4,7 @@ title: Your journey
 description:
 ---
 
-# 1:1 coaching with Kate
+# Personalized coaching for leaders and career transitioners 
 
 On this page, you can explore what your journey working with me could look like.
 
