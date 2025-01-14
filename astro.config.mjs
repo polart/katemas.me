@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
-import vercel from '@astrojs/vercel';
+// import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,11 +18,11 @@ export default defineConfig({
         tailwind({
             applyBaseStyles: false
         })
-    ],
+    ]
 
-    adapter: vercel({
-        webAnalytics: {
-            enabled: true
-        }
-    })
+    // adapter: vercel({
+    //     webAnalytics: {
+    //         enabled: true
+    //     }
+    // })
 });
