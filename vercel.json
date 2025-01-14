@@ -1,6 +1,8 @@
 {
+    "$schema": "https://openapi.vercel.sh/vercel.json",
     "version": 2,
     "scope": "polart",
+    "framework": "astro",
     "github": {
         "enabled": true
     }
