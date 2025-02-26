@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BaseLayout.astro
-title: Your journey
+title: Services
 description:
 ---
 
