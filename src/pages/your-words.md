@@ -35,3 +35,20 @@ I couldn’t have asked for a better coach. Kate’s approach helped me see myse
 "Kate's help was invaluable. We had three sessions. I requested that my performance highlights be figured out. Together, we identified my strengths and areas for career development. Additionally, Kate helped me structure and even write my updated CV."
 
 — Anastasia L.
+
+"Kate's greatest talent is to uncover your believe system by meticulously paying attention to every word you say and every gesture you make. You can't hide from her ability to read you, which she does at an incredible speed. That's what makes each session so effective and valuable."
+
+- Pauline
+
+"I went into the process just as an experiment, to see how coaching can help me with my work/life balance and cement a good habit I started.
+
+Oh boy, how far that goal was from what really mattered. Kate helped me “dig out” a much bigger and important problem, helping me move forward with a truly pivotal decision in life of me and my family. Coaching helped me to see clearly the real challenges I have, reflect back on the strategies I use to cope with them and challenge myself to do better. All the way, Kate was receptive and open in our conversation, never going into advice mode, but just gently guiding me to answer (sometimes tough) questions by myself, very rewarding process IMO. I especially liked the way we did course correction in the early-mid stage of our sessions and how Kate noticed that things were “going South” and proactively suggested a new plan that worked terrifically!
+
+As a result, Kate and I found the real problem and were able to arrive at the solution through our collaboration. That for me is a true showcase of a good work! Thanks!"
+
+- Anonymous 
+
+"The coaching sessions helped me to understand myself much better and get a better life goals, smth that I really want."
+
+- Myroslav
+
