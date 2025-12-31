@@ -46,22 +46,22 @@ const siteConfig: SiteConfig = {
             href: '/'
         },
         {
-            text: 'My journey',
-            href: '/my-journey'
+            text: 'About me',
+            href: '/about-me'
         },
         {
-            text: 'Your journey',
-            href: '/your-journey'
+            text: 'Services',
+            href: '/services'
         },
         {
-            text: 'Your words',
-            href: '/your-words'
+            text: 'Client stories',
+            href: '/client-love'
         }
     ],
     footerNavLinks: [
         {
-            text: 'My journey',
-            href: '/my-journey'
+            text: 'About me',
+            href: '/about-me'
         },
         {
             text: 'Contact',
@@ -75,11 +75,11 @@ const siteConfig: SiteConfig = {
     socialLinks: [
         {
             text: 'Instagram',
-            href: 'https://www.instagram.com/kate.mas_/'
+            href: 'https://www.instagram.com/messycareers/'
         },
         {
             text: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/katemaslenkova/'
+            href: 'https://www.linkedin.com/in/kate-mas/'
         }
     ]
 };
