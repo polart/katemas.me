@@ -161,24 +161,6 @@ This offering is perfect for one-off requests such as resolving urgent challenge
 
 For long-term goals and sustained progress, I recommend considering my 3- or 6-month coaching packages, which provide a more comprehensive approach.
 
-#### My clients choose this session to:
-
-- Resolve Immediate Challenges
-  
-  	Whether you're facing a personal or professional crisis, this session provides focused support to navigate urgent challenges and find solutions.
-  
-- Explore New Resources
-  
-  	If you’re looking to discover new tools, strategies, or resources to tackle specific goals or obstacles, this session will help you identify and leverage what’s available.
-  
-- Develop a Clear Action Plan
-  
-  	If you need guidance on how to move forward with a project or a new initiative, we’ll create a concrete, actionable plan with clear steps and timelines.
-  
-- Strategic Decision-Making
-  
-  	When faced with an important decision, this session helps you weigh your options and make strategic choices aligned with your long-term vision.
-
 ##### One-off session details:
 1 session
 70-min call
