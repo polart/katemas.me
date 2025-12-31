@@ -65,7 +65,7 @@ This package is designed for clients committed to making sustained progress towa
 70-min calls  
 Text access to me; session notes or recordings upon request
 
-Investment: **€1080** 
+Price: **€1080** 
 
 Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro) 
 
@@ -124,23 +124,23 @@ This is for moments when staying stuck is more expensive than deciding.
 
 #### My clients choose this package to:
 
-Get Unstuck Fast
+– Get Unstuck Fast
 
 You’re circling the same questions, gathering input, thinking a lot — but not moving. We’ll name the real problem and decide what matters now.
 
-Make a Confident Decision
+– Make a Confident Decision
 
 Job change, role shift, promotion, pivot, boundaries, workload — we’ll evaluate options, risks, and trade-offs so you can move forward without second-guessing.
 
-Clarify Priorities & Focus
+– Clarify Priorities & Focus
 
 When everything feels important, nothing moves. We’ll define your top priorities and eliminate distractions that drain time and energy.
 
-Create a Practical Short-Term Plan
+– Create a Practical Short-Term Plan
 
 You’ll leave with a concrete plan for the next 30–60 days — realistic, aligned, and doable alongside real life and work.
 
-Pressure-Test Your Thinking
+– Pressure-Test Your Thinking
 
 This isn’t motivational talk. I’ll challenge assumptions, reflect blind spots, and help you think more clearly under uncertainty.
 
