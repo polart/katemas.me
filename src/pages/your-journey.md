@@ -12,7 +12,7 @@ You’ll find details about the coaching packages I offer, pricing options, and 
 
 ## Approach
 
-As an ICF coach, I adhere to the [International Coaching Federation (ICF)](https://www.credly.com/badges/c7fdb9be-af14-4244-b235-c1264e0fb7e3/public_url) and uphold their [Code of Ethics](https://coachingfederation.org/ethics/code-of-ethics).
+As an ICF ACC coach, I adhere to the [International Coaching Federation (ICF)](https://www.credly.com/badges/c7fdb9be-af14-4244-b235-c1264e0fb7e3/public_url) and uphold their [Code of Ethics](https://coachingfederation.org/ethics/code-of-ethics).
 
 In coaching, we focus on the **future**.
 
@@ -21,7 +21,7 @@ Together, we will define where you are now and where you want to be, so you can 
 Together, we’ll work to create ‘more’ in your life—more balance, more fulfilment, and more joy.
 
 I usually work with:
-- Leaders in tech (C level, Mid-level)
+- Leaders in tech (Mid-level or new managers)
 - High performers (IC, Expert, Staff) in tech
 - Expats & immigrants
 - Career transitioners 
@@ -43,21 +43,17 @@ This package is designed for clients committed to making sustained progress towa
 
 	Whether you're looking to advance in your current role, switch careers, or start your own business, we'll focus on setting clear milestones, overcoming obstacles, and developing the mindset needed for success.
 
-
 - Grow as Leaders 
 
 	For those in leadership positions or aspiring leaders, this package helps you enhance your communication, decision-making, and team-building skills, empowering you to lead with confidence and purpose.
-
 
 - Define Personal Values 
 
 	If you're looking to overcome self-doubt, build resilience, or gain clarity on your personal values, this package will provide the tools and support to grow into your best self.
 
-
 - Achieve Work-Life Balance 
 
 	We'll explore how to create a fulfilling balance between your professional and personal life, helping you prioritize what matters most and avoid burnout.
-
 
 - Set & Achieve Goals
 
@@ -69,9 +65,9 @@ This package is designed for clients committed to making sustained progress towa
 70-min calls  
 Text access to me; session notes or recordings upon request
 
-Investment: **€990**
+Investment: **€1080** 
 
-Schedule a [free 30-min chemistry session](https://cal.com/katemas/30min-intro) 
+Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro) 
 
 While the package is designed for 6 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
@@ -88,21 +84,17 @@ This focused 3-month package is designed for clients who are ready to make signi
 
 	Whether you're seeking to change roles, improve your current job situation, or overcome career challenges, we’ll work together to clarify your path and develop a concrete action plan.
 
-
 - Enhance Leadership & Personal Development:
 
 	For those looking to build leadership skills, increase self-awareness, or focus on specific aspects of personal growth, this package offers tailored strategies to help you lead with confidence and authenticity.
-
 
 - Improve Time Management & Boost Productivity
 
 	Struggling to manage your time effectively? This package helps you prioritize your tasks, optimize your workflow, and increase productivity to achieve more with less stress.
 
-
 - Achieve Work-Life Balance 
 
 	If you're finding it hard to juggle your professional and personal life, we’ll work on creating strategies to help you maintain balance, prioritize what matters most, and prevent burnout.
-
 
 - Set & Achieve Goals with Action Plans
 
@@ -114,13 +106,53 @@ This focused 3-month package is designed for clients who are ready to make signi
 70-min calls  
 Text access to me; session notes or recordings upon request
 
-Investment: **€590** 
+Investment: **€610** 
 
-Schedule a [free 30-min chemistry session](https://cal.com/katemas/30min-intro)  
+Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro)  
 
 While the package is designed for 3 months, it's possible that we may reach your goals or desired outcomes earlier than anticipated. In that case, you can use the remaining sessions whenever you like, whether for ongoing support, follow-up, or to address new challenges that arise.
 
 I am confident in the value I provide through my coaching sessions, and your satisfaction is my top priority. If you’re not satisfied with the outcomes of our coaching, I offer a money-back guarantee under the terms we agree upon at the start of our collaboration.
+
+### The Rapid Clarity Package (less than a month)
+
+This short, high-impact package is designed for clients who don’t need long-term coaching — they need clarity, direction, and a smart next move.
+
+Across 3 focused sessions, we identify what’s actually blocking you, cut through noise and overthinking, and turn ambiguity into a clear, realistic action plan.
+
+This is for moments when staying stuck is more expensive than deciding.
+
+#### My clients choose this package to:
+
+Get Unstuck Fast
+
+You’re circling the same questions, gathering input, thinking a lot — but not moving. We’ll name the real problem and decide what matters now.
+
+Make a Confident Decision
+
+Job change, role shift, promotion, pivot, boundaries, workload — we’ll evaluate options, risks, and trade-offs so you can move forward without second-guessing.
+
+Clarify Priorities & Focus
+
+When everything feels important, nothing moves. We’ll define your top priorities and eliminate distractions that drain time and energy.
+
+Create a Practical Short-Term Plan
+
+You’ll leave with a concrete plan for the next 30–60 days — realistic, aligned, and doable alongside real life and work.
+
+Pressure-Test Your Thinking
+
+This isn’t motivational talk. I’ll challenge assumptions, reflect blind spots, and help you think more clearly under uncertainty.
+
+##### Package details:
+
+3 sessions
+70-min calls
+Text access to me; session notes or recordings upon request
+
+Price: **€340**
+
+Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro)  
 
 ### One-off session
 
@@ -153,6 +185,6 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
 
 Investment: **€120**
 
-Schedule a [free 30-min chemistry session](https://cal.com/katemas/30min-intro) 
+Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro) 
 
 
