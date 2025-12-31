@@ -106,7 +106,7 @@ This focused 3-month package is designed for clients who are ready to make signi
 70-min calls  
 Text access to me; session notes or recordings upon request
 
-Investment: **€610** 
+Price: **€610** 
 
 Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro)  
 
@@ -183,7 +183,7 @@ For long-term goals and sustained progress, I recommend considering my 3- or 6-m
 1 session
 70-min call
 
-Investment: **€120**
+Price: **€120**
 
 Schedule a [free 20-min chemistry session](https://cal.com/katemas/20min-intro) 
 
