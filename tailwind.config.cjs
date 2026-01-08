@@ -1,7 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
     darkMode: 'class',
     theme: {
         fontFamily: {
@@ -31,13 +30,19 @@ module.exports = {
                         '--tw-prose-bullets': theme('textColor.main / 100%'),
                         '--tw-prose-hr': theme('borderColor.main / 100%'),
                         '--tw-prose-quotes': theme('textColor.main / 100%'),
-                        '--tw-prose-quote-borders': theme('borderColor.main / 100%'),
+                        '--tw-prose-quote-borders': theme(
+                            'borderColor.main / 100%'
+                        ),
                         '--tw-prose-captions': theme('textColor.main / 100%'),
                         '--tw-prose-code': theme('textColor.main / 100%'),
                         '--tw-prose-pre-code': theme('colors.zinc.100'),
                         '--tw-prose-pre-bg': theme('colors.zinc.800'),
-                        '--tw-prose-th-borders': theme('borderColor.main / 100%'),
-                        '--tw-prose-td-borders': theme('borderColor.main / 100%')
+                        '--tw-prose-th-borders': theme(
+                            'borderColor.main / 100%'
+                        ),
+                        '--tw-prose-td-borders': theme(
+                            'borderColor.main / 100%'
+                        )
                     }
                 },
                 DEFAULT: {

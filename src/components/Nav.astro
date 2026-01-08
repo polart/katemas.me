@@ -39,6 +39,8 @@ const navLinks = siteConfig.headerNavLinks || [];
 </nav>
 
 <style>
+    @reference "../styles/global.css";
+
     @media (max-width: 767px) {
         .menu {
             @apply flex-col gap-1 absolute -top-2.5 -left-2.5 max-w-64 px-3 pt-16 pb-10 z-20 bg-main border border-dashed border-main invisible opacity-0;
@@ -90,10 +92,17 @@ const navLinks = siteConfig.headerNavLinks || [];
         const menu = document.querySelector('.menu');
         const menuToggleBtn = document.querySelector('.menu-toggle');
         menuToggleBtn?.addEventListener('click', () => {
-            const isMenuExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+            const isMenuExpanded =
+                menuToggleBtn.getAttribute('aria-expanded') === 'true';
             menuToggleBtn.classList.toggle('is-active');
-            menuToggleBtn.setAttribute('aria-expanded', isMenuExpanded ? 'false' : 'true');
-            menuToggleBtn.setAttribute('aria-label', isMenuExpanded ? 'Open Menu' : 'Close Menu');
+            menuToggleBtn.setAttribute(
+                'aria-expanded',
+                isMenuExpanded ? 'false' : 'true'
+            );
+            menuToggleBtn.setAttribute(
+                'aria-label',
+                isMenuExpanded ? 'Open Menu' : 'Close Menu'
+            );
             menu?.classList.toggle('is-visible');
         });
     }
