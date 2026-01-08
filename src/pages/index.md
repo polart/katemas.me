@@ -12,4 +12,4 @@ I'm Kate, an ICF ACC coach with over 8 years of experience and a proven leadersh
 Whether you're navigating a **major life transition, redefining your career, or striving for personal growth**, I’m here to support you throughout your journey.
 
 
-[Start your journey](/your-journey)
+[Start your journey](/services)
