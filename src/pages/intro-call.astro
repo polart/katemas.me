@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+    title="Intro Call with Kate"
+    description="Schedule an introductory call with Kate"
+>
+    <!-- Cal inline embed code begins -->
+    <div class="mt-20 py-16 min-h-screen bg-background">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="font-handwritten text-3xl text-primary mb-4">
+                    Let's connect
+                </p>
+                <h1
+                    class="font-serif text-4xl md:text-5xl text-foreground mb-4"
+                >
+                    Schedule an Intro Call
+                </h1>
+                <p
+                    class="font-sans text-lg text-muted-foreground max-w-2xl mx-auto"
+                >
+                    Book a 20-minute conversation to discuss your career goals
+                    and explore how coaching can help you move forward.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto overflow-hidden">
+                <div
+                    style="width:100%;height:700px;overflow:hidden"
+                    id="my-cal-inline-20min-intro"
+                >
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function (C, A, L) {
+            let p = function (a, ar) {
+                a.q.push(ar);
+            };
+            let d = C.document;
+            C.Cal =
+                C.Cal ||
+                function () {
+                    let cal = C.Cal;
+                    let ar = arguments;
+                    if (!cal.loaded) {
+                        cal.ns = {};
+                        cal.q = cal.q || [];
+                        d.head.appendChild(d.createElement('script')).src = A;
+                        cal.loaded = true;
+                    }
+                    if (ar[0] === L) {
+                        const api = function () {
+                            p(api, arguments);
+                        };
+                        const namespace = ar[1];
+                        api.q = api.q || [];
+                        if (typeof namespace === 'string') {
+                            cal.ns[namespace] = cal.ns[namespace] || api;
+                            p(cal.ns[namespace], ar);
+                            p(cal, ['initNamespace', namespace]);
+                        } else p(cal, ar);
+                        return;
+                    }
+                    p(cal, ar);
+                };
+        })(window, 'https://app.cal.com/embed/embed.js', 'init');
+        Cal('init', '20min-intro', { origin: 'https://app.cal.com' });
+
+        Cal.ns['20min-intro']('inline', {
+            elementOrSelector: '#my-cal-inline-20min-intro',
+            config: { layout: 'month_view', theme: 'light' },
+            calLink: 'katemas/20min-intro'
+        });
+
+        Cal.ns['20min-intro']('ui', {
+            theme: 'light',
+            cssVarsPerTheme: {
+                light: {
+                    'cal-brand': 'hsl(235 85% 50%)',
+                    'cal-brand-emphasis': 'hsl(235 85% 45%)',
+                    'cal-brand-subtle': 'hsl(235 85% 95%)',
+                    'cal-text': 'hsl(235 85% 25%)',
+                    'cal-text-emphasis': 'hsl(235 85% 15%)',
+                    'cal-text-subtle': 'hsl(235 40% 45%)',
+                    'cal-bg': 'hsl(54 100% 95%)',
+                    'cal-bg-emphasis': 'hsl(45 40% 95%)',
+                    'cal-bg-subtle': 'hsl(220 30% 92%)',
+                    'cal-border': 'hsl(220 30% 85%)',
+                    'cal-border-emphasis': 'hsl(235 85% 50%)',
+                    'cal-border-subtle': 'hsl(220 45% 88%)'
+                }
+            },
+            hideEventTypeDetails: false,
+            layout: 'month_view'
+        });
+    </script>
+
+    <style>
+        /* Custom styles to match website design */
+        :global(#my-cal-inline-20min-intro) {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        :global(.cal-embed) {
+            background: hsl(54 100% 95%) !important;
+        }
+
+        /* Style Cal.com buttons to match site design */
+        :global(
+            .cal-embed button[data-testid='incrementMonth'],
+            .cal-embed button[data-testid='decrementMonth']
+        ) {
+            background: hsl(235 85% 50%) !important;
+            color: hsl(45 33% 97%) !important;
+            border-radius: 0.75rem !important;
+            border: none !important;
+            transition: all 0.2s ease !important;
+        }
+
+        :global(
+            .cal-embed button[data-testid='incrementMonth']:hover,
+            .cal-embed button[data-testid='decrementMonth']:hover
+        ) {
+            background: hsl(235 85% 45%) !important;
+        }
+
+        /* Style primary action buttons */
+        :global(.cal-embed button[type='submit'], .cal-embed .bg-brand) {
+            background: hsl(235 85% 50%) !important;
+            color: hsl(45 33% 97%) !important;
+            border-radius: 0.75rem !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 500 !important;
+            transition: all 0.2s ease !important;
+        }
+
+        :global(
+            .cal-embed button[type='submit']:hover,
+            .cal-embed .bg-brand:hover
+        ) {
+            background: hsl(235 85% 45%) !important;
+        }
+
+        /* Style input fields */
+        :global(.cal-embed input, .cal-embed textarea, .cal-embed select) {
+            border: 1px solid hsl(220 30% 85%) !important;
+            border-radius: 0.5rem !important;
+            background: hsl(45 40% 95%) !important;
+            color: hsl(235 85% 25%) !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        :global(
+            .cal-embed input:focus,
+            .cal-embed textarea:focus,
+            .cal-embed select:focus
+        ) {
+            border-color: hsl(235 85% 50%) !important;
+            outline: none !important;
+            box-shadow: 0 0 0 2px hsl(235 85% 50% / 0.2) !important;
+        }
+
+        /* Style calendar grid */
+        :global(.cal-embed .calendar-grid) {
+            background: hsl(54 100% 95%) !important;
+        }
+
+        /* Style available time slots */
+        :global(.cal-embed .time-slot) {
+            background: hsl(45 40% 95%) !important;
+            border: 1px solid hsl(220 30% 85%) !important;
+            border-radius: 0.5rem !important;
+            color: hsl(235 85% 25%) !important;
+            transition: all 0.2s ease !important;
+        }
+
+        :global(.cal-embed .time-slot:hover) {
+            background: hsl(235 85% 50%) !important;
+            color: hsl(45 33% 97%) !important;
+            border-color: hsl(235 85% 50%) !important;
+        }
+
+        /* Style headers and text */
+        :global(.cal-embed h1, .cal-embed h2, .cal-embed h3) {
+            font-family: 'DM Serif Display', serif !important;
+            color: hsl(235 85% 25%) !important;
+        }
+
+        :global(.cal-embed p, .cal-embed span, .cal-embed label) {
+            color: hsl(235 85% 25%) !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Style the calendar container */
+        :global(.cal-embed .calendar-container) {
+            background: hsl(54 100% 95%) !important;
+            border-radius: 1rem !important;
+        }
+    </style>
+    <!-- Cal inline embed code ends -->
+</BaseLayout>

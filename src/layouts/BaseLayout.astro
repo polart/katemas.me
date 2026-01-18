@@ -1,40 +1,87 @@
 ---
-import { ClientRouter } from 'astro:transitions';
-import type { MarkdownLayoutProps } from 'astro';
-import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Nav from '../components/Nav.astro';
+import '../styles/global.css';
 
-type Props = MarkdownLayoutProps<{
-  title: string;
-  description: string;
-}>;
+interface Props {
+    title?: string;
+    description?: string;
+}
 
-const { frontmatter } = Astro.props;
+const {
+    title = 'Messy Careers',
+    description = 'Career coaching services for ambitious professionals'
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="antialiased wrap-break-word">
+<html lang="en">
     <head>
-        <BaseHead {...frontmatter} />
-        <script>
-            if (localStorage.theme === 'dark') {
-                document.documentElement.classList.add('dark');
-            }
-        </script>
-        <ClientRouter />
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <title>{title}</title>
     </head>
-    <body class="bg-main text-main">
-        <div class="flex flex-col min-h-screen px-4 md:px-8">
-            <Nav />
-            <main class="grow w-full max-w-3xl mx-auto">
-                <article class="mb-16 sm:mb-24">
-                    <div class="max-w-none prose prose-dante sm:prose-lg">
-                        <slot />
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+    <body class="min-h-screen bg-background font-sans text-foreground">
+        <header
+            class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xs border-b border-border p-2"
+        >
+            <div
+                class="container mx-auto px-3 py-3 md:px-6 md:py-4 flex items-center justify-between"
+            >
+                <a href="/">
+                    <img
+                        src="/favicon.svg"
+                        alt="Messy Careers"
+                        class="h-4 md:h-6 w-auto"
+                    />
+                </a>
+                <nav class="flex items-center gap-6 md:gap-8">
+                    <a
+                        class="font-sans text-sm md:text-base text-foreground hover:text-primary transition-colors"
+                        href="/about"
+                    >
+                        About Me
+                    </a>
+                    <a
+                        class="font-sans text-sm md:text-base text-foreground hover:text-primary transition-colors"
+                        href="/services"
+                    >
+                        Services
+                    </a>
+                    <a
+                        class="font-sans text-sm md:text-base text-foreground hover:text-primary transition-colors"
+                        href="/reviews"
+                    >
+                        Reviews
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="">
+            <slot />
+        </main>
+
+        <footer class="py-12 bg-foreground text-background">
+            <div class="container mx-auto px-6 text-center">
+                <img
+                    src="/favicon.svg"
+                    alt="Messy Careers"
+                    class="w-48 mx-auto mb-4 invert"
+                />
+                <p class="font-sans text-sm opacity-70">
+                    &copy; {new Date().getFullYear()} Kate Mas.
+                </p>
+                <div class="mt-4">
+                    <a
+                        href="/terms"
+                        class="font-sans text-xs text-background/60 hover:text-background/80 transition-colors"
+                    >
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -12,7 +11,7 @@ export default defineConfig({
         prefetchAll: true
     },
 
-    integrations: [mdx(), sitemap()],
+    integrations: [sitemap()],
 
     vite: {
         plugins: [tailwindcss()]
