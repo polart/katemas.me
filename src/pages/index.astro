@@ -5,162 +5,212 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout
     title="Messy Careers - Career Coaching with Kate Mas"
     description="Career coaching with Kate Mas. Find clarity, build confidence, and embrace the beautiful chaos of your professional journey."
+    transparentHeader={true}
 >
-    <section class="relative min-h-screen flex items-center justify-center">
-        <div class="container mx-auto px-6 text-center relative z-10">
+    <!-- Hero — photo -->
+    <section class="relative min-h-dvh flex items-end">
+        <img
+            src="/hero2.png"
+            alt="Kate Mas"
+            class="absolute inset-0 w-full h-full object-cover" style="object-position: 70% center"
+        />
+        <!-- gradient scrim for text legibility -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        <div class="relative z-10 px-6 sm:px-10 md:px-12 lg:px-16 pt-24 pb-28 sm:pb-32 w-full md:w-1/2">
             <h1
-                class="font-serif text-5xl md:text-7xl lg:text-8xl text-foreground mb-4 leading-tight"
+                class="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-6 leading-[1.05]"
             >
-                Embrace Your
-                <span class="font-handwritten text-primary italic block"
-                    >Messy Career</span
-                >
+                <span class="block">Get clear on</span>
+                <span class="block font-accent text-3xl sm:text-4xl md:text-5xl">
+                    your next career move
+                </span>
             </h1>
-            <p
-                class="font-sans text-lg md:text-xl text-foreground max-w-2xl mx-auto mb-10"
-            >
-                Career coaching with Kate Mas. Find clarity, build confidence,
-                and embrace the beautiful chaos of your professional journey.
+            <p class="font-sans text-base md:text-lg text-white/90 mb-8 leading-relaxed">
+                Career strategy & coaching for leaders in the messy middle — stuck, uncertain but ready for something different.
             </p>
-            <div
-                class="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-                <a
-                    href="/intro-call"
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer h-11 bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-lg px-8 py-6 rounded-full"
-                >
-                    Book an Intro Call
-                </a>
-                <a
-                    href="/reviews"
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border bg-background h-11 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans text-lg px-8 py-6 rounded-full"
-                >
-                    Client Stories
-                </a>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+                <a href="/intro-call" class="btn-white">Let's talk</a>
+                <a href="/reviews" class="btn-outline-white">Client stories</a>
+            </div>
+            <div class="mt-6 sm:mt-10">
+                <p class="font-sans text-xs font-bold uppercase tracking-wider text-white/50 mb-2">Trusted by clients from</p>
+                <div class="flex flex-wrap gap-x-4 gap-y-1.5">
+                    <span class="font-sans font-bold text-sm text-white/55">Microsoft</span>
+                    <span class="font-sans font-bold text-sm text-white/55">Preply</span>
+                    <span class="font-sans font-bold text-sm text-white/55">Qonto</span>
+                    <span class="font-sans font-bold text-sm text-white/55">IWC</span>
+                    <span class="font-sans font-bold text-sm text-white/55">Ogury</span>
+                    <span class="font-sans font-bold text-sm text-white/55">DeepL</span>
+                </div>
             </div>
         </div>
-        <svg
-            class="absolute bottom-20 left-1/2 -translate-x-1/2 w-48 h-8 text-primary opacity-60"
-            viewBox="0 0 200 30"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-        >
-            <path d="M10 15 Q50 5, 100 15 T190 15"></path>
-            <path d="M20 20 Q60 10, 110 20 T180 20"></path>
-        </svg>
     </section>
 
-    <section class="py-24 bg-primary text-primary-foreground">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <p class="font-handwritten text-3xl md:text-4xl mb-6">
+    <!-- 1 — BLUE: Bio -->
+    <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+        <div class="container mx-auto px-5 sm:px-6">
+            <div class="max-w-3xl mx-auto">
+                <p class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-6">
                     Hi, I'm Kate
                 </p>
-                <h2 class="font-serif text-4xl md:text-5xl mb-8">
-                    Your career doesn't have to be linear to be successful
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl mb-6 leading-tight">
+                    Your career doesn't have to be linear
                 </h2>
-                <p class="font-sans text-lg md:text-xl leading-relaxed">
-                    I help ambitious professionals who feel stuck, uncertain, or
-                    ready for change to gain clarity on their next career move.
-                    Through personalized coaching, we'll uncover what truly
-                    drives you and create an actionable path forward.
+                <p class="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-primary-foreground/70 mb-6">
+                    I spent 8+ years working in tech — across edtech and fintech
+                    — eventually leading teams as a manager. I was good at my
+                    job. But what I kept coming back to, in every role, was the
+                    people side: the difficult conversations, the career
+                    crossroads, the moments when someone needed to be seen.
                 </p>
+                <p class="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-primary-foreground/70 mb-10">
+                    So I made my own pivot. I retrained as a coach, earned my
+                    ICF ACC accreditation, and have since worked with 150+
+                    clients navigating their own messy career stories. Part of
+                    what I bring is lived experience — including the wrong turns,
+                    so you don't have to make them too.
+                </p>
+                <a href="/about" class="link-arrow-white">
+                    More about me
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-background">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <p class="font-handwritten text-2xl text-accent mb-4">
+    <!-- 2 — BEIGE: People come to me when… -->
+    <section class="py-16 sm:py-20 bg-background">
+        <div class="container mx-auto px-5 sm:px-6">
+            <p class="font-sans text-xs font-bold uppercase tracking-wider text-primary/50 text-center mb-4">
+                Sound familiar?
+            </p>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground text-center mb-8 sm:mb-10">
+                People come to me when…
+            </h2>
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl mx-auto">
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I don't know what I want anymore"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I need to change direction — but how?"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I've been stuck for a while and I can't figure out why"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I've lost sight of what actually matters to me"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I feel like I'm playing a role that isn't really mine"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"My job is taking over my life"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"Everything changed — now what?"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I just need help figuring out what I actually want"</span>
+                <span class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl">"I'm stepping into leadership and need to figure out who I am in this role"</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 — BLUE: Coaching Services -->
+    <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+        <div class="container mx-auto px-5 sm:px-6">
+            <div class="text-center mb-10 sm:mb-16">
+                <p class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-4">
                     How I can help
                 </p>
-                <h2 class="font-serif text-4xl md:text-5xl text-foreground">
-                    Coaching Services
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl">
+                    Ways to work together
                 </h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div
-                    class="bg-card p-8 rounded-2xl border border-border hover:border-primary transition-colors group"
-                >
-                    <div
-                        class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary transition-colors"
-                    >
-                        <span
-                            class="font-handwritten text-xl text-foreground group-hover:text-primary-foreground transition-colors"
-                            >1</span
-                        >
+            <div class="grid md:grid-cols-2 gap-5 sm:gap-8 max-w-3xl mx-auto">
+                <div class="bg-primary-foreground/10 border border-primary-foreground/20 p-6 sm:p-8 rounded-2xl hover:bg-primary-foreground/15 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <span class="font-serif text-xl text-primary">1</span>
                     </div>
-                    <h3 class="font-serif text-2xl text-foreground mb-4">
+                    <h3 class="font-serif text-2xl text-primary-foreground mb-4">
                         1:1 Coaching
                     </h3>
-                    <p class="font-sans text-muted-foreground">
-                        Personalized sessions tailored to your unique career
-                        challenges and goals.
+                    <p class="font-sans text-primary-foreground/70">
+                        Personalized sessions to get unstuck, gain clarity, and
+                        move forward — at your own pace, on your own terms.
                     </p>
                 </div>
-                <div
-                    class="bg-card p-8 rounded-2xl border border-border hover:border-primary transition-colors group"
-                >
-                    <div
-                        class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary transition-colors"
-                    >
-                        <span
-                            class="font-handwritten text-xl text-foreground group-hover:text-primary-foreground transition-colors"
-                            >2</span
-                        >
+                <div class="bg-primary-foreground/10 border border-primary-foreground/20 p-6 sm:p-8 rounded-2xl hover:bg-primary-foreground/15 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <span class="font-serif text-xl text-primary">2</span>
                     </div>
-                    <h3 class="font-serif text-2xl text-foreground mb-4">
-                        Career Clarity
+                    <h3 class="font-serif text-2xl text-primary-foreground mb-4">
+                        Corporate Training
                     </h3>
-                    <p class="font-sans text-muted-foreground">
-                        Deep-dive discovery to uncover what truly matters to you
-                        professionally.
+                    <p class="font-sans text-primary-foreground/70">
+                        Workshops and coaching programmes for teams navigating
+                        change, growth, or career development at scale.
                     </p>
                 </div>
-                <div
-                    class="bg-card p-8 rounded-2xl border border-border hover:border-primary transition-colors group"
-                >
-                    <div
-                        class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary transition-colors"
-                    >
-                        <span
-                            class="font-handwritten text-xl text-foreground group-hover:text-primary-foreground transition-colors"
-                            >3</span
-                        >
-                    </div>
-                    <h3 class="font-serif text-2xl text-foreground mb-4">
-                        Transition Support
-                    </h3>
-                    <p class="font-sans text-muted-foreground">
-                        Strategic guidance for pivoting industries, roles, or
-                        starting fresh.
-                    </p>
-                </div>
+            </div>
+            <div class="text-center mt-8 sm:mt-10">
+                <a href="/services" class="link-arrow-white">
+                    Find the right fit
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-secondary">
-        <div class="container mx-auto px-6 text-center">
-            <p class="font-handwritten text-3xl text-primary mb-4">
-                Ready to start?
+    <!-- 5 — BEIGE: Client stories -->
+    <section class="py-16 sm:py-20 md:py-24 bg-background">
+        <div class="container mx-auto px-5 sm:px-6">
+            <div class="text-center mb-10 sm:mb-16">
+                <p class="font-sans text-xs font-bold uppercase tracking-wider text-primary mb-4">
+                    Client stories
+                </p>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground">
+                    What people say
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+                <div class="bg-card p-5 sm:p-6 rounded-2xl border border-border flex flex-col">
+                    <div class="mb-4">
+                        <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">Career growth</span>
+                    </div>
+                    <blockquote class="font-accent text-base sm:text-lg text-foreground leading-snug flex-grow mb-5">
+                        "She helps you uncover solutions you didn't even know you had in you."
+                    </blockquote>
+                    <p class="font-sans text-sm text-muted-foreground">Daria L.</p>
+                </div>
+                <div class="bg-card p-5 sm:p-6 rounded-2xl border border-border flex flex-col">
+                    <div class="mb-4">
+                        <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">Life pivot</span>
+                    </div>
+                    <blockquote class="font-accent text-base sm:text-lg text-foreground leading-snug flex-grow mb-5">
+                        "Kate helped me dig out a much bigger problem — and move forward with a truly pivotal decision for me and my family."
+                    </blockquote>
+                    <p class="font-sans text-sm text-muted-foreground">Anonymous</p>
+                </div>
+                <div class="bg-card p-5 sm:p-6 rounded-2xl border border-border flex flex-col">
+                    <div class="mb-4">
+                        <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">Career clarity</span>
+                    </div>
+                    <blockquote class="font-accent text-base sm:text-lg text-foreground leading-snug flex-grow mb-5">
+                        "Kate's approach helped me see myself and my potential in a new light."
+                    </blockquote>
+                    <p class="font-sans text-sm text-muted-foreground">Yana A.</p>
+                </div>
+            </div>
+            <div class="text-center mt-8 sm:mt-10">
+                <a href="/reviews" class="link-arrow">
+                    Read all stories
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 — BLUE: Final CTA -->
+    <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+        <div class="container mx-auto px-5 sm:px-6 text-center">
+            <p class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-4">
+                First step
             </p>
-            <h2 class="font-serif text-4xl md:text-5xl text-foreground mb-8">
-                Book an Intro Call
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8">
+                Not sure where to start?
             </h2>
-            <p class="font-sans text-lg text-foreground max-w-xl mx-auto mb-10">
-                Let's chat about where you are, where you want to be, and how
-                coaching can bridge the gap.
+            <p class="font-sans text-base sm:text-lg text-primary-foreground/80 max-w-xl mx-auto mb-8 sm:mb-10">
+                Book a free intro call. We'll talk about what's going on,
+                what you're hoping to change, and whether we're a good fit.
+                No pressure, no pitch.
             </p>
-            <a
-                href="/intro-call"
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer h-11 bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-lg px-10 py-6 rounded-full"
-            >
-                Schedule Your Call
-            </a>
+            <a href="/intro-call" class="btn-white btn-lg">Let's talk</a>
         </div>
     </section>
 </BaseLayout>

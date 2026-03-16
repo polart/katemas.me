@@ -1,28 +1,28 @@
 @import 'tailwindcss';
-@import '@fontsource/dm-serif-display';
-@import '@fontsource/inter';
-@import '@fontsource/caveat';
+@import '@fontsource/dela-gothic-one';
+@import '@fontsource/plus-jakarta-sans';
+@import '@fontsource/playfair-display';
 
 @theme {
     /* Font families */
-    --font-serif: 'DM Serif Display', serif;
-    --font-sans: 'Inter', sans-serif;
-    --font-handwritten: 'Caveat', cursive;
+    --font-serif: 'Dela Gothic One', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-accent: 'Playfair Display', serif;
 
-    /* Colors - HSL format */
-    --color-background: hsl(54 100% 95%);
-    --color-foreground: hsl(235 85% 25%);
-    --color-primary: hsl(235 85% 50%);
-    --color-primary-foreground: hsl(45 33% 97%);
-    --color-secondary: hsl(220 45% 88%);
-    --color-secondary-foreground: hsl(235 85% 25%);
-    --color-muted: hsl(220 30% 92%);
-    --color-muted-foreground: hsl(235 40% 45%);
-    --color-accent: hsl(225 65% 60%);
-    --color-card: hsl(45 40% 95%);
-    --color-border: hsl(220 30% 85%);
-    --color-ring: hsl(235 85% 50%);
-    --color-ring-offset: hsl(54 100% 95%);
+    /* Colors - Brand palette */
+    --color-background: #FFFDE9;       /* Warm Cream */
+    --color-foreground: #1023CE;       /* Electric Blue */
+    --color-primary: #1023CE;          /* Electric Blue */
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #86AFFA;        /* Sky Blue */
+    --color-secondary-foreground: #1023CE;
+    --color-muted: #d4e0fd;
+    --color-muted-foreground: #3a4fa8;
+    --color-accent: #86AFFA;           /* Sky Blue */
+    --color-card: #FFFDE9;             /* Warm Cream */
+    --color-border: #86AFFA;           /* Sky Blue */
+    --color-ring: #1023CE;
+    --color-ring-offset: #FFFDE9;
 
     /* Border radius */
     --radius: 0.75rem;
@@ -33,3 +33,87 @@
     --radius-2xl: 1.5rem;
     --radius-3xl: 2rem;
 }
+
+.font-accent {
+    font-style: italic;
+}
+
+/* ── Button system ───────────────────────────────────────────── */
+
+/* Base shared by all buttons */
+.btn-primary,
+.btn-white,
+.btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;   /* text-sm */
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;  /* py-3 px-6 */
+    border-radius: 9999px;
+    transition: opacity 0.15s, background-color 0.15s, color 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Solid blue — on beige backgrounds */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+.btn-primary:hover { opacity: 0.88; }
+
+/* Solid white — on blue backgrounds */
+.btn-white {
+    background-color: #ffffff;
+    color: var(--color-primary);
+}
+.btn-white:hover { opacity: 0.88; }
+
+/* Underlined secondary — on blue/photo backgrounds */
+.btn-outline-white {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.btn-outline-white:hover { opacity: 0.7; }
+
+/* Large size modifier */
+.btn-lg {
+    font-size: 1rem;       /* text-base */
+    padding: 1rem 2.5rem;  /* py-4 px-10 */
+}
+
+/* Text link with arrow — on beige */
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+.link-arrow:hover { opacity: 0.7; }
+
+/* Text link with arrow — on blue */
+.link-arrow-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+.link-arrow-white:hover { opacity: 0.7; }

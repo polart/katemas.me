@@ -6,58 +6,203 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     title="About Kate - Career Coach"
     description="Learn about Kate's journey and approach to career coaching"
 >
-    <div class="mt-20 py-16 min-h-screen">
+    <!-- Intro -->
+    <div class="py-16 bg-background">
         <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <p class="font-handwritten text-2xl text-accent mb-4">
-                    About Me
-                </p>
-                <h1
-                    class="font-serif text-4xl md:text-5xl text-foreground mb-8"
-                >
-                    Hi, I'm Kate
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="font-sans text-xs font-bold uppercase tracking-wider text-primary mb-4">About Kate</p>
+                <h1 class="font-serif text-4xl md:text-5xl text-foreground mb-6">
+                    A career built on wrong turns
                 </h1>
-                <div class="prose prose-lg">
-                    <p
-                        class="font-sans text-lg text-muted-foreground leading-relaxed mb-6"
-                    >
-                        
-I was born in 1992, in the aftermath of the Soviet Union’s collapse, a time of uncertainty and hardship for many, including my own family. When I was just 6 years old, my parents separated, and my mother made the difficult decision to emigrate to Cyprus in search of a better future. As a child, I stayed in Poltava, clinging to the familiarity of home. But by the age of 12, I followed my mother’s footsteps, leaving behind everything I knew to join her in a new country. That chapter of my life marked the beginning of a journey that would shape who I am today.
-
-Emigrating to Cyprus was one of the hardest moments of my life. I had to learn Greek at record speed, start at a new school, and make new friends—all while navigating the challenges of being a teenager in an unfamiliar world. Cyprus is now a place I call my second home, one I cherish and return to often.
-
-At 18, I moved to Italy to pursue my studies in communication. I set a goal not only to master the Italian language but also to find a part-time job to support myself while studying. After graduation, I made the bold decision to close the chapter on my life in Europe and return to Ukraine, hoping to find my first job and apply my language skills and international experience in my home country.
-
-Shortly after, I landed my first job at the language learning startup Preply, joining when it was just 40 people. I quickly established myself as a communication expert and grew to lead the copywriting department. After five years and several investment rounds, I left the company to pursue an offer from a French unicorn and relocate to Paris, France, where I now live with my family.
-                    </p>
-                    <p
-                        class="font-sans text-lg text-muted-foreground leading-relaxed mb-6"
-                    >
-                        
-While writing my 2024 resolutions, I dared to put into words a phrase that had been swirling in my head for years: “I want to leave my job.”
-
-Working in a dynamic and successful company, holding a prestigious leadership role in one of the biggest fintech firms in France, I was proud of my achievements. For years, I had led teams that shaped user stories and delivered impactful solutions. Yet, amidst all this professional success, I came to a profound realization—I was helping everyone but myself.
-
-Six years ago, when I stepped into my first leadership role, my main motivation was simple: people. I wanted to help them discover their true strengths, grow in their roles, and feel motivated and fulfilled. However, as the years went by, I realized that people management was only a small part of my day-to-day responsibilities. With each passing year, the demands of my role pulled me further away from what I truly enjoyed. What once felt meaningful began to feel less fulfilling, and I started to question whether I was truly aligned with my purpose.
-                    </p>
-                    <p
-                        class="font-sans text-lg text-muted-foreground leading-relaxed mb-8"
-                    >
-                       
-In 2023, I took a leap of faith and completed my ACTP at the International Coaching Competence Academy. Coaching my first clients as an ICF certified coach was a transformative experience—it was as if everything clicked. I had a profound revelation: there is a way out, and I was exactly where I needed to be.
-
-By 2024, I was ready to fully embrace coaching as my career. The more I coached, the more I felt a deep sense of alignment with my purpose. What started as a dream in 2023 turned into a reality in 2024, as I made the decision to step away from shaping user stories and dedicate myself fully to empowering individuals to reshape their own lives.
-
-I craved more connection and impact, and working directly with clients was giving me exactly that. It also fulfilled my creativity, sparked inspiration, and left me in pure awe of the personalities I was meeting.
-                    </p>
-                </div>
-                <a
-                    href="/services"
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer h-11 bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-lg px-8 py-6 rounded-full"
-                >
-                    Explore Services
-                </a>
+                <p class="font-sans text-lg text-muted-foreground leading-relaxed">
+                    Four countries. Five languages. Two unicorns. And a pivot nobody saw coming.
+                    My career has never gone to plan — and that's exactly why I'm good at this.
+                </p>
             </div>
         </div>
     </div>
+
+    <!-- Timeline -->
+    <section class="py-16 bg-background">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Timeline wrapper -->
+                <div class="relative">
+                    <!-- Vertical line (desktop only) -->
+                    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-primary/20 -translate-x-1/2"></div>
+
+                    <!-- Milestones -->
+                    <div class="space-y-0">
+
+                        <!-- 1992 -->
+                        <div class="relative flex md:justify-end md:pr-12 pb-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-card border border-border rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary/20 leading-none">1992</span>
+                                    <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">🇺🇦 Ukraine</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-foreground mb-2">The beginning</h3>
+                                <p class="font-sans text-sm text-muted-foreground">Born in Poltava, in the aftermath of the Soviet Union's collapse. Not exactly a stable start — which turned out to be pretty good training for everything that followed.</p>
+                            </div>
+                            <!-- Dot -->
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+                        </div>
+
+                        <!-- 2004 -->
+                        <div class="relative flex md:justify-start md:pl-12 pb-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-primary text-primary-foreground rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary-foreground/20 leading-none">2004</span>
+                                    <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">🇨🇾 Cyprus</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-primary-foreground mb-2">First big move</h3>
+                                <p class="font-sans text-sm text-primary-foreground/70">Age 12. Left everyone I knew to join my mom in a new country. New language, new school, new life. It was hard — and it taught me I could handle hard things.</p>
+                            </div>
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-background"></div>
+                        </div>
+
+                        <!-- 2012 -->
+                        <div class="relative flex md:justify-end md:pr-12 pb-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-card border border-border rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary/20 leading-none">2012</span>
+                                    <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">🇮🇹 Italy</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-foreground mb-2">Chasing curiosity and pizza</h3>
+                                <p class="font-sans text-sm text-muted-foreground">Moved to Italy at 18 to study Communication. Learned a fourth language. Paid my own way. Right before graduation, planned to return to Ukraine and leverage my international experiences — which I actually stuck to.</p>
+                            </div>
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+                        </div>
+
+                        <!-- 2017 -->
+                        <div class="relative flex md:justify-start md:pl-12 pb-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-card border border-border rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary/20 leading-none">2017</span>
+                                    <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">🇺🇦 Kyiv</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-foreground mb-2">Startup mode</h3>
+                                <p class="font-sans text-sm text-muted-foreground">Joined Preply when it was 40 people. Watched it grow through multiple funding rounds. Went from early hire to leading the copywriting department. Five years of building something from scratch.</p>
+                            </div>
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+                        </div>
+
+                        <!-- 2022 -->
+                        <div class="relative flex md:justify-end md:pr-12 pb-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-primary text-primary-foreground rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary-foreground/20 leading-none">2022</span>
+                                    <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">🇫🇷 Paris</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-primary-foreground mb-2">The Parisian life</h3>
+                                <p class="font-sans text-sm text-primary-foreground/70">Right as Russia launched its full-scale invasion of Ukraine, an offer arrived from a French unicorn — unicorn #2. Leadership role in one of the biggest fintechs in France. Relocated to Paris, learned French to B2, and built a life there. It was good. It just wasn't quite enough.</p>
+                            </div>
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-background"></div>
+                        </div>
+
+                        <!-- 2023 -->
+                        <div class="relative flex md:justify-start md:pl-12 pb-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-card border border-border rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary/20 leading-none">2023</span>
+                                    <span class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider">📚 ICF ACC</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-foreground mb-2">The big pivot</h3>
+                                <p class="font-sans text-sm text-muted-foreground">Always wanted to try coaching. Enrolled at the coaching school, earned my ICF certification, and coached 120 clients before getting ACC accredited. Felt like my passion for people could finally be more than just a footnote in my job description.</p>
+                                <div class="flex flex-wrap gap-3 mt-4">
+                                    <a
+                                        href="https://www.credly.com/badges/a7c85c18-7eba-4f5e-b557-d5ea999503c3/public_url"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex items-center gap-3 bg-secondary/60 hover:bg-secondary transition-colors border border-primary/10 rounded-xl px-4 py-3 group"
+                                    >
+                                        <span class="text-2xl">🏅</span>
+                                        <div>
+                                            <p class="font-sans text-xs font-bold text-primary uppercase tracking-wider leading-none mb-0.5">ICF ACC</p>
+                                            <p class="font-sans text-xs text-muted-foreground">Associate Certified Coach</p>
+                                        </div>
+                                        <svg class="w-3.5 h-3.5 text-primary/40 group-hover:text-primary transition-colors ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+                        </div>
+
+                        <!-- 2024 -->
+                        <div class="relative flex md:justify-end md:pr-12">
+                            <div class="md:w-[calc(50%-2rem)] bg-secondary rounded-2xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="font-serif text-3xl text-primary/30 leading-none">2024</span>
+                                    <span class="font-sans text-xs font-bold bg-primary text-primary-foreground px-2.5 py-1 rounded-full uppercase tracking-wider">✨ Now</span>
+                                </div>
+                                <h3 class="font-serif text-xl text-foreground mb-2">Full-time career coach</h3>
+                                <p class="font-sans text-sm text-foreground/70">Walked away from the title and the salary to do the work I actually care about. Helping people untangle their careers, find what drives them, and move forward — no matter how messy their story is. My curiosity for humans doesn't stop there: I'm in my 2nd year of training to become a Gestalt Therapist, and starting a BA in Psychology in 2027.</p>
+                            </div>
+                            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-primary border-4 border-background ring-2 ring-primary"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I believe -->
+    <section class="py-24 bg-primary text-primary-foreground">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-4 text-center">What I believe</p>
+                <h2 class="font-serif text-4xl md:text-5xl text-center mb-16">The stuff that shapes me</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <p class="font-serif text-4xl text-secondary mb-4">01</p>
+                        <h3 class="font-serif text-xl mb-3">Ultimate liminality</h3>
+                        <p class="font-sans text-sm text-primary-foreground/70 leading-relaxed">I'm always in between and never quite where I'm meant to be. Four countries, multiple careers, a life lived in transition. I've stopped waiting to arrive — this is it.</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-secondary mb-4">02</p>
+                        <h3 class="font-serif text-xl mb-3">Always moving, always learning</h3>
+                        <p class="font-sans text-sm text-primary-foreground/70 leading-relaxed">Stagnation is the one thing I genuinely can't do. New language, new field, new country — if there's something to understand, I want to understand it. That curiosity is what I bring into every session.</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-secondary mb-4">03</p>
+                        <h3 class="font-serif text-xl mb-3">Challenge over comfort</h3>
+                        <p class="font-sans text-sm text-primary-foreground/70 leading-relaxed">Every big move I've made was the harder choice. I'll always choose it. And I'll help you figure out if you will too — because not everyone should, and knowing the difference matters.</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-secondary mb-4">04</p>
+                        <h3 class="font-serif text-xl mb-3">Messy is not a flaw</h3>
+                        <p class="font-sans text-sm text-primary-foreground/70 leading-relaxed">The pivot, the detour, the wrong turn — these aren't failures. They're data. Your zigzag path is probably your biggest asset.</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-secondary mb-4">05</p>
+                        <h3 class="font-serif text-xl mb-3">Clarity before action</h3>
+                        <p class="font-sans text-sm text-primary-foreground/70 leading-relaxed">Most people don't need to work harder. They need to get clear on what they actually want — and that's harder than it sounds, which is why I'm here.</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-secondary mb-4">06</p>
+                        <h3 class="font-serif text-xl mb-3">You already know</h3>
+                        <p class="font-sans text-sm text-primary-foreground/70 leading-relaxed">I don't give you the answers. I help you find the ones you've been sitting on. The insight is yours — I just ask the right questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-secondary text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl md:text-5xl text-foreground mb-6">Ready to write your next chapter?</h2>
+            <p class="font-sans text-lg text-foreground/70 max-w-xl mx-auto mb-10">
+                Whatever stage you're at — stuck, transitioning, or just tired of where you are — let's figure it out together.
+            </p>
+            <a
+                href="/intro-call"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground font-sans text-sm px-8 py-4 rounded-full"
+            >
+                Let's talk
+            </a>
+        </div>
+    </section>
 </BaseLayout>
