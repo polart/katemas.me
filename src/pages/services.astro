@@ -179,20 +179,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
             <!-- One-off session -->
             <div class="max-w-6xl mx-auto mt-6">
-                <div class="relative bg-card rounded-2xl border border-border hover:border-primary transition-colors flex flex-col sm:flex-row gap-6 sm:gap-10 p-6 sm:p-8 group">
-                    <p class="absolute top-5 right-5 sm:top-6 sm:right-6 font-sans text-xs font-bold text-accent uppercase tracking-wider">60 mins</p>
-                    <div class="sm:w-64 flex-shrink-0">
-                        <h2 class="font-serif text-2xl text-foreground mb-2 mt-0 sm:mt-0">
-                            No Strings Attached
-                        </h2>
-                        <p class="font-sans text-muted-foreground">
-                            No ongoing commitment. Just get it done.
-                        </p>
+                <div class="bg-card rounded-2xl border border-border hover:border-primary transition-colors grid sm:grid-cols-2 gap-0 group overflow-hidden">
+                    <!-- Left -->
+                    <div class="flex flex-col justify-between p-6 sm:p-8 border-b sm:border-b-0 sm:border-r border-border">
+                        <div>
+                            <p class="font-sans text-xs font-bold text-accent uppercase tracking-wider mb-4">60 mins</p>
+                            <h2 class="font-serif text-2xl text-foreground mb-2">
+                                No Strings Attached
+                            </h2>
+                            <p class="font-sans text-muted-foreground">
+                                No ongoing commitment. Just get it done.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="/intro-call" class="btn-primary">Start here</a>
+                        </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <div class="bg-secondary/40 rounded-xl p-4 mb-4">
+                    <!-- Right -->
+                    <div class="flex flex-col gap-4 p-6 sm:p-8">
+                        <div class="bg-secondary/40 rounded-xl p-4">
                             <p class="font-sans text-xs font-bold text-primary uppercase tracking-wider mb-3">Good fit if:</p>
-                            <ul class="flex flex-wrap gap-x-6 gap-y-2">
+                            <ul class="space-y-2.5">
                                 <li class="font-sans text-sm text-foreground flex items-start gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-1.5"></span>You have a specific challenge to solve right now
                                 </li>
@@ -204,8 +211,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                 </li>
                             </ul>
                         </div>
-                        <div class="flex flex-wrap items-center justify-between gap-4">
-                            <ul class="flex flex-wrap gap-x-6 gap-y-1.5">
+                        <div>
+                            <p class="font-sans text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">What you get</p>
+                            <ul class="space-y-2">
                                 <li class="font-sans text-sm text-muted-foreground flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-primary/40 flex-shrink-0"></span>1 × 60-minute session
                                 </li>
@@ -216,7 +224,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                     <span class="w-1.5 h-1.5 rounded-full bg-primary/40 flex-shrink-0"></span>One clear next step
                                 </li>
                             </ul>
-                            <a href="/intro-call" class="btn-primary flex-shrink-0">Start here</a>
                         </div>
                     </div>
                 </div>
