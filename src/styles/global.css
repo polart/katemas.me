@@ -117,3 +117,37 @@
     transition: opacity 0.15s;
 }
 .link-arrow-white:hover { opacity: 0.7; }
+
+/* ── Photo frame ─────────────────────────────────────────────── */
+
+/* Flat colour block offset behind a slightly tilted photo.
+   Electric blue by default (beige sections); add .photo-frame-sky on blue sections.
+   Tilt direction: .photo-tilt-left / .photo-tilt-right */
+@layer components {
+.photo-frame {
+    --frame-color: var(--color-primary);
+    --frame-offset: 0.875rem;
+    position: relative;
+    isolation: isolate;
+}
+.photo-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translate(var(--frame-offset), var(--frame-offset));
+    background-color: var(--frame-color);
+    z-index: -1;
+}
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.photo-frame-sky { --frame-color: var(--color-secondary); }
+.photo-tilt-left img { rotate: -2deg; }
+.photo-tilt-right img { rotate: 2deg; }
+
+@media (min-width: 768px) {
+    .photo-frame { --frame-offset: 1.125rem; }
+}
+}
