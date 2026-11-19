@@ -18,10 +18,12 @@ called "Messy Careers". Built with Astro 7.x and styled with Tailwind CSS 4.x.
 - `pnpm build` - Build for production
 - `pnpm preview` - Preview production build locally
 
-### Code Formatting
+### Code Quality
 
-- `pnpm exec prettier --write .` - Format all files
-- `pnpm exec prettier --check .` - Check formatting without changes
+- `pnpm format` - Format all files with Prettier
+- `pnpm format:check` - Check formatting without changes
+- `pnpm typecheck` - Type-check `.astro` and TS files (`astro check`)
+- `pnpm check` - Run format check, typecheck and build (run before committing)
 
 ## Architecture & Structure
 
