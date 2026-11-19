@@ -1,0 +1,21 @@
+name: Security audit
+
+on:
+    schedule:
+        - cron: '0 8 * * 1' # Mondays 08:00 UTC
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    audit:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: pnpm/action-setup@v6
+            - uses: actions/setup-node@v7
+              with:
+                  node-version: 26
+            # Fails (and GitHub emails you) on high or critical advisories
+            - run: pnpm audit --audit-level high
