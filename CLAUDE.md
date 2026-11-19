@@ -11,13 +11,13 @@ This is a personal website for Kate Mas (katemas.me), a career coaching business
 ## Common Commands
 
 ### Development
-- `npm run dev` or `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
+- `pnpm dev` or `pnpm start` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build locally
 
 ### Code Formatting
-- `npx prettier --write .` - Format all files
-- `npx prettier --check .` - Check formatting without changes
+- `pnpm exec prettier --write .` - Format all files
+- `pnpm exec prettier --check .` - Check formatting without changes
 
 ## Architecture & Structure
 
