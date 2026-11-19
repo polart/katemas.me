@@ -147,369 +147,354 @@ const faqs = [
         <meta name="twitter:image" content={ogImageUrl} />
     </Fragment>
 
-        <div class="next-move">
-            <!-- 2. Hero -->
-            <section class="hero">
-                <div class="wrap hero-grid">
-                    <div class="hero-text">
-                        <p class="hero-kicker">
-                            For senior tech people in the messy middle
-                        </p>
-                        <h1>
-                            <span class="h1-main"
-                                >Stop applying<br />everywhere.</span
-                            >
-                            <span class="h1-accent">Start aiming.</span>
-                        </h1>
-                        <p class="hero-lede">
-                            Get interviews for roles that fit. The Next Move
-                            Playbook is a 90-minute worksheet for senior tech
-                            people who've rewritten their CV more times than
-                            they'd admit and still hear nothing back.
-                        </p>
-                        <div class="btn-row">
-                            <a href="#offer" class="btn btn-solid btn-hero"
-                                >Join the waitlist · €29&nbsp;→</a
-                            >
-                        </div>
-                    </div>
-                    <div class="hero-media">
-                        <Image
-                            src={heroImg}
-                            alt="Kate Mas standing against a warm ochre backdrop in a yellow striped shirt and jeans"
-                            format="webp"
-                            loading="eager"
-                            fetchpriority="high"
-                            class="hero-img"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. Sound familiar -->
-            <section class="section on-blue" aria-labelledby="familiar-title">
-                <div class="wrap">
-                    <p class="kicker">Sound familiar?</p>
-                    <h2 id="familiar-title">What I kept hearing.</h2>
-                    <p class="section-intro">
-                        I asked experienced tech people what they needed help
-                        with in their job search. The same stories came up again
-                        and again.
+    <div class="next-move">
+        <!-- 2. Hero -->
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-text">
+                    <p class="hero-kicker">
+                        For senior tech people in the messy middle
                     </p>
-                    <ul class="familiar-grid" role="list">
-                        {
-                            familiar.map((line) => (
-                                <li class="familiar-card">{line}</li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </section>
-
-            <!-- 4. Reframe -->
-            <section class="section" aria-labelledby="reframe-title">
-                <div class="wrap">
-                    <p class="kicker">The thing nobody tells you</p>
-                    <h2 id="reframe-title">The CV is rarely the problem.</h2>
-                    <p class="lead">
-                        Most of the people I spoke to thought they needed a
-                        better CV. When we dug in, it was almost never what was
-                        broken. Three things were, and they come in this order:
+                    <h1>
+                        <span class="h1-main"
+                            >Stop applying<br />everywhere.</span
+                        >
+                        <span class="h1-accent">Start aiming.</span>
+                    </h1>
+                    <p class="hero-lede">
+                        Get interviews for roles that fit. The Next Move
+                        Playbook is a 90-minute worksheet for senior tech people
+                        who've rewritten their CV more times than they'd admit
+                        and still hear nothing back.
                     </p>
-                    <ol class="reframe-grid" role="list">
-                        {
-                            reframe.map((item) => (
-                                <li class="reframe-card">
-                                    <span class="reframe-num" aria-hidden="true">
-                                        {item.num}
-                                    </span>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.text}</p>
-                                </li>
-                            ))
-                        }
-                    </ol>
-                    <blockquote class="pull-quote">
-                        A beautiful CV aimed at the wrong roles, through the
-                        busiest channel, is still a CV nobody reads.
-                    </blockquote>
-                </div>
-            </section>
-
-            <!-- 5. Specialist panel -->
-            <section class="section section-tight" aria-labelledby="spec-title">
-                <div class="wrap">
-                    <div class="sky-panel">
-                        <h2 id="spec-title">
-                            Ten years of expertise. Somehow that's the problem?
-                        </h2>
-                        <p>
-                            Being very good at one thing for a long time does
-                            something sneaky. It makes it hard to see what else
-                            you are, let alone say it. Your job title starts
-                            doing your thinking for you.
-                        </p>
-                        <p>
-                            The Playbook helps you dig your value out from under
-                            the title, then aim it somewhere it'll land.
-                        </p>
+                    <div class="btn-row">
+                        <a href="#offer" class="btn btn-solid btn-hero"
+                            >Join the waitlist · €29&nbsp;→</a
+                        >
                     </div>
                 </div>
-            </section>
-
-            <!-- 6. What's inside -->
-            <section class="section" aria-labelledby="inside-title">
-                <div class="wrap">
-                    <p class="kicker">What's inside</p>
-                    <h2 id="inside-title">
-                        90 minutes. Five parts. A plan you can start on Monday.
-                    </h2>
-                    <ol class="rows" role="list">
-                        {
-                            parts.map((p) => (
-                                <li class="row part-row">
-                                    <div class="part-meta">
-                                        <span class="part-num">{p.part}</span>
-                                        <span class="part-time">{p.time}</span>
-                                    </div>
-                                    <div class="part-body">
-                                        <h3>{p.title}</h3>
-                                        <p>{p.text}</p>
-                                    </div>
-                                    <p class="part-leave">
-                                        <strong>You leave with:</strong>{' '}
-                                        {p.leave}
-                                    </p>
-                                </li>
-                            ))
-                        }
-                    </ol>
-                </div>
-            </section>
-
-            <!-- 7. Offer -->
-            <section id="offer" class="section" aria-labelledby="offer-title">
-                <div class="wrap">
-                    <p class="kicker">Black Friday week · 20–30 November</p>
-                    <h2 id="offer-title">Two ways in.</h2>
-                    <div class="offer-grid">
-                        <article class="offer-card offer-a">
-                            <h3>The Next Move Playbook</h3>
-                            <p class="offer-sub">
-                                Do it on your own, at your own pace.
-                            </p>
-                            <p class="price">€29</p>
-                            <ul class="offer-list">
-                                <li>The 11-page Next Move Playbook worksheet</li>
-                                <li>About 90 minutes, in one sitting or three</li>
-                                <li>Fill it in on screen or print it out</li>
-                                <li>
-                                    Yours to keep, with any future updates, and
-                                    to redo next time you're at a crossroads
-                                </li>
-                            </ul>
-                            <p class="waitlist-note">
-                                Launching soon. Join the list and you'll get it
-                                first, at the Black Friday price.
-                            </p>
-                            <a
-                                href={PLAYBOOK_URL}
-                                class="btn btn-solid btn-block"
-                                target="_blank"
-                                rel="noopener"
-                                >Join the waitlist · €29</a
-                            >
-                        </article>
-
-                        <article class="offer-card offer-b">
-                            <div class="offer-head">
-                                <h3>The Bold Move Session</h3>
-                                <span class="badge">Only 5 spots</span>
-                            </div>
-                            <p class="offer-sub">
-                                For when your pace doesn't allow
-                                second-guessing.
-                            </p>
-                            <p class="price">
-                                €150 <span class="price-was"
-                                    >instead of €180</span
-                                >
-                            </p>
-                            <ul class="offer-list">
-                                <li>The 11-page Next Move Playbook worksheet</li>
-                                <li>
-                                    A 70-minute 1:1 with me. You fill in Parts
-                                    0–3 first, so we spend our time on what you
-                                    found, not on filling in boxes.
-                                </li>
-                                <li>
-                                    We pressure-test your direction, sharpen
-                                    your one-liner, and pick your first 10
-                                    targets and the exact messages to send
-                                </li>
-                                <li>
-                                    <strong>Bonus: the CV Reset Kit.</strong> Six
-                                    AI prompts, including a CV Checker, that sharpen
-                                    your CV without making it sound like everyone
-                                    else's
-                                </li>
-                            </ul>
-                            <a
-                                href={SESSION_URL}
-                                class="btn btn-light btn-block"
-                                target="_blank"
-                                rel="noopener"
-                                >Join the waitlist · €150</a
-                            >
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 8. For / not for -->
-            <section class="section section-tight" aria-label="Who this is for">
-                <div class="wrap fit-grid">
-                    <div>
-                        <h2 class="fit-title">This is for you if…</h2>
-                        <ul class="fit-list">
-                            <li>
-                                You've got 8–15+ years in product, design,
-                                content, research, engineering or product
-                                management
-                            </li>
-                            <li>
-                                You're applying and hearing nothing back, or
-                                you're about to start and want to do it
-                                differently
-                            </li>
-                            <li>
-                                Your career is a bit of a zigzag and you're not
-                                sure how to tell it
-                            </li>
-                            <li>You'd rather aim better than apply more</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="fit-title">It's not for you if…</h2>
-                        <ul class="fit-list">
-                            <li>You want someone to rewrite your CV for you</li>
-                            <li>
-                                You're early in your career (under about 5
-                                years)
-                            </li>
-                            <li>
-                                You're after a guaranteed job in 30 days. Nobody
-                                honest can promise you that.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 9. Stance -->
-            <section class="section on-blue" aria-labelledby="stance-title">
-                <div class="wrap">
-                    <h2 id="stance-title">One CV per direction. Not per job.</h2>
-                    <p class="lead">
-                        I'm not going to teach you to rewrite your CV for every
-                        posting. It's busywork that feels like progress, and it
-                        slowly turns your CV into keyword soup that doesn't
-                        sound like anyone. A strong CV for a clear target
-                        already fits most roles in that target.
-                    </p>
-                    <p class="stance-line">
-                        If you're editing your CV for every application, the
-                        problem isn't your CV. It's your aim.
-                    </p>
-                </div>
-            </section>
-
-            <!-- 10. About -->
-            <section class="section" aria-labelledby="about-title">
-                <div class="wrap about">
+                <div class="hero-media">
                     <Image
-                        src={aboutImg}
-                        alt="Kate Mas, sitting cross-legged on a chair in a yellow striped shirt"
+                        src={heroImg}
+                        alt="Kate Mas standing against a warm ochre backdrop in a yellow striped shirt and jeans"
                         format="webp"
-                        loading="lazy"
-                        class="about-img"
+                        loading="eager"
+                        fetchpriority="high"
+                        class="hero-img"
                     />
-                    <div class="about-text">
-                        <p class="kicker">Who's behind this</p>
-                        <h2 id="about-title">Hi, I'm Kate.</h2>
-                        <p>
-                            I'm a career coach for people who didn't follow the
-                            plan, because there was never a plan, and that's
-                            okay. I help experienced tech people get clear on
-                            what they want and figure out what comes next.
-                        </p>
-                        <p>
-                            I spent over 8 years working in tech, building teams
-                            and leading UX writing and content functions at
-                            companies like Preply and Qonto. Along the way, I've
-                            hired and worked with senior professionals across
-                            different disciplines – from design and product to
-                            content and localization. I've seen careers evolve
-                            from both sides of the hiring table: as someone
-                            building teams and as someone helping people
-                            navigate their next career move.
-                        </p>
-                        <a href="/about" class="about-link">
-                            More about me
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                        </a>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- 11. FAQ -->
-            <section class="section" aria-labelledby="faq-title">
-                <div class="wrap">
-                    <h2 id="faq-title">Questions</h2>
-                    <ul class="rows" role="list">
-                        {
-                            faqs.map((f) => (
-                                <li class="row faq-row">
-                                    <h3>{f.q}</h3>
-                                    {f.a.map((para) => (
-                                        <p>{para}</p>
-                                    ))}
-                                </li>
-                            ))
-                        }
+        <!-- 3. Sound familiar -->
+        <section class="section on-blue" aria-labelledby="familiar-title">
+            <div class="wrap">
+                <p class="kicker">Sound familiar?</p>
+                <h2 id="familiar-title">What I kept hearing.</h2>
+                <p class="section-intro">
+                    I asked experienced tech people what they needed help with
+                    in their job search. The same stories came up again and
+                    again.
+                </p>
+                <ul class="familiar-grid" role="list">
+                    {familiar.map((line) => <li class="familiar-card">
+                        {line}
+                    </li>)}
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. Reframe -->
+        <section class="section" aria-labelledby="reframe-title">
+            <div class="wrap">
+                <p class="kicker">The thing nobody tells you</p>
+                <h2 id="reframe-title">The CV is rarely the problem.</h2>
+                <p class="lead">
+                    Most of the people I spoke to thought they needed a better
+                    CV. When we dug in, it was almost never what was broken.
+                    Three things were, and they come in this order:
+                </p>
+                <ol class="reframe-grid" role="list">
+                    {reframe.map((item) => <li class="reframe-card">
+                        <span class="reframe-num" aria-hidden="true">
+                            {item.num}
+                        </span>
+                        <h3>{item.title}</h3>
+                        <p>{item.text}</p>
+                    </li>)}
+                </ol>
+                <blockquote class="pull-quote">
+                    A beautiful CV aimed at the wrong roles, through the busiest
+                    channel, is still a CV nobody reads.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- 5. Specialist panel -->
+        <section class="section section-tight" aria-labelledby="spec-title">
+            <div class="wrap">
+                <div class="sky-panel">
+                    <h2 id="spec-title">
+                        Ten years of expertise. Somehow that's the problem?
+                    </h2>
+                    <p>
+                        Being very good at one thing for a long time does
+                        something sneaky. It makes it hard to see what else you
+                        are, let alone say it. Your job title starts doing your
+                        thinking for you.
+                    </p>
+                    <p>
+                        The Playbook helps you dig your value out from under the
+                        title, then aim it somewhere it'll land.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. What's inside -->
+        <section class="section" aria-labelledby="inside-title">
+            <div class="wrap">
+                <p class="kicker">What's inside</p>
+                <h2 id="inside-title">
+                    90 minutes. Five parts. A plan you can start on Monday.
+                </h2>
+                <ol class="rows" role="list">
+                    {parts.map((p) => <li class="row part-row">
+                        <div class="part-meta">
+                            <span class="part-num">{p.part}</span>
+                            <span class="part-time">{p.time}</span>
+                        </div>
+                        <div class="part-body">
+                            <h3>{p.title}</h3>
+                            <p>{p.text}</p>
+                        </div>
+                        <p class="part-leave">
+                            <strong>You leave with:</strong>{' '}
+                            {p.leave}
+                        </p>
+                    </li>)}
+                </ol>
+            </div>
+        </section>
+
+        <!-- 7. Offer -->
+        <section id="offer" class="section" aria-labelledby="offer-title">
+            <div class="wrap">
+                <p class="kicker">Black Friday week · 20–30 November</p>
+                <h2 id="offer-title">Two ways in.</h2>
+                <div class="offer-grid">
+                    <article class="offer-card offer-a">
+                        <h3>The Next Move Playbook</h3>
+                        <p class="offer-sub">
+                            Do it on your own, at your own pace.
+                        </p>
+                        <p class="price">€29</p>
+                        <ul class="offer-list">
+                            <li>The 11-page Next Move Playbook worksheet</li>
+                            <li>About 90 minutes, in one sitting or three</li>
+                            <li>Fill it in on screen or print it out</li>
+                            <li>
+                                Yours to keep, with any future updates, and to
+                                redo next time you're at a crossroads
+                            </li>
+                        </ul>
+                        <p class="waitlist-note">
+                            Launching soon. Join the list and you'll get it
+                            first, at the Black Friday price.
+                        </p>
+                        <a
+                            href={PLAYBOOK_URL}
+                            class="btn btn-solid btn-block"
+                            target="_blank"
+                            rel="noopener"
+                            >Join the waitlist · €29</a
+                        >
+                    </article>
+
+                    <article class="offer-card offer-b">
+                        <div class="offer-head">
+                            <h3>The Bold Move Session</h3>
+                            <span class="badge">Only 5 spots</span>
+                        </div>
+                        <p class="offer-sub">
+                            For when your pace doesn't allow second-guessing.
+                        </p>
+                        <p class="price">
+                            €150 <span class="price-was">instead of €180</span>
+                        </p>
+                        <ul class="offer-list">
+                            <li>The 11-page Next Move Playbook worksheet</li>
+                            <li>
+                                A 70-minute 1:1 with me. You fill in Parts 0–3
+                                first, so we spend our time on what you found,
+                                not on filling in boxes.
+                            </li>
+                            <li>
+                                We pressure-test your direction, sharpen your
+                                one-liner, and pick your first 10 targets and
+                                the exact messages to send
+                            </li>
+                            <li>
+                                <strong>Bonus: the CV Reset Kit.</strong> Six AI
+                                prompts, including a CV Checker, that sharpen
+                                your CV without making it sound like everyone
+                                else's
+                            </li>
+                        </ul>
+                        <a
+                            href={SESSION_URL}
+                            class="btn btn-light btn-block"
+                            target="_blank"
+                            rel="noopener"
+                            >Join the waitlist · €150</a
+                        >
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. For / not for -->
+        <section class="section section-tight" aria-label="Who this is for">
+            <div class="wrap fit-grid">
+                <div>
+                    <h2 class="fit-title">This is for you if…</h2>
+                    <ul class="fit-list">
+                        <li>
+                            You've got 8–15+ years in product, design, content,
+                            research, engineering or product management
+                        </li>
+                        <li>
+                            You're applying and hearing nothing back, or you're
+                            about to start and want to do it differently
+                        </li>
+                        <li>
+                            Your career is a bit of a zigzag and you're not sure
+                            how to tell it
+                        </li>
+                        <li>You'd rather aim better than apply more</li>
                     </ul>
                 </div>
-            </section>
+                <div>
+                    <h2 class="fit-title">It's not for you if…</h2>
+                    <ul class="fit-list">
+                        <li>You want someone to rewrite your CV for you</li>
+                        <li>
+                            You're early in your career (under about 5 years)
+                        </li>
+                        <li>
+                            You're after a guaranteed job in 30 days. Nobody
+                            honest can promise you that.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <!-- 12. Final CTA -->
-            <section class="section section-tight" aria-labelledby="cta-title">
-                <div class="wrap">
-                    <div class="cta-panel">
-                        <h2 id="cta-title">Stop spinning. Start aiming.</h2>
-                        <p>
-                            5 session spots this round. Black Friday week ends
-                            30 November.
-                        </p>
-                        <div class="btn-row btn-row-center">
-                            <a
-                                href={PLAYBOOK_URL}
-                                class="btn btn-light"
-                                target="_blank"
-                                rel="noopener"
-                                >Join the waitlist · €29</a
-                            >
-                            <a
-                                href={SESSION_URL}
-                                class="btn btn-ghost-light"
-                                target="_blank"
-                                rel="noopener"
-                                >Join the session waitlist · €150</a
-                            >
-                        </div>
+        <!-- 9. Stance -->
+        <section class="section on-blue" aria-labelledby="stance-title">
+            <div class="wrap">
+                <h2 id="stance-title">One CV per direction. Not per job.</h2>
+                <p class="lead">
+                    I'm not going to teach you to rewrite your CV for every
+                    posting. It's busywork that feels like progress, and it
+                    slowly turns your CV into keyword soup that doesn't sound
+                    like anyone. A strong CV for a clear target already fits
+                    most roles in that target.
+                </p>
+                <p class="stance-line">
+                    If you're editing your CV for every application, the problem
+                    isn't your CV. It's your aim.
+                </p>
+            </div>
+        </section>
+
+        <!-- 10. About -->
+        <section class="section" aria-labelledby="about-title">
+            <div class="wrap about">
+                <Image
+                    src={aboutImg}
+                    alt="Kate Mas, sitting cross-legged on a chair in a yellow striped shirt"
+                    format="webp"
+                    loading="lazy"
+                    class="about-img"
+                />
+                <div class="about-text">
+                    <p class="kicker">Who's behind this</p>
+                    <h2 id="about-title">Hi, I'm Kate.</h2>
+                    <p>
+                        I'm a career coach for people who didn't follow the
+                        plan, because there was never a plan, and that's okay. I
+                        help experienced tech people get clear on what they want
+                        and figure out what comes next.
+                    </p>
+                    <p>
+                        I spent over 8 years working in tech, building teams and
+                        leading UX writing and content functions at companies
+                        like Preply and Qonto. Along the way, I've hired and
+                        worked with senior professionals across different
+                        disciplines – from design and product to content and
+                        localization. I've seen careers evolve from both sides
+                        of the hiring table: as someone building teams and as
+                        someone helping people navigate their next career move.
+                    </p>
+                    <a href="/about" class="about-link">
+                        More about me
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. FAQ -->
+        <section class="section" aria-labelledby="faq-title">
+            <div class="wrap">
+                <h2 id="faq-title">Questions</h2>
+                <ul class="rows" role="list">
+                    {faqs.map((f) => <li class="row faq-row">
+                        <h3>{f.q}</h3>
+                        {f.a.map((para) => <p>{para}</p>)}
+                    </li>)}
+                </ul>
+            </div>
+        </section>
+
+        <!-- 12. Final CTA -->
+        <section class="section section-tight" aria-labelledby="cta-title">
+            <div class="wrap">
+                <div class="cta-panel">
+                    <h2 id="cta-title">Stop spinning. Start aiming.</h2>
+                    <p>
+                        5 session spots this round. Black Friday week ends 30
+                        November.
+                    </p>
+                    <div class="btn-row btn-row-center">
+                        <a
+                            href={PLAYBOOK_URL}
+                            class="btn btn-light"
+                            target="_blank"
+                            rel="noopener"
+                            >Join the waitlist · €29</a
+                        >
+                        <a
+                            href={SESSION_URL}
+                            class="btn btn-ghost-light"
+                            target="_blank"
+                            rel="noopener"
+                            >Join the session waitlist · €150</a
+                        >
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 </BaseLayout>
 
 <style is:global>

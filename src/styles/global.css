@@ -10,19 +10,19 @@
     --font-accent: 'Playfair Display', serif;
 
     /* Colors - Brand palette */
-    --color-background: #FFFDE9;       /* Warm Cream */
-    --color-foreground: #1023CE;       /* Electric Blue */
-    --color-primary: #1023CE;          /* Electric Blue */
-    --color-primary-foreground: #FFFFFF;
-    --color-secondary: #86AFFA;        /* Sky Blue */
-    --color-secondary-foreground: #1023CE;
+    --color-background: #fffde9; /* Warm Cream */
+    --color-foreground: #1023ce; /* Electric Blue */
+    --color-primary: #1023ce; /* Electric Blue */
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #86affa; /* Sky Blue */
+    --color-secondary-foreground: #1023ce;
     --color-muted: #d4e0fd;
     --color-muted-foreground: #3a4fa8;
-    --color-accent: #86AFFA;           /* Sky Blue */
-    --color-card: #FFFDE9;             /* Warm Cream */
-    --color-border: #86AFFA;           /* Sky Blue */
-    --color-ring: #1023CE;
-    --color-ring-offset: #FFFDE9;
+    --color-accent: #86affa; /* Sky Blue */
+    --color-card: #fffde9; /* Warm Cream */
+    --color-border: #86affa; /* Sky Blue */
+    --color-ring: #1023ce;
+    --color-ring-offset: #fffde9;
 
     /* Border radius */
     --radius: 0.75rem;
@@ -49,12 +49,15 @@
     justify-content: center;
     gap: 0.5rem;
     font-family: var(--font-sans);
-    font-size: 0.875rem;   /* text-sm */
+    font-size: 0.875rem; /* text-sm */
     font-weight: 700;
     white-space: nowrap;
-    padding: 0.75rem 1.5rem;  /* py-3 px-6 */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
     border-radius: 9999px;
-    transition: opacity 0.15s, background-color 0.15s, color 0.15s;
+    transition:
+        opacity 0.15s,
+        background-color 0.15s,
+        color 0.15s;
     cursor: pointer;
     text-decoration: none;
 }
@@ -64,14 +67,18 @@
     background-color: var(--color-primary);
     color: #ffffff;
 }
-.btn-primary:hover { opacity: 0.88; }
+.btn-primary:hover {
+    opacity: 0.88;
+}
 
 /* Solid white — on blue backgrounds */
 .btn-white {
     background-color: #ffffff;
     color: var(--color-primary);
 }
-.btn-white:hover { opacity: 0.88; }
+.btn-white:hover {
+    opacity: 0.88;
+}
 
 /* Underlined secondary — on blue/photo backgrounds */
 .btn-outline-white {
@@ -82,12 +89,14 @@
     text-decoration: underline;
     text-underline-offset: 3px;
 }
-.btn-outline-white:hover { opacity: 0.7; }
+.btn-outline-white:hover {
+    opacity: 0.7;
+}
 
 /* Large size modifier */
 .btn-lg {
-    font-size: 1rem;       /* text-base */
-    padding: 1rem 2.5rem;  /* py-4 px-10 */
+    font-size: 1rem; /* text-base */
+    padding: 1rem 2.5rem; /* py-4 px-10 */
 }
 
 /* Text link with arrow — on beige */
@@ -102,7 +111,9 @@
     text-decoration: none;
     transition: opacity 0.15s;
 }
-.link-arrow:hover { opacity: 0.7; }
+.link-arrow:hover {
+    opacity: 0.7;
+}
 
 /* Text link with arrow — on blue */
 .link-arrow-white {
@@ -116,7 +127,9 @@
     text-decoration: none;
     transition: opacity 0.15s;
 }
-.link-arrow-white:hover { opacity: 0.7; }
+.link-arrow-white:hover {
+    opacity: 0.7;
+}
 
 /* ── Photo frame ─────────────────────────────────────────────── */
 
@@ -124,30 +137,38 @@
    Electric blue by default (beige sections); add .photo-frame-sky on blue sections.
    Tilt direction: .photo-tilt-left / .photo-tilt-right */
 @layer components {
-.photo-frame {
-    --frame-color: var(--color-primary);
-    --frame-offset: 0.875rem;
-    position: relative;
-    isolation: isolate;
-}
-.photo-frame::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    transform: translate(var(--frame-offset), var(--frame-offset));
-    background-color: var(--frame-color);
-    z-index: -1;
-}
-.photo-frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.photo-frame-sky { --frame-color: var(--color-secondary); }
-.photo-tilt-left img { rotate: -2deg; }
-.photo-tilt-right img { rotate: 2deg; }
+    .photo-frame {
+        --frame-color: var(--color-primary);
+        --frame-offset: 0.875rem;
+        position: relative;
+        isolation: isolate;
+    }
+    .photo-frame::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transform: translate(var(--frame-offset), var(--frame-offset));
+        background-color: var(--frame-color);
+        z-index: -1;
+    }
+    .photo-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .photo-frame-sky {
+        --frame-color: var(--color-secondary);
+    }
+    .photo-tilt-left img {
+        rotate: -2deg;
+    }
+    .photo-tilt-right img {
+        rotate: 2deg;
+    }
 
-@media (min-width: 768px) {
-    .photo-frame { --frame-offset: 1.125rem; }
-}
+    @media (min-width: 768px) {
+        .photo-frame {
+            --frame-offset: 1.125rem;
+        }
+    }
 }
