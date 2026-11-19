@@ -23,6 +23,7 @@ const {
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
         <title>{title}</title>
+        <slot name="head" />
     </head>
     <body class="min-h-screen bg-background font-sans text-foreground">
         <header
@@ -53,6 +54,12 @@ const {
                         href="/services"
                     >
                         Programs
+                    </a>
+                    <a
+                        class="nav-link hidden sm:block font-sans font-bold text-sm md:text-base transition-colors"
+                        href="/next-move"
+                    >
+                        Products
                     </a>
                     <a
                         class="nav-link hidden sm:block font-sans font-bold text-sm md:text-base transition-colors"
@@ -181,6 +188,7 @@ const {
                             <p class="font-sans text-xs font-bold uppercase tracking-wider text-background/40 mb-1">Site</p>
                             <a href="/about" class="font-sans text-sm text-background/70 hover:text-background transition-colors">About</a>
                             <a href="/services" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Programs</a>
+                            <a href="/next-move" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Products</a>
                             <a href="/reviews" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Stories</a>
                         </div>
                         <div class="flex flex-col gap-3 min-w-0">
