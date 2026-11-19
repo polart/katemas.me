@@ -79,10 +79,9 @@ The site uses a custom design system defined in `src/styles/global.css`:
 
 All pages use `BaseLayout.astro` which provides:
 - Standard HTML structure with meta tags
-- Fixed header with logo + nav links (About, Offers, Stories) hidden on mobile; only "Let's talk" CTA visible on mobile
+- Fixed header with logo + nav links (About, Work with me, Products) hidden on mobile; only "Let's talk" CTA visible on mobile
 - Transparent header on homepage (turns solid on scroll via JS)
 - Footer with logo, ICF ACC + ICF Member credential badge, nav links, email, LinkedIn, and Paris location
-- "Home" back button shown on all non-homepage pages (bottom-left, fixed)
 - Title and description props for SEO
 
 ### Homepage Section Order (`index.astro`)

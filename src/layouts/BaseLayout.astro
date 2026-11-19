@@ -44,28 +44,22 @@ const {
                 </a>
                 <nav class="flex items-center gap-3 sm:gap-6 md:gap-8">
                     <a
-                        class="nav-link hidden sm:block font-sans font-bold text-sm md:text-base transition-colors"
+                        class="nav-link hidden sm:block whitespace-nowrap font-sans font-bold text-sm md:text-base transition-colors"
                         href="/about"
                     >
                         About
                     </a>
                     <a
-                        class="nav-link hidden sm:block font-sans font-bold text-sm md:text-base transition-colors"
+                        class="nav-link hidden sm:block whitespace-nowrap font-sans font-bold text-sm md:text-base transition-colors"
                         href="/services"
                     >
-                        Programs
+                        Work with me
                     </a>
                     <a
-                        class="nav-link hidden sm:block font-sans font-bold text-sm md:text-base transition-colors"
+                        class="nav-link hidden sm:block whitespace-nowrap font-sans font-bold text-sm md:text-base transition-colors"
                         href="/next-move"
                     >
                         Products
-                    </a>
-                    <a
-                        class="nav-link hidden sm:block font-sans font-bold text-sm md:text-base transition-colors"
-                        href="/reviews"
-                    >
-                        Stories
                     </a>
                     <a
                         class="nav-cta font-sans font-bold text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all"
@@ -128,15 +122,6 @@ const {
         </style>
 
         <main class={!transparentHeader ? 'pt-20' : ''}>
-            {!transparentHeader && (
-                <a
-                    href="/"
-                    class="fixed left-6 bottom-6 z-50 inline-flex items-center gap-1.5 font-sans text-xs font-bold bg-background border border-border text-primary/50 hover:text-primary hover:border-primary px-4 py-2.5 rounded-full shadow-sm transition-all uppercase tracking-wider"
-                >
-                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-                    Home
-                </a>
-            )}
             <slot />
         </main>
 
@@ -187,9 +172,9 @@ const {
                         <div class="flex flex-col gap-3 min-w-0">
                             <p class="font-sans text-xs font-bold uppercase tracking-wider text-background/40 mb-1">Site</p>
                             <a href="/about" class="font-sans text-sm text-background/70 hover:text-background transition-colors">About</a>
-                            <a href="/services" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Programs</a>
+                            <a href="/services" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Work with me</a>
                             <a href="/next-move" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Products</a>
-                            <a href="/reviews" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Stories</a>
+                            <a href="/reviews" class="font-sans text-sm text-background/70 hover:text-background transition-colors">Reviews</a>
                         </div>
                         <div class="flex flex-col gap-3 min-w-0">
                             <p class="font-sans text-xs font-bold uppercase tracking-wider text-background/40 mb-1">Contact</p>
