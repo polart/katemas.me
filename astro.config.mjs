@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://katemas.me',
+    // Astro 7 defaults to 'jsx', which strips whitespace between inline elements
+    compressHTML: true,
     prefetch: {
         prefetchAll: true
     },

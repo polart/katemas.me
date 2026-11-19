@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal website for Kate Mas (katemas.me), a career coaching business called "Messy Careers". Built with Astro 5.x and styled with Tailwind CSS 4.x.
+This is a personal website for Kate Mas (katemas.me), a career coaching business called "Messy Careers". Built with Astro 7.x and styled with Tailwind CSS 4.x.
 
 **Site URL**: https://katemas.me
 
@@ -22,7 +22,7 @@ This is a personal website for Kate Mas (katemas.me), a career coaching business
 ## Architecture & Structure
 
 ### Framework & Styling
-- **Astro 5.x** with static site generation
+- **Astro 7.x** with static site generation
 - **Tailwind CSS 4.x** using Vite plugin (`@tailwindcss/vite`)
 - All styles defined in `src/styles/global.css` using Tailwind's `@theme` directive
 - TypeScript with strict mode enabled
@@ -121,7 +121,8 @@ Key config in `astro.config.mjs`:
 - Sitemap generation enabled (`@astrojs/sitemap`)
 - Prefetch all links enabled (`prefetchAll: true`)
 - Tailwind CSS via Vite plugin
-- Vercel adapter commented out (currently using static build)
+- `compressHTML: true` (Astro 7 defaults to `'jsx'`, which strips whitespace between inline elements)
+- No adapter: static build deployed to Vercel
 
 ### Code Style
 
