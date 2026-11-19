@@ -2,7 +2,7 @@
     "name": "katemas.me",
     "type": "module",
     "version": "0.1.0",
-    "packageManager": "pnpm@12.21.0",
+    "packageManager": "pnpm@12.20.0",
     "engines": {
         "node": "26.13.1"
     },
