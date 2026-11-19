@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
     title?: string;
@@ -24,6 +25,7 @@ const {
         <meta name="description" content={description} />
         <title>{title}</title>
         <slot name="head" />
+        <Analytics />
     </head>
     <body class="min-h-screen bg-background font-sans text-foreground">
         <header
