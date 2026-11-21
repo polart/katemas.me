@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HandNote from '../components/HandNote.astro';
 ---
 
 <BaseLayout
-    title="Book an Intro Call with Kate Mas | Messy Careers"
-    description="Book an intro call with Kate Mas. A 30-min conversation to see if we're a good fit."
+    title="Book a Clarity Call with Kate Mas | Messy Careers"
+    description="Book a clarity call with Kate Mas. A 30-min conversation to see if we're a good fit."
 >
     <!-- Cal inline embed code begins -->
     <div class="py-16 min-h-screen bg-background">
@@ -18,7 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h1
                     class="font-serif text-4xl md:text-5xl text-foreground mb-4"
                 >
-                    Schedule an intro call
+                    Book a clarity call
                 </h1>
                 <p
                     class="font-sans text-lg text-muted-foreground max-w-2xl mx-auto"
@@ -26,6 +27,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     Book a free 30-minute conversation to discuss your career
                     goals and explore how coaching can help you move forward.
                 </p>
+                <HandNote rotate={-3} delay={0.6} class="mt-4 text-primary"
+                    >bring the mess, I'll bring the questions</HandNote
+                >
             </div>
             <div class="max-w-4xl mx-auto overflow-hidden">
                 <div
@@ -232,7 +236,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <p
                         class="font-sans text-sm text-primary-foreground/80 mt-4 leading-relaxed"
                     >
-                        We start with a free intro call to make sure we're a
+                        We start with a free clarity call to make sure we're a
                         good fit — no pressure, no pitch. If we both want to
                         move forward, we'll book your first session.<br /><br />
                         Sessions are 70 minutes, on video — or in person if

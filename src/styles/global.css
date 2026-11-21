@@ -2,12 +2,14 @@
 @import '@fontsource/dela-gothic-one';
 @import '@fontsource/plus-jakarta-sans';
 @import '@fontsource/playfair-display';
+@import '@fontsource/caveat/600.css';
 
 @theme {
     /* Font families */
     --font-serif: 'Dela Gothic One', sans-serif;
     --font-sans: 'Plus Jakarta Sans', sans-serif;
     --font-accent: 'Playfair Display', serif;
+    --font-hand: 'Caveat', cursive; /* handwritten notes (HandNote) */
 
     /* Colors - Brand palette */
     --color-background: #fffde9; /* Warm Cream */
@@ -171,4 +173,28 @@
             --frame-offset: 1.125rem;
         }
     }
+}
+
+/* ── Hand-drawn marks ────────────────────────────────────────── */
+
+/* Scribbles, arrows and threads (components/Scribble, HandNote,
+   ThreadLine) draw themselves in when they scroll into view. The hidden
+   state only applies once BaseLayout's script adds .draw-ready to <html>,
+   so without JS (or with reduced motion) they're simply visible. */
+.draw-ready [data-draw] path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset var(--draw-duration, 0.9s)
+        cubic-bezier(0.65, 0, 0.35, 1) var(--draw-delay, 0s);
+}
+.draw-ready [data-draw].is-drawn path {
+    stroke-dashoffset: 0;
+}
+.draw-ready .hand-note-text {
+    opacity: 0;
+    transition: opacity 0.5s ease var(--draw-delay, 0s);
+}
+.draw-ready .is-drawn .hand-note-text,
+.draw-ready .hand-note.is-drawn .hand-note-text {
+    opacity: 1;
 }

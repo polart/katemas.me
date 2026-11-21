@@ -25,6 +25,13 @@ const {
         <meta name="description" content={description} />
         <title>{title}</title>
         <slot name="head" />
+        <script is:inline>
+            // Hide hand-drawn marks until they scroll into view (before first
+            // paint, so nothing flashes). Reduced-motion users just see them.
+            if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('draw-ready');
+            }
+        </script>
         <Analytics />
     </head>
     <body class="min-h-screen bg-background font-sans text-foreground">
@@ -67,7 +74,7 @@ const {
                         class="nav-cta font-sans font-bold text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all"
                         href="/intro-call"
                     >
-                        Let's talk
+                        Book a clarity call
                     </a>
                 </nav>
             </div>
@@ -143,6 +150,26 @@ const {
             updateHeader();
         </script>}
 
+        <script>
+            // Draw each scribble, arrow and thread once it's on screen
+            const marks = document.querySelectorAll('[data-draw]');
+            if (!('IntersectionObserver' in window)) {
+                marks.forEach((m) => m.classList.add('is-drawn'));
+            } else {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        for (const entry of entries) {
+                            if (!entry.isIntersecting) continue;
+                            entry.target.classList.add('is-drawn');
+                            observer.unobserve(entry.target);
+                        }
+                    },
+                    { rootMargin: '0px 0px -12% 0px' }
+                );
+                marks.forEach((m) => observer.observe(m));
+            }
+        </script>
+
         <footer class="py-16 bg-foreground text-background">
             <div class="container mx-auto px-5 sm:px-6">
                 <div
@@ -157,6 +184,12 @@ const {
                             alt="Messy Careers"
                             class="w-28 sm:w-36 brightness-0 invert"
                         />
+                        <p
+                            class="font-sans text-sm text-background/60 max-w-xs text-center md:text-left leading-relaxed"
+                        >
+                            Career coaching for experienced professionals
+                            navigating the messy middle.
+                        </p>
                         <div
                             class="inline-flex items-center gap-2.5 border border-background/20 rounded-xl px-3.5 py-2.5"
                         >
@@ -234,7 +267,7 @@ const {
                             <a
                                 href="/intro-call"
                                 class="font-sans text-sm text-background/70 hover:text-background transition-colors"
-                                >Book an intro call</a
+                                >Book a clarity call</a
                             >
                             <a
                                 href="mailto:hello@katemas.me"

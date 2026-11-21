@@ -1,380 +1,964 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HandNote from '../components/HandNote.astro';
+import Scribble from '../components/Scribble.astro';
+import ThreadLine from '../components/ThreadLine.astro';
+import heroImg from '../assets/home/kate-smiling.jpg';
+import kateImg from '../assets/home/kate-thoughtful.jpg';
+import kickImg from '../assets/home/kate-kick.jpg';
+
+// ─── Resource links: paste the real URLs here ───────────────────────────────
+// Leave empty to show the card as "Coming soon" with no link.
+const MESSY_MIDDLE_CHECK_URL = 'https://the-messy-career-check.lovable.app/';
+const JOB_SEARCH_GUIDE_URL = '/next-move';
+// ────────────────────────────────────────────────────────────────────────────
+
+const situations = [
+    {
+        lead: "You've outgrown your role.",
+        text: "You're good at what you do, but the work no longer challenges or fulfils you."
+    },
+    {
+        lead: "You're questioning your next step.",
+        text: 'Management, senior IC, a different company, a different industry? None of the obvious options feels quite right.'
+    },
+    {
+        lead: 'Your professional identity feels too narrow.',
+        text: "You've spent years becoming an expert in something, but you're wondering what else you could do with everything you've learned."
+    },
+    {
+        lead: "You're worried about the changing job market.",
+        text: 'AI, restructuring and shifting expectations are making you question where your experience fits.'
+    },
+    {
+        lead: "You want something different, but don't want to risk everything.",
+        text: "You have responsibilities, financial commitments and a life outside work. Starting over isn't a decision you can make lightly."
+    }
+];
+
+const stats = [
+    {
+        value: '8+',
+        unit: 'years',
+        text: 'Working in international tech, across edtech and fintech.'
+    },
+    {
+        value: '380+',
+        unit: 'hours',
+        text: 'Of coaching experience.'
+    },
+    {
+        value: '90+',
+        unit: 'processes',
+        text: 'Supporting professionals through career questions, transitions and leadership challenges.'
+    },
+    {
+        value: 'ACC',
+        unit: 'ICF',
+        text: 'An accredited coaching credential from the International Coaching Federation.'
+    }
+];
+
+// Logos are rendered as a CSS mask so they pick up the brand blue.
+// ratio = intrinsic width / height of each file.
+const logos = [
+    { src: '/Microsoft-logo.webp', alt: 'Microsoft', ratio: 768 / 199 },
+    { src: '/google-logo.svg', alt: 'Google', ratio: 272 / 92 },
+    { src: '/Preply_logo_(2023).svg.png', alt: 'Preply', ratio: 1920 / 536 },
+    { src: '/qonto-2022.svg', alt: 'Qonto', ratio: 407.2 / 116.7 },
+    { src: '/DeepL_logo.svg', alt: 'DeepL', ratio: 1024 / 365 },
+    {
+        src: '/International_Watch_Company_logo.svg.png',
+        alt: 'IWC',
+        ratio: 1280 / 573
+    }
+];
+
+const areas = [
+    {
+        num: '01',
+        title: 'Direction',
+        lead: 'First, we make sense of where you are.',
+        questions:
+            "What's working? What's not? What has changed? What matters to you now?",
+        text: 'We explore your motivations, values, strengths, professional identity and the assumptions influencing your decisions.'
+    },
+    {
+        num: '02',
+        title: 'Value',
+        lead: 'Then, we look at what you bring to the table.',
+        questions:
+            "Not just your job title or years of experience, but the skills, capabilities and perspectives you've developed along the way.",
+        text: 'We explore how transferable your experience is, where it might be valuable and what possibilities you may have overlooked.'
+    },
+    {
+        num: '03',
+        title: 'Communication',
+        lead: 'Finally, we work on translating that understanding into action.',
+        questions:
+            'How do you position yourself? How do you communicate your experience? How do you explore opportunities, have conversations and make your next move?',
+        text: 'Because knowing what you want is one thing. Being able to communicate your value and act on it is another.'
+    }
+];
+
+const testimonials = [
+    {
+        tag: 'Career clarity',
+        quote: "Kate's approach helped me see myself and my potential in a new light."
+    },
+    {
+        tag: 'Career transition',
+        quote: 'She guided me to understand what will work best for me — not just following external signals and trends.'
+    },
+    {
+        tag: 'Professional identity',
+        quote: 'What I found was something much deeper, more human, and incredibly impactful.'
+    }
+];
+
+const resources = [
+    {
+        kicker: 'Free quiz',
+        title: 'The Messy Middle Check',
+        text: 'Are you growing, plateauing or finding yourself in the messy middle? Take a step back and understand where you are.',
+        cta: 'Take the check',
+        href: MESSY_MIDDLE_CHECK_URL
+    },
+    {
+        kicker: 'Guide',
+        title: 'Job Search 2026',
+        text: "Thinking about exploring the market? Before updating your CV or sending applications, get clearer on what you're looking for and how to approach your search.",
+        cta: 'Get the guide',
+        href: JOB_SEARCH_GUIDE_URL
+    }
+];
+
+const arrow = `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>`;
 ---
 
 <BaseLayout
-    title="Messy Careers - Career Coaching with Kate Mas"
-    description="Career coaching with Kate Mas for professionals navigating a career change, leadership transition, or identity crisis. Based in Paris, working worldwide."
+    title="Messy Careers — Career Coaching for Tech Professionals | Kate Mas"
+    description="Career coaching for experienced tech professionals figuring out what comes next. Redesign your career without throwing away everything you've built. Based in Paris, working internationally."
     transparentHeader={true}
 >
-    <!-- Hero — photo -->
-    <section class="relative min-h-dvh flex items-end">
-        <img
-            src="/hero2.png"
-            alt="Kate Mas"
-            class="absolute inset-0 w-full h-full object-cover"
-            style="object-position: 70% center"
-        />
-        <!-- gradient scrim for text legibility -->
+    <!-- 1 — BLUE: Hero -->
+    <section
+        class="bg-primary text-primary-foreground overflow-hidden md:min-h-dvh md:flex md:items-center"
+    >
         <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
-        ></div>
-        <div
-            class="relative z-10 px-6 sm:px-10 md:px-12 lg:px-16 pt-24 pb-28 sm:pb-32 w-full md:w-1/2"
+            class="container mx-auto px-5 sm:px-6 pt-28 pb-16 sm:pb-20 md:py-32"
         >
-            <h1
-                class="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-6 leading-[1.05]"
+            <div
+                class="max-w-6xl mx-auto grid md:grid-cols-[minmax(0,1fr)_18rem] lg:grid-cols-[minmax(0,1fr)_24rem] gap-12 md:gap-14 lg:gap-20 items-center"
             >
-                <span class="block">Get clear on</span>
-                <span
-                    class="block font-accent text-3xl sm:text-4xl md:text-5xl"
-                >
-                    your next career move
-                </span>
-            </h1>
-            <p
-                class="font-sans text-base md:text-lg text-white/90 mb-8 leading-relaxed"
-            >
-                Career strategy & coaching for leaders in the messy middle —
-                stuck, uncertain but ready for something different.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
-                <a href="/intro-call" class="btn-white">Let's talk</a>
-                <a href="/reviews" class="btn-outline-white">Client reviews</a>
-            </div>
-            <div class="mt-6 sm:mt-10">
-                <p
-                    class="font-sans text-[10px] font-bold uppercase tracking-wider text-white/50 mb-3"
-                >
-                    Trusted by clients from
-                </p>
+                <div>
+                    <h1
+                        class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mb-5"
+                    >
+                        Redesign your
+                        <Scribble variant="circle" delay={0.4}
+                            >career.</Scribble
+                        >
+                    </h1>
+                    <p
+                        class="font-didot text-2xl sm:text-3xl lg:text-4xl leading-tight text-secondary mb-8"
+                    >
+                        Without throwing away everything you've built.
+                    </p>
+                    <p
+                        class="font-sans text-base sm:text-lg leading-relaxed text-primary-foreground/80 mb-8 max-w-md"
+                    >
+                        Career coaching for experienced tech professionals
+                        figuring out what comes next.
+                    </p>
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6"
+                    >
+                        <a href="/services" class="btn-white btn-lg"
+                            >Explore coaching</a
+                        >
+                        <a href="/about" class="btn-outline-white text-base"
+                            >Meet Kate</a
+                        >
+                    </div>
+                </div>
                 <div
-                    class="grid grid-cols-3 sm:flex sm:flex-wrap items-center gap-x-5 gap-y-4 sm:gap-y-3"
+                    class="relative max-w-[16rem] sm:max-w-xs mx-auto md:max-w-none w-full photo-frame photo-frame-sky photo-tilt-right"
                 >
-                    <img
-                        src="/Microsoft-logo.webp"
-                        alt="Microsoft"
-                        class="h-4 sm:h-5 w-auto max-w-[90px] object-contain object-left opacity-50 brightness-0 invert"
-                    />
-                    <img
-                        src="/Preply_logo_(2023).svg.png"
-                        alt="Preply"
-                        class="h-4 sm:h-5 w-auto max-w-[90px] object-contain object-left opacity-50 brightness-0 invert"
-                    />
-                    <img
-                        src="/qonto-2022.svg"
-                        alt="Qonto"
-                        class="h-4 sm:h-5 w-auto max-w-[90px] object-contain object-left opacity-50 brightness-0 invert"
-                    />
-                    <img
-                        src="/International_Watch_Company_logo.svg.png"
-                        alt="IWC"
-                        class="h-4 sm:h-5 w-auto max-w-[90px] object-contain object-left opacity-50 brightness-0 invert"
-                    />
-                    <img
-                        src="/google-logo.svg"
-                        alt="Google"
-                        class="h-4 sm:h-5 w-auto max-w-[90px] object-contain object-left opacity-50 brightness-0 invert"
-                    />
-                    <img
-                        src="/DeepL_logo.svg"
-                        alt="DeepL"
-                        class="h-4 sm:h-5 w-auto max-w-[90px] object-contain object-left opacity-50 brightness-0 invert"
+                    <Image
+                        src={heroImg}
+                        alt="Kate Mas smiling, hand on hip, in a yellow striped shirt"
+                        widths={[400, 724]}
+                        sizes="(min-width: 1024px) 24rem, (min-width: 768px) 18rem, 20rem"
+                        loading="eager"
+                        fetchpriority="high"
                     />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 1 — BLUE: Bio -->
-    <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+    <!-- 2 — BEIGE: The problem -->
+    <section class="py-16 sm:py-20 md:py-28 bg-background">
         <div class="container mx-auto px-5 sm:px-6">
             <div class="max-w-3xl mx-auto">
                 <p
-                    class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-6"
+                    class="font-sans font-medium text-xl sm:text-2xl md:text-3xl leading-snug text-foreground mb-8"
                 >
-                    Hi, I'm Kate
-                </p>
-                <h2
-                    class="font-serif text-3xl sm:text-4xl md:text-5xl mb-6 leading-tight"
-                >
-                    Your career doesn't have to be linear
-                </h2>
-                <p
-                    class="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-primary-foreground/70 mb-6"
-                >
-                    I spent 8+ years working in tech — across edtech and fintech
-                    — eventually leading teams as a manager. I was good at my
-                    job. But what I kept coming back to, in every role, was the
-                    people side: the difficult conversations, the career
-                    crossroads, the moments when someone needed to be seen.
+                    You've built experience, developed expertise and probably
+                    spent years getting where you are. But what happens when the
+                    career you've worked so hard to build no longer feels like
+                    the right fit?
                 </p>
                 <p
-                    class="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-primary-foreground/70 mb-10"
+                    class="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-muted-foreground mb-12 sm:mb-16"
                 >
-                    So I made my own pivot. I retrained as a coach, earned my
-                    ICF ACC accreditation, and have since worked with 150+
-                    clients navigating their own messy career stories. Part of
-                    what I bring is lived experience — including the wrong
-                    turns, so you don't have to make them too.
+                    Maybe you've outgrown your role. Maybe you're questioning
+                    your next move. Or maybe the industry is changing faster
+                    than your idea of what a successful career looks like.
                 </p>
-                <a href="/about" class="link-arrow-white">
-                    More about me
-                    <svg
-                        class="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </a>
+                <div class="grid sm:grid-cols-2 gap-8 sm:gap-10">
+                    <div>
+                        <p
+                            class="font-sans text-xs font-bold uppercase tracking-wider text-primary/50 mb-3"
+                        >
+                            What you don't need
+                        </p>
+                        <p
+                            class="font-serif text-2xl sm:text-3xl leading-tight text-foreground"
+                        >
+                            To
+                            <Scribble
+                                variant="strike"
+                                color="text-secondary"
+                                delay={0.0}
+                                ><s class="no-underline">quit</s></Scribble
+                            >,
+                            <Scribble
+                                variant="strike"
+                                color="text-secondary"
+                                delay={0.25}
+                                ><s class="no-underline">start</s></Scribble
+                            >
+                            <Scribble
+                                variant="strike"
+                                color="text-secondary"
+                                delay={0.5}
+                                ><s class="no-underline">over</s></Scribble
+                            >
+                            or
+                            <Scribble
+                                variant="strike"
+                                color="text-secondary"
+                                delay={0.75}
+                                ><s class="no-underline">throw</s></Scribble
+                            >
+                            <Scribble
+                                variant="strike"
+                                color="text-secondary"
+                                delay={1.0}
+                                ><s class="no-underline"
+                                    >everything</s
+                                ></Scribble
+                            >
+                            <Scribble
+                                variant="strike"
+                                color="text-secondary"
+                                delay={1.25}
+                                ><s class="no-underline">out</s>.</Scribble
+                            >
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-baseline gap-3 mb-3">
+                            <p
+                                class="font-sans text-xs font-bold uppercase tracking-wider text-primary/50"
+                            >
+                                What you do need
+                            </p>
+                            <HandNote rotate={-3} class="text-primary"
+                                >(the good news)</HandNote
+                            >
+                        </div>
+                        <p
+                            class="font-didot text-2xl sm:text-3xl leading-tight text-foreground"
+                        >
+                            Space to rethink what you want, recognise the value
+                            of what you've already built and explore what else
+                            is possible.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 2 — BEIGE: People come to me when… -->
-    <section class="py-16 sm:py-20 bg-background">
+    <!-- 3 — BLUE: Welcome to the messy middle -->
+    <section
+        class="relative overflow-hidden py-16 sm:py-20 md:py-28 bg-primary text-primary-foreground"
+    >
         <div class="container mx-auto px-5 sm:px-6">
-            <p
-                class="font-sans text-xs font-bold uppercase tracking-wider text-primary/50 text-center mb-4"
-            >
-                Sound familiar?
-            </p>
-            <h2
-                class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground text-center mb-8 sm:mb-10"
-            >
-                People come to me when…
-            </h2>
-            <div
-                class="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl mx-auto"
-            >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I don't know what I want anymore"</span
+            <div class="max-w-5xl mx-auto">
+                <div class="max-w-3xl mb-10 sm:mb-14">
+                    <h2
+                        class="font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.05] mb-5"
+                    >
+                        Welcome to the messy middle.
+                    </h2>
+                    <p
+                        class="font-didot text-xl sm:text-2xl md:text-3xl leading-snug text-secondary"
+                    >
+                        That uncomfortable space between the career you've built
+                        and the one you might want next.
+                    </p>
+                </div>
+                <p
+                    class="font-sans text-base sm:text-lg text-primary-foreground/70 mb-6"
                 >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I need to change direction — but how?"</span
+                    You might recognise yourself in one of these situations:
+                </p>
+                <div class="relative" data-thread-stage>
+                    <!-- Tangled thread: untangles into a straight line as you scroll -->
+                    <svg class="thread" aria-hidden="true">
+                        <path data-thread-path></path>
+                    </svg>
+                    <ol class="relative grid md:grid-cols-2 gap-4 sm:gap-5">
+                        {situations.map((s, i) => <li
+                            data-thread-card
+                            class="thread-card relative flex gap-4 sm:gap-5 bg-primary-foreground/10 border border-primary-foreground/20 rounded-2xl p-5 sm:p-6 last:md:col-span-2"
+                        >
+                            <span class="thread-node" data-thread-node></span>
+                            <span
+                                class="font-serif text-xl text-secondary leading-none pt-1 shrink-0"
+                            >
+                                {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <p
+                                class="font-sans text-base sm:text-lg leading-relaxed text-primary-foreground/70"
+                            >
+                                <strong
+                                    class="block text-primary-foreground font-bold mb-1"
+                                >
+                                    {s.lead}
+                                </strong>
+                                {s.text}
+                            </p>
+                        </li>)}
+                    </ol>
+                </div>
+                <div
+                    class="mt-12 sm:mt-16 border-t border-primary-foreground/20 pt-10 sm:pt-12 grid md:grid-cols-2 gap-6 md:gap-12"
                 >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I've been stuck for a while and I can't figure out
-                    why"</span
-                >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I've lost sight of what actually matters to me"</span
-                >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I feel like I'm playing a role that isn't really
-                    mine"</span
-                >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"My job is taking over my life"</span
-                >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"Everything changed — now what?"</span
-                >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I just need help figuring out what I actually want"</span
-                >
-                <span
-                    class="font-sans text-xs sm:text-sm font-medium text-primary-foreground bg-primary px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl"
-                    >"I'm stepping into leadership and need to figure out who I
-                    am in this role"</span
-                >
+                    <p class="font-serif text-2xl sm:text-3xl leading-tight">
+                        You don't need another person telling you to
+                        <span class="text-secondary">follow your passion</span>
+                        or just
+                        <span class="text-secondary">update your CV</span>.
+                    </p>
+                    <p
+                        class="font-sans text-lg sm:text-xl leading-relaxed text-primary-foreground/80 md:pt-1"
+                    >
+                        You need to understand what's actually happening, what
+                        matters to you now and what options you have.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 4 — BLUE: Coaching Services -->
+    <!-- 4 — BEIGE: Hi, I'm Kate -->
+    <section class="py-16 sm:py-20 md:py-28 bg-background">
+        <div class="container mx-auto px-5 sm:px-6">
+            <div
+                class="max-w-5xl mx-auto grid md:grid-cols-[18rem_minmax(0,1fr)] lg:grid-cols-[22rem_minmax(0,1fr)] gap-12 md:gap-14 lg:gap-20 items-start"
+            >
+                <div
+                    class="relative max-w-[16rem] sm:max-w-xs mx-auto md:max-w-none w-full photo-frame photo-tilt-left md:sticky md:top-28"
+                >
+                    <Image
+                        src={kateImg}
+                        alt="Kate Mas sitting on a chair, hugging one knee and looking to the side"
+                        widths={[400, 724]}
+                        sizes="(min-width: 1024px) 22rem, (min-width: 768px) 18rem, 20rem"
+                    />
+                </div>
+                <div>
+                    <p
+                        class="font-sans text-xs font-bold uppercase tracking-wider text-primary mb-4"
+                    >
+                        Hi, I'm Kate
+                    </p>
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-6"
+                    >
+                        Career coach, former tech leader
+                    </h2>
+                    <p
+                        class="font-didot text-xl sm:text-2xl leading-snug text-foreground mb-8"
+                    >
+                        …and someone who's taken a few unconventional turns.
+                    </p>
+                    <div
+                        class="space-y-5 font-sans text-base sm:text-lg leading-relaxed text-muted-foreground"
+                    >
+                        <p>
+                            Before building Messy Careers, I spent over eight
+                            years working in tech, across edtech and fintech.
+                        </p>
+                        <p>
+                            At
+                            <span class="text-foreground font-medium"
+                                >Preply</span
+                            >, I built a copywriting function from the ground up
+                            and grew a team. At
+                            <span class="text-foreground font-medium"
+                                >Qonto</span
+                            >, I led UX writing in a fast-growing fintech
+                            environment, working on content systems and product
+                            experiences across multiple markets.
+                        </p>
+                        <p>
+                            I've experienced the excitement of building
+                            something from scratch, the challenges of
+                            leadership, the uncertainty of organisational change
+                            and the moment when a career that looks good on
+                            paper stops feeling quite right.
+                        </p>
+                        <p>
+                            Today, I combine that industry experience with
+                            coaching, Gestalt and practical career strategy to
+                            help experienced professionals rethink their next
+                            chapter.
+                        </p>
+                        <p>
+                            I know that career decisions rarely happen in
+                            isolation. There's your salary, professional
+                            reputation, family, identity, ambitions and
+                            everything else that makes a career part of your
+                            life.
+                        </p>
+                    </div>
+                    <blockquote
+                        class="my-10 font-serif text-2xl sm:text-3xl leading-tight text-foreground border-l-4 border-secondary pl-5 sm:pl-6"
+                    >
+                        I don't think every career problem requires a career
+                        change. And I won't tell you to quit your job and figure
+                        it out later.
+                    </blockquote>
+                    <a href="/about" class="link-arrow"
+                        >More about me <Fragment set:html={arrow}
+                    /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 — BLUE: Context / credentials -->
     <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
         <div class="container mx-auto px-5 sm:px-6">
-            <div class="text-center mb-10 sm:mb-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="max-w-2xl mb-10 sm:mb-14">
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight mb-4"
+                    >
+                        A little context behind the coaching.
+                    </h2>
+                    <p
+                        class="font-didot text-xl sm:text-2xl leading-snug text-secondary"
+                    >
+                        Because experience matters, especially when you're
+                        making decisions about your future.
+                    </p>
+                </div>
+                <dl
+                    class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 sm:gap-x-8 border-t border-primary-foreground/20 pt-10"
+                >
+                    {stats.map((s) => <div class="min-w-0">
+                        <dt
+                            class="font-serif text-4xl sm:text-5xl leading-none mb-2"
+                        >
+                            <span class="relative inline-block">
+                                {s.value}
+                                {s.value === '90+' && <HandNote
+                                    rotate={-12}
+                                    delay={0.4}
+                                    class="absolute left-[85%] -top-6 whitespace-nowrap text-secondary"
+                                >
+                                    & counting
+                                </HandNote>}
+                            </span>
+                            <span
+                                class="block font-sans font-bold text-xs uppercase tracking-wider text-secondary mt-3"
+                            >
+                                {s.unit}
+                            </span>
+                        </dt>
+                        <dd
+                            class="font-sans text-sm sm:text-base leading-relaxed text-primary-foreground/70 mt-3"
+                        >
+                            {s.text}
+                        </dd>
+                    </div>)}
+                </dl>
                 <p
-                    class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-4"
+                    class="font-sans text-base sm:text-lg leading-relaxed text-primary-foreground/80 mt-12 max-w-2xl"
                 >
-                    How I can help
+                    My background also includes leadership experience, hiring
+                    and building international teams, and ongoing Gestalt
+                    training.
                 </p>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl">
-                    Ways to work together
-                </h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-5 sm:gap-8 max-w-3xl mx-auto">
-                <div
-                    class="bg-primary-foreground/10 border border-primary-foreground/20 p-6 sm:p-8 rounded-2xl hover:bg-primary-foreground/15 transition-colors"
-                >
-                    <div
-                        class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6"
+                <div class="mt-12 sm:mt-14">
+                    <p
+                        class="font-sans text-xs font-bold uppercase tracking-wider text-primary-foreground/50 mb-5"
                     >
-                        <span class="font-serif text-xl text-primary">1</span>
-                    </div>
-                    <h3
-                        class="font-serif text-2xl text-primary-foreground mb-4"
-                    >
-                        1-to-1 Coaching
-                    </h3>
-                    <p class="font-sans text-primary-foreground/70">
-                        Personalized sessions to get unstuck, gain clarity, and
-                        move forward — whether you're navigating a career change
-                        or stepping into a new kind of leadership.
+                        Trusted by clients from
                     </p>
+                    <ul
+                        class="grid grid-cols-3 sm:flex sm:flex-wrap items-center gap-x-8 gap-y-6 sm:gap-x-10"
+                    >
+                        {logos.map((l) => <li>
+                            <span
+                                role="img"
+                                aria-label={l.alt}
+                                class="logo-mask block h-5 sm:h-6 max-w-full bg-primary-foreground/70"
+                                style={`--logo: url("${l.src}"); aspect-ratio: ${l.ratio};`}
+                            />
+                        </li>)}
+                    </ul>
                 </div>
-                <div
-                    class="bg-primary-foreground/10 border border-primary-foreground/20 p-6 sm:p-8 rounded-2xl hover:bg-primary-foreground/15 transition-colors"
-                >
-                    <div
-                        class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6"
-                    >
-                        <span class="font-serif text-xl text-primary">2</span>
-                    </div>
-                    <h3
-                        class="font-serif text-2xl text-primary-foreground mb-4"
-                    >
-                        Corporate Training
-                    </h3>
-                    <p class="font-sans text-primary-foreground/70">
-                        Workshops and coaching programmes for teams navigating
-                        change, growth, or career development at scale.
-                    </p>
-                </div>
-            </div>
-            <div class="text-center mt-8 sm:mt-10">
-                <a href="/services" class="link-arrow-white">
-                    Find the right fit
-                    <svg
-                        class="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- 5 — BEIGE: Client stories -->
+    <!-- 6 — BEIGE: How we work together -->
+    <section class="py-16 sm:py-20 md:py-28 bg-background">
+        <div class="container mx-auto px-5 sm:px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="max-w-3xl mb-12 sm:mb-16">
+                    <p
+                        class="font-sans text-xs font-bold uppercase tracking-wider text-primary mb-4"
+                    >
+                        How it works
+                    </p>
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-6"
+                    >
+                        So, how do we work together?
+                    </h2>
+                    <p
+                        class="font-sans text-base sm:text-lg md:text-xl leading-relaxed text-muted-foreground"
+                    >
+                        Not with a universal formula or a five-step plan to find
+                        your dream job. Every career situation is different. But
+                        I generally see three important areas of work.
+                    </p>
+                </div>
+                <ThreadLine class="h-10 sm:h-12 text-secondary mb-6 sm:mb-8" />
+                <ol class="grid md:grid-cols-3 gap-5 sm:gap-6">
+                    {areas.map((a) => <li
+                        class="flex flex-col border-2 border-primary rounded-2xl p-6 sm:p-7"
+                    >
+                        <span class="font-serif text-lg text-secondary mb-2">
+                            {a.num}
+                        </span>
+                        <h3 class="font-serif text-2xl text-foreground mb-6">
+                            {a.title}
+                        </h3>
+                        <p
+                            class="font-sans font-bold text-base sm:text-lg text-foreground mb-3"
+                        >
+                            {a.lead}
+                        </p>
+                        <p
+                            class="font-didot text-lg leading-snug text-foreground mb-4"
+                        >
+                            {a.questions}
+                        </p>
+                        <p
+                            class="font-sans text-sm sm:text-base leading-relaxed text-muted-foreground"
+                        >
+                            {a.text}
+                        </p>
+                    </li>)}
+                </ol>
+                <div
+                    class="mt-12 sm:mt-16 flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+                >
+                    <p
+                        class="font-serif text-3xl sm:text-4xl text-foreground leading-tight"
+                    >
+                        Clarity before action.
+                        <span class="font-didot text-secondary"
+                            ><Scribble
+                                variant="circle"
+                                color="text-primary"
+                                delay={0.3}
+                                >Always.</Scribble
+                            ></span
+                        >
+                    </p>
+                    <a href="/services" class="btn-primary btn-lg self-start"
+                        >Explore coaching options <Fragment set:html={arrow}
+                    /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 — BLUE: Testimonials -->
+    <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+        <div class="container mx-auto px-5 sm:px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="max-w-2xl mb-10 sm:mb-14">
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight mb-4"
+                    >
+                        Different people. Different career questions.
+                    </h2>
+                    <p
+                        class="font-didot text-xl sm:text-2xl leading-snug text-secondary"
+                    >
+                        A few words from people I've worked with.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+                    {testimonials.map((t) => <figure
+                        class="bg-background text-foreground rounded-2xl p-6 sm:p-7 flex flex-col"
+                    >
+                        <span
+                            class="self-start font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider mb-6"
+                        >
+                            {t.tag}
+                        </span>
+                        <span
+                            class="font-serif text-5xl leading-none text-secondary mb-2"
+                            aria-hidden="true"
+                        >
+                            “
+                        </span>
+                        <blockquote
+                            class="font-didot text-xl sm:text-2xl leading-snug flex-grow"
+                        >
+                            {t.quote}
+                        </blockquote>
+                    </figure>)}
+                </div>
+                <div
+                    class="mt-10 sm:mt-12 flex flex-col md:flex-row md:items-center justify-between gap-5"
+                >
+                    <p
+                        class="font-sans text-base sm:text-lg leading-relaxed text-primary-foreground/70 max-w-xl"
+                    >
+                        Every coaching process is different. You can read more
+                        about the people I've worked with and what they took
+                        away from our conversations.
+                    </p>
+                    <a href="/reviews" class="link-arrow-white shrink-0"
+                        >Read client stories <Fragment set:html={arrow}
+                    /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 — BEIGE: Resources -->
     <section class="py-16 sm:py-20 md:py-24 bg-background">
         <div class="container mx-auto px-5 sm:px-6">
-            <div class="text-center mb-10 sm:mb-16">
-                <p
-                    class="font-sans text-xs font-bold uppercase tracking-wider text-primary mb-4"
-                >
-                    Client reviews
-                </p>
-                <h2
-                    class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground"
-                >
-                    What people say
-                </h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-                <div
-                    class="bg-card p-5 sm:p-6 rounded-2xl border border-border flex flex-col"
-                >
-                    <div class="mb-4">
-                        <span
-                            class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider"
-                            >Career growth</span
-                        >
-                    </div>
-                    <blockquote
-                        class="font-accent text-base sm:text-lg text-foreground leading-snug flex-grow mb-5"
+            <div class="max-w-5xl mx-auto">
+                <div class="max-w-2xl mb-10 sm:mb-12">
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-4"
                     >
-                        "She helps you uncover solutions you didn't even know
-                        you had in you."
-                    </blockquote>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Daria L.
+                        A few things to help you get started.
+                    </h2>
+                    <p
+                        class="font-sans text-base sm:text-lg leading-relaxed text-muted-foreground"
+                    >
+                        Not ready for coaching? That's fine. There are other
+                        ways to start thinking about your career.
                     </p>
                 </div>
-                <div
-                    class="bg-card p-5 sm:p-6 rounded-2xl border border-border flex flex-col"
-                >
-                    <div class="mb-4">
-                        <span
-                            class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider"
-                            >Life pivot</span
+                <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
+                    {resources.map((r) => {
+                        const Tag = r.href ? 'a' : 'div';
+                        const external = r.href.startsWith('http');
+                        return <Tag
+                            href={r.href || undefined}
+                            target={external ? '_blank' : undefined}
+                            rel={external ? 'noopener' : undefined}
+                            class:list={[
+                                'relative group flex flex-col bg-muted/50 rounded-2xl p-6 sm:p-8 border border-transparent transition-colors',
+                                r.href && 'hover:border-primary'
+                            ]}
                         >
-                    </div>
-                    <blockquote
-                        class="font-accent text-base sm:text-lg text-foreground leading-snug flex-grow mb-5"
-                    >
-                        "Kate helped me dig out a much bigger problem — and move
-                        forward with a truly pivotal decision for me and my
-                        family."
-                    </blockquote>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Anonymous
-                    </p>
+                            <p
+                                class="font-sans text-xs font-bold uppercase tracking-wider text-primary/60 mb-4"
+                            >
+                                {r.kicker}
+                            </p>
+                            <h3
+                                class="font-serif text-2xl sm:text-3xl text-foreground mb-4"
+                            >
+                                {r.title}
+                            </h3>
+                            <p
+                                class="font-sans text-base leading-relaxed text-muted-foreground flex-grow mb-8"
+                            >
+                                {r.text}
+                            </p>
+                            {r.href ? (
+                                <span class="link-arrow group-hover:opacity-70">
+                                    {r.cta}
+                                    <Fragment set:html={arrow} />
+                                </span>
+                            ) : (
+                                <span
+                                    class="self-start font-sans text-xs font-bold uppercase tracking-wider text-primary bg-secondary/60 px-3 py-1.5 rounded-full"
+                                >
+                                    Coming soon
+                                </span>
+                            )}
+                        </Tag>;
+                    })}
                 </div>
-                <div
-                    class="bg-card p-5 sm:p-6 rounded-2xl border border-border flex flex-col"
-                >
-                    <div class="mb-4">
-                        <span
-                            class="font-sans text-xs font-bold bg-secondary text-primary px-2.5 py-1 rounded-full uppercase tracking-wider"
-                            >Career clarity</span
-                        >
-                    </div>
-                    <blockquote
-                        class="font-accent text-base sm:text-lg text-foreground leading-snug flex-grow mb-5"
-                    >
-                        "Kate's approach helped me see myself and my potential
-                        in a new light."
-                    </blockquote>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Yana A.
-                    </p>
-                </div>
-            </div>
-            <div class="text-center mt-8 sm:mt-10">
-                <a href="/reviews" class="link-arrow">
-                    Read all reviews
-                    <svg
-                        class="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- 6 — BLUE: Final CTA -->
-    <section class="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
-        <div class="container mx-auto px-5 sm:px-6 text-center">
-            <p
-                class="font-sans text-xs font-bold uppercase tracking-wider text-secondary mb-4"
+    <!-- 9 — BLUE: Final CTA -->
+    <section
+        class="py-16 sm:py-20 md:py-28 bg-primary text-primary-foreground overflow-hidden"
+    >
+        <div class="container mx-auto px-5 sm:px-6">
+            <div
+                class="max-w-5xl mx-auto grid md:grid-cols-[minmax(0,1fr)_16rem] lg:grid-cols-[minmax(0,1fr)_20rem] gap-12 md:gap-14 lg:gap-20 items-center"
             >
-                First step
-            </p>
-            <h2
-                class="font-serif text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8"
-            >
-                Not sure where to start?
-            </h2>
-            <p
-                class="font-sans text-base sm:text-lg text-primary-foreground/80 max-w-xl mx-auto mb-8 sm:mb-10"
-            >
-                Book a free intro call. We'll talk about what's going on, what
-                you're hoping to change, and whether we're a good fit. No
-                pressure, no pitch.
-            </p>
-            <a href="/intro-call" class="btn-white btn-lg">Let's talk</a>
+                <div>
+                    <h2
+                        class="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.05] mb-8"
+                    >
+                        You don't have to burn it all down to build something
+                        <Scribble variant="underline" delay={0.3}
+                            >different.</Scribble
+                        >
+                    </h2>
+                    <div
+                        class="space-y-5 font-sans text-base sm:text-lg leading-relaxed text-primary-foreground/75 mb-8"
+                    >
+                        <p>
+                            Your next career chapter doesn't have to look like
+                            the previous one. But it also doesn't have to mean
+                            starting from zero.
+                        </p>
+                        <p>
+                            Sometimes the answer is a new role. Sometimes it's a
+                            different way of working, a change in
+                            responsibilities or a new relationship with your
+                            professional identity.
+                        </p>
+                        <p>
+                            And sometimes, you just need to stop, look at what
+                            you've built and ask yourself whether it's still
+                            what you want.
+                        </p>
+                    </div>
+                    <p
+                        class="font-didot text-2xl sm:text-3xl leading-snug text-secondary mb-2"
+                    >
+                        If you're somewhere in that process, let's talk.
+                    </p>
+                    <p
+                        class="font-sans text-base text-primary-foreground/70 mb-8"
+                    >
+                        You don't need to have a clear plan before we start.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
+                        <a href="/intro-call" class="btn-white btn-lg"
+                            >Book a clarity call <Fragment set:html={arrow}
+                        /></a>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[15rem] sm:max-w-xs mx-auto md:max-w-none w-full photo-frame photo-frame-sky photo-tilt-right"
+                >
+                    <Image
+                        src={kickImg}
+                        alt="Kate Mas mid-kick, leaning back and laughing"
+                        widths={[400, 724]}
+                        sizes="(min-width: 1024px) 20rem, (min-width: 768px) 16rem, 15rem"
+                    />
+                </div>
+            </div>
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    /* Brand accent face (Didot), falling back to the site's Playfair italic
+       where Didot isn't installed (non-Apple devices). */
+    .font-didot {
+        font-family:
+            'Didot', 'Didot LT STD', 'Bodoni 72', 'GFS Didot',
+            'Playfair Display', serif;
+        font-style: italic;
+    }
+
+    /* ── Messy middle thread ───────────────────────────────────────
+       Hidden states only apply once the script adds .thread-ready, so
+       without JS (or with reduced motion) the list is a plain grid. The list
+       becomes one column with a gutter on the left; the script draws a
+       tangled line through the gutter that pulls straight as each part of
+       it scrolls past, and sets --p (0 → 1) on each card as it's reached. */
+    .thread,
+    .thread-node {
+        display: none;
+    }
+    .thread-ready {
+        --g: 2.75rem;
+    }
+    @media (min-width: 768px) {
+        .thread-ready {
+            --g: 4.5rem;
+        }
+    }
+    .thread-ready ol {
+        grid-template-columns: minmax(0, 1fr);
+        padding-left: var(--g);
+        max-width: 52rem;
+    }
+    .thread-ready ol > li {
+        grid-column: auto;
+    }
+    .thread-ready .thread {
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        pointer-events: none;
+    }
+    .thread path {
+        fill: none;
+        stroke: var(--color-secondary);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    .thread-ready .thread-node {
+        display: block;
+        position: absolute;
+        left: calc(var(--g) / -2);
+        top: 1.85rem;
+        width: 0.875rem;
+        height: 0.875rem;
+        translate: -50% -50%;
+        border-radius: 9999px;
+        border: 2.5px solid var(--color-secondary);
+        background: var(--color-primary);
+        transition:
+            background-color 0.3s,
+            scale 0.3s;
+    }
+    .thread-ready .thread-node.is-on {
+        background: #fff;
+        border-color: #fff;
+        scale: 1.25;
+    }
+    .thread-ready .thread-card {
+        opacity: calc(0.25 + var(--p, 0) * 0.75);
+        transform: translateX(calc((1 - var(--p, 0)) * 14px));
+    }
+
+    /* Client logos tinted via mask so they take the surrounding colour */
+    .logo-mask {
+        -webkit-mask: var(--logo) left center / contain no-repeat;
+        mask: var(--logo) left center / contain no-repeat;
+    }
+</style>
+
+<script>
+    // Messy middle thread: a tangled line pulls straight as you scroll and
+    // each situation comes forward as the line reaches it.
+    // Skipped entirely for reduced-motion users: the cards just show.
+    const stage = document.querySelector<HTMLElement>('[data-thread-stage]');
+    const reduceMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (stage && !reduceMotion) {
+        const cards = [
+            ...stage.querySelectorAll<HTMLElement>('[data-thread-card]')
+        ];
+        const nodes = [
+            ...stage.querySelectorAll<HTMLElement>('[data-thread-node]')
+        ];
+        const path = stage.querySelector<SVGPathElement>('[data-thread-path]');
+        const clamp = (n: number) => Math.min(1, Math.max(0, n));
+        const ease = (t: number) => t * t * (3 - 2 * t);
+        let ticking = false;
+
+        // How untangled a point is, from its position in the viewport:
+        // 0 below 85% of the screen height, 1 once it's above 45%.
+        const untangled = (viewportY: number, vh: number) =>
+            clamp((vh * 0.85 - viewportY) / (vh * 0.4));
+
+        const drawThread = (rect: DOMRect, vh: number) => {
+            if (!path || !nodes[0]) return;
+            const W = rect.width;
+            const H = rect.height;
+            // Straight line runs through the centre of the card nodes
+            const n = nodes[0].getBoundingClientRect();
+            const x0 = n.left + n.width / 2 - rect.left;
+            // Smaller loops on phones so they don't swamp the card text
+            const rMax = Math.min(W * (W < 640 ? 0.18 : 0.3), 150);
+            const loops = Math.max(6, H / 105);
+            const steps = 360;
+            let d = '';
+
+            for (let i = 0; i <= steps; i++) {
+                const s = i / steps;
+                const y0 = s * H;
+                const k = 1 - ease(untangled(rect.top + y0, vh));
+                // Irregular loops of varying size, so it reads as a scribble
+                const a = 2 * Math.PI * (loops * s + 0.35 * Math.sin(s * 9));
+                const r = rMax * (0.55 + 0.45 * Math.sin(s * 7.3 + 1.2)) * k;
+                // A second, tighter wobble on top makes it knot up
+                const a2 = a * 2.7 + 1.3;
+                const r2 = r * 0.32;
+                const x = x0 + r * 1.05 - r * Math.cos(a) + r2 * Math.sin(a2);
+                const y = y0 + r * 0.8 * Math.sin(a) + r2 * Math.cos(a2);
+                d += `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`;
+            }
+            path.setAttribute('d', d);
+        };
+
+        const update = () => {
+            ticking = false;
+            const vh = window.innerHeight;
+            const rect = stage.getBoundingClientRect();
+
+            drawThread(rect, vh);
+            // Each card comes forward as the thread straightens beside it
+            cards.forEach((card, i) => {
+                const node = nodes[i].getBoundingClientRect();
+                const p = untangled(node.top, vh);
+                card.style.setProperty('--p', p.toFixed(3));
+                nodes[i].classList.toggle('is-on', p > 0.9);
+            });
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(update);
+            }
+        };
+
+        stage.classList.add('thread-ready');
+        update();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+    }
+</script>

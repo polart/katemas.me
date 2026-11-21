@@ -1,0 +1,51 @@
+---
+// A loose horizontal thread with a knot in it, echoing the tangled line in
+// the Home page's "messy middle" section. Stretches to its container's
+// width and draws itself in on scroll (see "Hand-drawn marks" in global.css).
+//
+//   <ThreadLine class="h-10 text-secondary" />
+
+interface Props {
+    /** Size and colour classes, e.g. "h-10 text-secondary" */
+    class?: string;
+    /** Put the knot near the start, middle or end */
+    knot?: 'start' | 'middle' | 'end';
+    delay?: number;
+}
+
+const { class: className, knot = 'middle', delay = 0 } = Astro.props;
+
+const paths = {
+    start: 'M0 32 C 60 14, 120 12, 160 28 C 190 42, 168 58, 146 46 C 122 32, 160 12, 206 24 C 330 52, 520 12, 700 32 C 820 44, 920 22, 1000 30',
+    middle: 'M0 30 C 120 10, 220 50, 340 30 C 420 16, 448 6, 474 20 C 500 34, 474 54, 448 42 C 422 30, 460 8, 506 22 C 580 42, 700 14, 820 32 C 900 44, 960 26, 1000 30',
+    end: 'M0 30 C 160 50, 380 12, 600 32 C 720 42, 780 8, 822 22 C 852 34, 828 56, 802 44 C 776 32, 820 10, 862 26 C 920 40, 966 28, 1000 30'
+};
+---
+
+<svg
+    data-draw
+    class:list={['thread-line', className]}
+    viewBox="0 0 1000 60"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+    style={`--draw-duration: 1.6s;${delay ? ` --draw-delay: ${delay}s;` : ''}`}
+>
+    <path d={paths[knot]} pathLength="1"></path>
+</svg>
+
+<style>
+    .thread-line {
+        display: block;
+        width: 100%;
+        overflow: visible;
+        pointer-events: none;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    .thread-line path {
+        stroke-width: 2.5px;
+        vector-effect: non-scaling-stroke;
+    }
+</style>

@@ -1,0 +1,105 @@
+---
+// A handwritten aside in Caveat, with an optional hand-drawn arrow.
+// The text fades in and the arrow draws itself on scroll
+// (see "Hand-drawn marks" in global.css).
+//
+//   <HandNote arrow="down-right">that's me!</HandNote>
+
+interface Props {
+    /** Where the arrow points, relative to the text */
+    arrow?: 'none' | 'left' | 'right' | 'down-left' | 'down-right';
+    /** Tilt in degrees */
+    rotate?: number;
+    /** Seconds to wait before drawing */
+    delay?: number;
+    class?: string;
+}
+
+const {
+    arrow = 'none',
+    rotate = -4,
+    delay = 0,
+    class: className
+} = Astro.props;
+
+const style = [
+    `--note-rotate: ${rotate}deg`,
+    delay ? `--draw-delay: ${delay}s` : ''
+]
+    .filter(Boolean)
+    .join('; ');
+---
+
+<span
+    data-draw
+    class:list={['hand-note', `hand-note-${arrow}`, className]}
+    style={style}
+>
+    <span class="hand-note-text"><slot /></span>
+    {arrow !== 'none' && <svg
+        class="hand-note-arrow"
+        viewBox="0 0 64 36"
+        aria-hidden="true"
+    >
+        <path
+            d="M3 26 C 16 8, 36 4, 56 15 M 45 7 L 57 15 L 47 24"
+            pathLength="1"
+        />
+    </svg>}
+</span>
+
+<style>
+    .hand-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-family: var(--font-hand);
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1.05;
+        rotate: var(--note-rotate);
+        pointer-events: none;
+    }
+    @media (min-width: 640px) {
+        .hand-note {
+            font-size: 1.75rem;
+        }
+    }
+    .hand-note-arrow {
+        width: 3rem;
+        flex-shrink: 0;
+        overflow: visible;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    /* Arrow on the left, pointing left */
+    .hand-note-left {
+        flex-direction: row-reverse;
+    }
+    .hand-note-left .hand-note-arrow {
+        scale: -1 1;
+    }
+    /* Arrow below the text, pointing down */
+    .hand-note-down-left,
+    .hand-note-down-right {
+        flex-direction: column;
+    }
+    .hand-note-down-right {
+        align-items: flex-end;
+    }
+    .hand-note-down-left {
+        align-items: flex-start;
+    }
+    .hand-note-down-right .hand-note-arrow {
+        rotate: 65deg;
+        margin-right: 0.25rem;
+    }
+    .hand-note-down-left .hand-note-arrow {
+        scale: -1 1;
+        rotate: -65deg;
+        margin-left: 0.25rem;
+    }
+</style>

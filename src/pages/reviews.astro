@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Scribble from '../components/Scribble.astro';
 ---
 
 <BaseLayout
@@ -17,7 +18,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h1
                     class="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-6"
                 >
-                    Reviews
+                    <Scribble variant="underline" delay={0.3}>Reviews</Scribble>
                 </h1>
                 <p
                     class="font-sans text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
@@ -29,7 +30,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div
                 class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto"
             >
-                <!-- Yana A. -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -81,12 +81,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             better coach. Highly recommended!"
                         </p>
                     </details>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Yana A.
-                    </p>
                 </div>
 
-                <!-- Marta R. -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -132,12 +128,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             like therapy."
                         </p>
                     </details>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Marta R.
-                    </p>
                 </div>
 
-                <!-- Anonymous -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -187,12 +179,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             good work!"
                         </p>
                     </details>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Anonymous
-                    </p>
                 </div>
 
-                <!-- Pauline -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -243,12 +231,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             certainly achieved that!"
                         </p>
                     </details>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Pauline
-                    </p>
                 </div>
 
-                <!-- Daria L. -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -292,12 +276,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             exceptional coach!"
                         </p>
                     </details>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Daria L.
-                    </p>
                 </div>
 
-                <!-- Myroslav -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -314,9 +294,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         better and get clarity on my life goals — something I
                         really want."
                     </blockquote>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Myroslav
-                    </p>
                 </div>
 
                 <!-- Share your story CTA -->
@@ -352,7 +329,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     >
                 </div>
 
-                <!-- Mildred -->
                 <div
                     class="bg-card p-5 sm:p-6 rounded-2xl border border-border hover:border-primary transition-colors group flex flex-col"
                 >
@@ -412,9 +388,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             reconnect, and ultimately, rediscover themselves."
                         </p>
                     </details>
-                    <p class="font-sans text-sm text-muted-foreground">
-                        Mildred C.
-                    </p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,102 @@
+---
+// A hand-drawn mark around a word or phrase: a wobbly underline, a loose
+// circle, or a scribbled-out strike. It draws itself in on scroll
+// (see "Hand-drawn marks" in global.css).
+//
+//   <Scribble variant="circle" color="text-secondary">career.</Scribble>
+
+interface Props {
+    variant?: 'underline' | 'circle' | 'strike';
+    /** Tailwind text colour class for the mark, e.g. text-secondary */
+    color?: string;
+    /** Seconds to wait before drawing */
+    delay?: number;
+    class?: string;
+}
+
+const {
+    variant = 'underline',
+    color = 'text-secondary',
+    delay = 0,
+    class: className
+} = Astro.props;
+
+const shapes = {
+    underline: {
+        viewBox: '0 0 200 24',
+        d: 'M4 13 C 40 6, 78 18, 118 11 S 176 6, 196 12 M 24 19 C 72 14, 128 21, 182 16'
+    },
+    circle: {
+        viewBox: '0 0 200 80',
+        d: 'M 150 9 C 96 -1, 18 9, 8 38 C 0 66, 64 78, 118 75 C 178 71, 199 50, 191 28 C 184 10, 142 3, 92 7'
+    },
+    strike: {
+        viewBox: '0 0 200 30',
+        d: 'M 3 17 C 50 11, 110 20, 197 13 M 8 21 C 60 16, 130 24, 192 9'
+    }
+};
+const shape = shapes[variant];
+---
+
+<span class:list={['scribble', `scribble-${variant}`, className]}>
+    <slot />
+    <svg
+        data-draw
+        class:list={['scribble-mark', color]}
+        viewBox={shape.viewBox}
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        style={delay ? `--draw-delay: ${delay}s` : undefined}
+    >
+        <path d={shape.d} pathLength="1"></path>
+    </svg>
+</span>
+
+<style>
+    .scribble {
+        position: relative;
+        display: inline-block;
+        isolation: isolate;
+    }
+    .scribble-mark {
+        position: absolute;
+        pointer-events: none;
+        overflow: visible;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    .scribble-mark path {
+        stroke-width: 3px;
+        vector-effect: non-scaling-stroke;
+    }
+    .scribble-underline .scribble-mark {
+        left: -3%;
+        width: 106%;
+        bottom: -0.3em;
+        height: 0.38em;
+    }
+    /* Room for the loop so it doesn't crowd neighbouring words */
+    .scribble-circle {
+        margin-inline: 0.2em;
+    }
+    .scribble-circle .scribble-mark {
+        left: -0.35em;
+        right: -0.35em;
+        top: -0.22em;
+        bottom: -0.3em;
+        width: calc(100% + 0.7em);
+        height: calc(100% + 0.52em);
+        z-index: -1;
+    }
+    .scribble-strike .scribble-mark {
+        left: -4%;
+        width: 108%;
+        top: 38%;
+        height: 0.4em;
+    }
+    .scribble-strike .scribble-mark path {
+        stroke-width: 4px;
+    }
+</style>
