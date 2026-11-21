@@ -4,24 +4,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Illustrations for the blue "three perspectives" cards (white + sky blue)
 const illustrations = {
     coaching: `<img src="/about/icf-logo.png" alt="International Coaching Federation" width="834" height="267" class="h-14 sm:h-16 w-auto" />`,
-    // Kanizsa triangle: the classic Gestalt figure — you see a whole that isn't drawn
-    gestalt: `<svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
-        <defs>
-            <mask id="gestalt-cut">
-                <rect width="120" height="96" fill="white" />
-                <path d="M60 18 L22 80 L98 80 Z" fill="black" />
-            </mask>
-        </defs>
-        <g class="stroke-white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M36 32 L24 32 L30 42.4" />
-            <path d="M84 32 L96 32 L90 42.4" />
-            <path d="M54 83.6 L60 94 L66 83.6" />
-        </g>
-        <g mask="url(#gestalt-cut)" class="fill-secondary">
-            <circle cx="60" cy="18" r="14" />
-            <circle cx="22" cy="80" r="14" />
-            <circle cx="98" cy="80" r="14" />
-        </g>
+    // Three linked rings: present moment · experience · relationship
+    gestalt: `<svg viewBox="0 0 120 96" fill="none" stroke-linecap="round" aria-hidden="true">
+        <circle cx="30" cy="48" r="20" class="stroke-secondary" stroke-width="5" />
+        <circle cx="60" cy="48" r="20" class="stroke-white" stroke-width="5" />
+        <circle cx="90" cy="48" r="20" class="stroke-secondary" stroke-width="5" />
+        <path d="M47.3 58 A20 20 0 0 1 42.3 63.8" class="stroke-secondary" stroke-width="5" />
+        <path d="M72.3 32.2 A20 20 0 0 1 77.3 38" class="stroke-white" stroke-width="5" />
+        <circle cx="26" cy="48" r="4" class="fill-white" />
+        <path d="M60 42 L61.6 46.4 L66 48 L61.6 49.6 L60 54 L58.4 49.6 L54 48 L58.4 46.4 Z" class="fill-secondary" />
+        <circle cx="90" cy="48" r="3" class="fill-white" />
+        <circle cx="99" cy="48" r="3" class="fill-white" />
     </svg>`,
     // A messy, looping path that still arrives at a flag
     strategy: `<svg viewBox="0 0 120 96" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
