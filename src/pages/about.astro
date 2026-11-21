@@ -1,16 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Illustrations for the blue "three perspectives" cards (white + sky blue)
+const illustrations = {
+    coaching: `<img src="/about/icf-logo.png" alt="International Coaching Federation" width="834" height="267" class="h-14 sm:h-16 w-auto" />`,
+    // Kanizsa triangle: the classic Gestalt figure — you see a whole that isn't drawn
+    gestalt: `<svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
+        <defs>
+            <mask id="gestalt-cut">
+                <rect width="120" height="96" fill="white" />
+                <path d="M60 18 L22 80 L98 80 Z" fill="black" />
+            </mask>
+        </defs>
+        <g class="stroke-white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M36 32 L24 32 L30 42.4" />
+            <path d="M84 32 L96 32 L90 42.4" />
+            <path d="M54 83.6 L60 94 L66 83.6" />
+        </g>
+        <g mask="url(#gestalt-cut)" class="fill-secondary">
+            <circle cx="60" cy="18" r="14" />
+            <circle cx="22" cy="80" r="14" />
+            <circle cx="98" cy="80" r="14" />
+        </g>
+    </svg>`,
+    // A messy, looping path that still arrives at a flag
+    strategy: `<svg viewBox="0 0 120 96" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14 82 C34 86 46 72 38 62 C30 52 46 44 54 56 C62 68 76 60 72 48 C68 36 82 40 90 44" class="stroke-white" stroke-width="3" stroke-dasharray="1 8" />
+        <circle cx="14" cy="82" r="5" class="fill-secondary" />
+        <path d="M96 46 V10" class="stroke-white" stroke-width="3" />
+        <path d="M96 10 L116 17 L96 24 Z" class="fill-secondary" />
+        <ellipse cx="96" cy="47" rx="8" ry="2.5" class="fill-secondary" />
+    </svg>`
+};
+
 const perspectives = [
     {
+        illustration: illustrations.coaching,
         title: 'Coaching',
         body: 'ICF-accredited coaching that helps you explore your assumptions, values, motivations and the questions you might be avoiding.'
     },
     {
+        illustration: illustrations.gestalt,
         title: 'Gestalt',
         body: "I'm currently in my second year of a four-year Gestalt training programme. It brings an additional perspective on awareness, relationships, patterns and how we experience ourselves in the world."
     },
     {
+        illustration: illustrations.strategy,
         title: 'Career strategy',
         body: "Practical thinking about the job market, professional positioning, transferable skills, leadership and the different ways your experience can translate into what's next."
     }
@@ -261,16 +296,13 @@ const quotes = [
             <div
                 class="grid md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mt-8 sm:mt-10"
             >
-                {perspectives.map((item, i) => <div
+                {perspectives.map((item) => <div
                     class="bg-primary-foreground/10 border border-primary-foreground/20 p-6 sm:p-8 rounded-2xl"
                 >
                     <div
-                        class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6"
-                    >
-                        <span class="font-serif text-xl text-primary"
-                            >{i + 1}</span
-                        >
-                    </div>
+                        class="h-24 sm:h-26 mb-6 flex items-center [&>svg]:h-full [&>svg]:w-auto"
+                        set:html={item.illustration}
+                    />
                     <h3 class="font-serif text-2xl mb-3">{item.title}</h3>
                     <p
                         class="font-sans text-sm sm:text-base leading-relaxed text-primary-foreground/70"
