@@ -1,12 +1,10 @@
 ---
 // ─── Links: paste the real URLs here ────────────────────────────────────────
-// €29 Playbook: waitlist form for now; swap for the Stripe link at launch
-const PLAYBOOK_URL =
-    'https://docs.google.com/forms/d/e/1FAIpQLSdiQMh5aiWOckq5nDmyzgc1wDHTJDmVmPO5RnwSsDwM7AGm6g/viewform';
-// €150 Bold Move Session: waitlist form for now.
-// Booking link for later: https://cal.com/katemas/the-bold-move-session
-const SESSION_URL =
-    'https://docs.google.com/forms/d/e/1FAIpQLSekPklplGIoOdoGTaaSQm9PDALea2aStoMY4PfBiWCzaIB3TQ/viewform';
+// €29 Next Move Playbook: Stripe checkout.
+const PLAYBOOK_URL = 'https://buy.stripe.com/6oUeVd8rQ3vl9Ycerg4ow00';
+// €150 Bold Move Session: Stripe checkout.
+// Booking link: https://cal.com/katemas/the-bold-move-session
+const SESSION_URL = 'https://buy.stripe.com/3cI6oH9vU0j9gmA4QG4ow01';
 // ────────────────────────────────────────────────────────────────────────────
 
 // Same self-hosted fonts as the rest of the site (see src/styles/global.css)
@@ -169,7 +167,7 @@ const faqs = [
                     </p>
                     <div class="btn-row">
                         <a href="#offer" class="btn btn-solid btn-hero"
-                            >Join the waitlist · €29&nbsp;→</a
+                            >Get the Playbook · €29&nbsp;→</a
                         >
                     </div>
                 </div>
@@ -290,7 +288,7 @@ const faqs = [
                         </p>
                         <p class="price">€29</p>
                         <ul class="offer-list">
-                            <li>The 11-page Next Move Playbook worksheet</li>
+                            <li>The 30-page Next Move Playbook worksheet</li>
                             <li>About 90 minutes, in one sitting or three</li>
                             <li>Fill it in on screen or print it out</li>
                             <li>
@@ -298,16 +296,8 @@ const faqs = [
                                 redo next time you're at a crossroads
                             </li>
                         </ul>
-                        <p class="waitlist-note">
-                            Launching soon. Join the list and you'll get it
-                            first, at the Black Friday price.
-                        </p>
-                        <a
-                            href={PLAYBOOK_URL}
-                            class="btn btn-solid btn-block"
-                            target="_blank"
-                            rel="noopener"
-                            >Join the waitlist · €29</a
+                        <a href={PLAYBOOK_URL} class="btn btn-solid btn-block"
+                            >Get the Playbook · €29</a
                         >
                     </article>
 
@@ -323,7 +313,7 @@ const faqs = [
                             €150 <span class="price-was">instead of €180</span>
                         </p>
                         <ul class="offer-list">
-                            <li>The 11-page Next Move Playbook worksheet</li>
+                            <li>The 30-page Next Move Playbook worksheet</li>
                             <li>
                                 A 70-minute 1:1 with me. You fill in Parts 0–3
                                 first, so we spend our time on what you found,
@@ -341,12 +331,8 @@ const faqs = [
                                 else's
                             </li>
                         </ul>
-                        <a
-                            href={SESSION_URL}
-                            class="btn btn-light btn-block"
-                            target="_blank"
-                            rel="noopener"
-                            >Join the waitlist · €150</a
+                        <a href={SESSION_URL} class="btn btn-light btn-block"
+                            >Book your spot · €150</a
                         >
                     </article>
                 </div>
@@ -476,19 +462,11 @@ const faqs = [
                         November.
                     </p>
                     <div class="btn-row btn-row-center">
-                        <a
-                            href={PLAYBOOK_URL}
-                            class="btn btn-light"
-                            target="_blank"
-                            rel="noopener"
-                            >Join the waitlist · €29</a
+                        <a href={PLAYBOOK_URL} class="btn btn-light"
+                            >Get the Playbook · €29</a
                         >
-                        <a
-                            href={SESSION_URL}
-                            class="btn btn-ghost-light"
-                            target="_blank"
-                            rel="noopener"
-                            >Join the session waitlist · €150</a
+                        <a href={SESSION_URL} class="btn btn-ghost-light"
+                            >Book the Bold Move Session · €150</a
                         >
                     </div>
                 </div>
@@ -1046,17 +1024,6 @@ const faqs = [
 
     .offer-sub {
         color: var(--muted);
-    }
-
-    .waitlist-note {
-        margin-top: auto;
-        margin-bottom: 16px;
-        font-size: 14px;
-        color: var(--muted);
-    }
-
-    .offer-card .waitlist-note + .btn-block {
-        margin-top: 0;
     }
 
     .offer-b .offer-sub {
