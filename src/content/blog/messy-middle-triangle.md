@@ -19,10 +19,11 @@ years of hard-won experience. And then they say some version of this:
 >
 > "I want to build my own thing, but I'm scared to fail."
 
-And this isn't just what I'm seeing in my own bubble. Gallup's 2026 State of the
-Global Workplace report found global engagement at 20%, its lowest point since
-2020, marking two straight years of decline. The steepest drop was among
-managers, whose engagement fell from 27% to 22% in a single year.
+And this isn't just what I'm seeing in my own bubble. Gallup's
+[2026 State of the Global Workplace report](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
+found global engagement at 20%, its lowest point since 2020, marking two
+straight years of decline. The steepest drop was among managers, whose
+engagement fell from 27% to 22% in a single year.
 
 The people most invested in their jobs are also the ones burning out fastest.
 Meanwhile, workplace researchers have started calling the opposite pattern "job
