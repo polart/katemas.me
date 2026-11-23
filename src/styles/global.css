@@ -175,6 +175,102 @@
     }
 }
 
+/* ── Blog post body ──────────────────────────────────────────── */
+
+/* Styles the HTML rendered from Markdown posts (pages/blog/[...slug]) */
+@layer components {
+    .blog-prose {
+        font-family: var(--font-sans);
+        font-size: 1.0625rem;
+        line-height: 1.75;
+        color: var(--color-muted-foreground);
+    }
+    @media (min-width: 640px) {
+        .blog-prose {
+            font-size: 1.125rem;
+        }
+    }
+    .blog-prose > * + * {
+        margin-top: 1.25em;
+    }
+    .blog-prose h2 {
+        font-family: var(--font-serif);
+        font-size: 1.75rem;
+        line-height: 1.2;
+        color: var(--color-foreground);
+        margin-top: 2.25em;
+    }
+    .blog-prose h3 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.35;
+        color: var(--color-foreground);
+        margin-top: 2em;
+    }
+    .blog-prose h2 + *,
+    .blog-prose h3 + * {
+        margin-top: 0.75em;
+    }
+    .blog-prose strong {
+        color: var(--color-foreground);
+        font-weight: 700;
+    }
+    .blog-prose a {
+        color: var(--color-primary);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: var(--color-secondary);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+    }
+    .blog-prose a:hover {
+        text-decoration-color: var(--color-primary);
+    }
+    .blog-prose ul,
+    .blog-prose ol {
+        padding-left: 1.4em;
+    }
+    .blog-prose ul {
+        list-style: disc;
+    }
+    .blog-prose ol {
+        list-style: decimal;
+    }
+    .blog-prose li + li {
+        margin-top: 0.5em;
+    }
+    .blog-prose li::marker {
+        color: var(--color-primary);
+    }
+    /* Pull quotes: same treatment as the blockquotes on About */
+    .blog-prose blockquote {
+        font-family: var(--font-accent);
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 1.35;
+        color: var(--color-primary);
+        border-left: 2px solid var(--color-secondary);
+        padding-left: 1.25rem;
+        margin-block: 2em;
+    }
+    .blog-prose hr {
+        border: 0;
+        border-top: 1px solid var(--color-border);
+        margin-block: 2.5em;
+    }
+    .blog-prose img {
+        border-radius: var(--radius-2xl);
+        margin-block: 2em;
+    }
+    .blog-prose code {
+        font-size: 0.9em;
+        background-color: var(--color-muted);
+        color: var(--color-foreground);
+        padding: 0.1em 0.35em;
+        border-radius: var(--radius-sm);
+    }
+}
+
 /* ── Hand-drawn marks ────────────────────────────────────────── */
 
 /* Scribbles, arrows and threads (components/Scribble, HandNote,

@@ -15,7 +15,7 @@ import '@fontsource/plus-jakarta-sans/700.css';
 import '@fontsource/playfair-display/400-italic.css';
 import '@fontsource/playfair-display/500-italic.css';
 
-import { Image, getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import heroImg from '../assets/next-move/kate-standing.jpg';
 import aboutImg from '../assets/next-move/kate-chair.jpg';
@@ -23,10 +23,6 @@ import aboutImg from '../assets/next-move/kate-chair.jpg';
 const title = 'The Next Move Playbook · Kate Mas';
 const description =
     'A 100-minute worksheet for senior tech people who are applying everywhere and hearing nothing back. Stop applying everywhere. Start aiming.';
-
-const ogImage = await getImage({ src: heroImg, format: 'jpg', width: 724 });
-const ogImageUrl = new URL(ogImage.src, Astro.site).href;
-const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 const familiar = [
     'Every role you find already has 100+ applicants by the time you see it.',
@@ -126,25 +122,12 @@ const faqs = [
 ];
 ---
 
-<BaseLayout title={title} description={description}>
-    <Fragment slot="head">
-        <link rel="canonical" href={pageUrl} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta
-            property="og:image:alt"
-            content="Kate Mas standing against a warm ochre backdrop in a yellow striped shirt and jeans"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImageUrl} />
-    </Fragment>
-
+<BaseLayout
+    title={title}
+    description={description}
+    image={heroImg}
+    imageAlt="Kate Mas standing against a warm ochre backdrop in a yellow striped shirt and jeans"
+>
     <div class="next-move">
         <!-- 2. Hero -->
         <section class="hero">

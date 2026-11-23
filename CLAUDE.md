@@ -131,6 +131,28 @@ Cards displayed in a 3-column grid (`md:grid-cols-3`). Includes:
 - "Share your story" CTA card (blue `bg-primary`) linking to Google Form:
   `https://docs.google.com/forms/d/1oJ6padQDu1aSiRP-96rQ1m67J_I6Fyrd5_D7S_K0xw4/viewform`
 
+### Blog (`src/pages/blog/`)
+
+- Posts are Markdown files in `src/content/blog/`; the filename is the URL slug
+  (`foo.md` → `/blog/foo`). Schema lives in `src/content.config.ts`
+- Frontmatter: `title`, `description`, `pubDate`, optional `updatedDate`,
+  `tags`, `draft`. Drafts render in `pnpm dev` only, never in the build or RSS
+- Helpers (sorting, dates, reading time) in `src/lib/blog.ts`
+- Post body typography is the `.blog-prose` class in `global.css`
+- RSS feed at `/rss.xml` (`src/pages/rss.xml.ts`)
+- `sample-post.md` is a draft formatting reference
+- Optional `image` (path relative to the post) + `imageAlt` give a cover photo
+  and the link-preview image
+- Posts emit `BlogPosting` JSON-LD; `astro.config.mjs` reads post front matter
+  to add `lastmod` to their sitemap entries
+
+### SEO / social meta (`BaseLayout.astro`)
+
+Every page gets a canonical URL (trailing-slash form, matching the sitemap),
+Open Graph and Twitter card tags. Pages can pass `image`/`imageAlt` (an imported
+`ImageMetadata`; default is `assets/home/kate-smiling.jpg`), `type`,
+`publishedTime`, `modifiedTime` and `noindex`. Don't add these tags per page.
+
 ### Services Page (`services.astro`)
 
 Three 1:1 coaching packages in a 3-column grid:
