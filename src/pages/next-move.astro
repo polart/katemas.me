@@ -63,7 +63,11 @@ const parts = [
         part: 'Part 1',
         time: '35 minutes',
         title: 'Direction',
-        text: 'The Messy Middle Triangle (security, growth, autonomy), your real non-negotiables, and 2–3 role hypotheses tested against live job postings.',
+        link: {
+            text: 'The Messy Middle Triangle',
+            href: '/blog/messy-middle-triangle'
+        },
+        text: '(security, growth, autonomy), your real non-negotiables, and 2–3 role hypotheses tested against live job postings.',
         leave: 'one direction worth your next four weeks.'
     },
     {
@@ -247,7 +251,18 @@ const faqs = [
                         </div>
                         <div class="part-body">
                             <h3>{p.title}</h3>
-                            <p>{p.text}</p>
+                            <p>
+                                {p.link && (
+                                    <>
+                                        <a
+                                            class="part-link"
+                                            href={p.link.href}
+                                            set:text={p.link.text}
+                                        />{' '}
+                                    </>
+                                )}
+                                {p.text}
+                            </p>
                         </div>
                         <p class="part-leave">
                             <strong>You leave with:</strong>{' '}
@@ -910,6 +925,17 @@ const faqs = [
     }
 
     /* 6. What's inside */
+    .part-link {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+    }
+
+    .part-link:hover {
+        text-decoration-thickness: 2px;
+    }
+
     .part-row {
         display: flex;
         flex-wrap: wrap;
