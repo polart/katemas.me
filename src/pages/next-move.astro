@@ -22,7 +22,7 @@ import aboutImg from '../assets/next-move/kate-chair.jpg';
 
 const title = 'The Next Move Playbook · Kate Mas';
 const description =
-    'A 90-minute worksheet for senior tech people who are applying everywhere and hearing nothing back. Stop applying everywhere. Start aiming.';
+    'A 100-minute worksheet for senior tech people who are applying everywhere and hearing nothing back. Stop applying everywhere. Start aiming.';
 
 const ogImage = await getImage({ src: heroImg, format: 'jpg', width: 724 });
 const ogImageUrl = new URL(ogImage.src, Astro.site).href;
@@ -65,7 +65,7 @@ const parts = [
     },
     {
         part: 'Part 1',
-        time: '25 minutes',
+        time: '35 minutes',
         title: 'Direction',
         text: 'The Messy Middle Triangle (security, growth, autonomy), your real non-negotiables, and 2–3 role hypotheses tested against live job postings.',
         leave: 'one direction worth your next four weeks.'
@@ -96,7 +96,7 @@ const parts = [
 const faqs = [
     {
         q: 'How long does it take?',
-        a: ['About 90 minutes. Do it in one sitting or three, your call.']
+        a: ['About 100 minutes. Do it in one sitting or three, your call.']
     },
     {
         q: "I'm employed, just restless. Is this for me?",
@@ -160,7 +160,7 @@ const faqs = [
                         <span class="h1-accent">Start aiming.</span>
                     </h1>
                     <p class="hero-lede">
-                        The Next Move Playbook is a 90-minute worksheet for
+                        The Next Move Playbook is a 100-minute worksheet for
                         senior tech people who are applying and hearing nothing
                         back, don't know where to start, or haven't let
                         themselves look yet.
@@ -254,7 +254,7 @@ const faqs = [
             <div class="wrap">
                 <p class="kicker">What's inside</p>
                 <h2 id="inside-title">
-                    90 minutes. Five parts. A plan you can start on Monday.
+                    100 minutes. Five parts. A plan you can start on Monday.
                 </h2>
                 <ol class="rows" role="list">
                     {parts.map((p) => <li class="row part-row">
@@ -289,7 +289,7 @@ const faqs = [
                         <p class="price">€29</p>
                         <ul class="offer-list">
                             <li>The 30-page Next Move Playbook worksheet</li>
-                            <li>About 90 minutes, in one sitting or three</li>
+                            <li>About 100 minutes, in one sitting or three</li>
                             <li>Fill it in on screen or print it out</li>
                             <li>
                                 Yours to keep, with any future updates, and to
