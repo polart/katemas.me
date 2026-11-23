@@ -286,7 +286,10 @@ const faqs = [
                         <p class="offer-sub">
                             Do it on your own, at your own pace.
                         </p>
-                        <p class="price">€29</p>
+                        <p class="price">
+                            €29
+                            <span class="price-was">€39 after 30 November</span>
+                        </p>
                         <ul class="offer-list">
                             <li>The 30-page Next Move Playbook worksheet</li>
                             <li>About 100 minutes, in one sitting or three</li>
@@ -1055,6 +1058,10 @@ const faqs = [
         font-size: 16px;
         color: var(--on-blue-soft);
         margin-left: 8px;
+    }
+
+    .offer-a .price-was {
+        color: var(--muted);
     }
 
     .offer-list {
