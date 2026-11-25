@@ -19,6 +19,10 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import heroImg from '../assets/next-move/kate-standing.jpg';
 import aboutImg from '../assets/next-move/kate-chair.jpg';
+import previewCover from '../assets/next-move/preview/cover.jpg';
+import previewHow from '../assets/next-move/preview/how-it-works.jpg';
+import previewTriangle from '../assets/next-move/preview/triangle.jpg';
+import previewOneLiner from '../assets/next-move/preview/one-liner.jpg';
 
 const title = 'The Next Move Playbook · Kate Mas';
 const description =
@@ -90,6 +94,22 @@ const parts = [
         title: 'Your two-week reset',
         text: 'Fewer applications, better aimed, through a person wherever you can. A week-by-week checklist, then you redo your Part 0 numbers.',
         leave: 'proof of what moved.'
+    }
+];
+
+const previewPages = [
+    { src: previewCover, alt: 'Cover of The Next Move Playbook' },
+    {
+        src: previewHow,
+        alt: 'How this works: the five parts of the Playbook, in order'
+    },
+    {
+        src: previewTriangle,
+        alt: 'The Messy Middle Triangle page: security, growth and autonomy'
+    },
+    {
+        src: previewOneLiner,
+        alt: 'Your one-liner page, with a template and space for two drafts'
     }
 ];
 
@@ -287,6 +307,27 @@ const faqs = [
                                 redo next time you're at a crossroads
                             </li>
                         </ul>
+                        <div class="preview">
+                            <p class="preview-label">Peek inside</p>
+                            <ul class="preview-grid" role="list">
+                                {previewPages.map((pg, i) => <li>
+                                    <button
+                                        type="button"
+                                        class="preview-thumb"
+                                        data-preview-index={i}
+                                        aria-label={`Open preview: ${pg.alt}`}
+                                    >
+                                        <Image
+                                            src={pg.src}
+                                            alt=""
+                                            width={240}
+                                            format="webp"
+                                            loading="lazy"
+                                        />
+                                    </button>
+                                </li>)}
+                            </ul>
+                        </div>
                         <a href={PLAYBOOK_URL} class="btn btn-solid btn-block"
                             >Get the Playbook · €29</a
                         >
@@ -464,7 +505,77 @@ const faqs = [
             </div>
         </section>
     </div>
+
+    <dialog class="preview-dialog" aria-label="Playbook preview">
+        <div class="preview-frame">
+            {previewPages.map((pg, i) => (
+                <Image
+                    src={pg.src}
+                    alt={pg.alt}
+                    width={1000}
+                    format="webp"
+                    loading="lazy"
+                    class="preview-full"
+                    data-preview-page={i}
+                    hidden={i !== 0}
+                />
+            ))}
+        </div>
+        <div class="preview-controls">
+            <button type="button" class="preview-nav" data-preview-step="-1">
+                ← Previous
+            </button>
+            <span class="preview-count" aria-live="polite"></span>
+            <button type="button" class="preview-nav" data-preview-step="1">
+                Next →
+            </button>
+        </div>
+        <button type="button" class="preview-close" aria-label="Close preview">
+            ×
+        </button>
+    </dialog>
 </BaseLayout>
+
+<script>
+    const dialog = document.querySelector<HTMLDialogElement>('.preview-dialog');
+    if (dialog) {
+        const pages = Array.from(
+            dialog.querySelectorAll<HTMLElement>('[data-preview-page]')
+        );
+        const count = dialog.querySelector('.preview-count');
+        let current = 0;
+        const show = (i: number) => {
+            current = (i + pages.length) % pages.length;
+            pages.forEach((p, n) => (p.hidden = n !== current));
+            if (count) count.textContent = `${current + 1} of ${pages.length}`;
+        };
+        document
+            .querySelectorAll<HTMLButtonElement>('[data-preview-index]')
+            .forEach((btn) =>
+                btn.addEventListener('click', () => {
+                    show(Number(btn.dataset.previewIndex));
+                    dialog.showModal();
+                })
+            );
+        dialog
+            .querySelectorAll<HTMLButtonElement>('[data-preview-step]')
+            .forEach((btn) =>
+                btn.addEventListener('click', () =>
+                    show(current + Number(btn.dataset.previewStep))
+                )
+            );
+        dialog
+            .querySelector('.preview-close')
+            ?.addEventListener('click', () => dialog.close());
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) dialog.close();
+        });
+        dialog.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') show(current + 1);
+            if (e.key === 'ArrowLeft') show(current - 1);
+        });
+    }
+</script>
 
 <style is:global>
     :root {
@@ -1079,6 +1190,125 @@ const faqs = [
 
     .offer-card .btn-block {
         margin-top: auto;
+    }
+
+    .preview {
+        margin-bottom: 36px;
+    }
+
+    .preview-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 12px;
+    }
+
+    .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .preview-thumb {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 1px solid rgba(16, 35, 206, 0.25);
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--cream);
+        cursor: zoom-in;
+        transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
+    }
+
+    .preview-thumb:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(10, 24, 144, 0.18);
+    }
+
+    .preview-thumb:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px;
+    }
+
+    .preview-thumb img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .preview-dialog {
+        margin: auto;
+        padding: 0;
+        border: none;
+        background: transparent;
+        max-width: min(92vw, 560px);
+        overflow: visible;
+    }
+
+    .preview-dialog::backdrop {
+        background: rgba(10, 24, 144, 0.85);
+    }
+
+    .preview-frame {
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--cream);
+    }
+
+    .preview-full {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: calc(100dvh - 120px);
+        object-fit: contain;
+    }
+
+    .preview-full[hidden] {
+        display: none;
+    }
+
+    .preview-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+        color: var(--white);
+        font-size: 15px;
+    }
+
+    .preview-nav {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: var(--white);
+        border-radius: 999px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font: inherit;
+    }
+
+    .preview-nav:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    .preview-close {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        border: none;
+        background: var(--white);
+        color: var(--navy);
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
     }
 
     /* 8. For / not for */
